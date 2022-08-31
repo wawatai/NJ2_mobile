@@ -5,20 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Document</title>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../js/slick-1.8.1/slick/slick.css">
-    <link rel="stylesheet" href="../js/slick-1.8.1/slick/slick-theme.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-    <script src="../js/slick-1.8.1/slick/slick.min.js"></script>
     <script src="../js/javascript.js"></script>
     <link rel="shortcut icon" href="../images/NJLOGO_64x64.ico" type="image/x-icon">
 </head>
 <body>
-    <!--header-->
-    <header>
+   <!--header-->
+   <header>
         <!--content-->
         <div class="content">
-            <i class="back_arrow" onclick="window.location.href='./member.html'"></i>
+            <button class="back_arrow" onclick="window.location.href='./member.html'">
+                <i class="arrow_ic"></i>
+                戻る
+            </button>
             <div class="title">VIPクラブ</div>
         </div>
     </header>
@@ -28,49 +27,42 @@
         <div class="vipWrap">
             <!--上部-->
             <div class="topBox">
-                <div class="board">
-                    <div class="content">
-                        <p class="account">ゴールド会員</p>
-                        <div class="textBox">
-                            <p>現在の入金</p>
-                            <div>
-                                <p>¥0.00</p>
-                                <p>( 0/3,000,000 )</p>
-                            </div>
+                <div class="cardBG">
+                    <div class="medal"></div>
+                    <div class="textBox">
+                        <p class="title">レギュラー会員</p>
+                        <div class="row">
+                            <p class="smallTitle">現在の入金</p>
+                            <p class="text">
+                                ¥10,000.00
+                                <span>( 10,000/500,000 )</span>
+                            </p>
                         </div>
-                        <div class="textBox">
-                            <p>現在のポイント</p>
-                            <div>
-                                <p>¥0.00</p>
-                                <p>( 0/30,000,000 )</p>
-                            </div>
-                        </div>
-                        <div class="medal"></div>
-                    </div>
-                    <div class="exBar">
-                        <div class="level">
-                            <p class="cur">ゴールド会員</p>
-                            <p>プラチナ会員</p>
-                        </div>
-                        <div class="bar">
-                            <div class="cur">
-                                <p>0.0%</p>
-                            </div>
+                        <div class="row">
+                            <p class="smallTitle">現在のベット額</p>
+                            <p class="text">
+                                ¥3,632.00
+                                <span>( 3,632/5,000,000 )</span>
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="lineTitle">
+                <i class="star_ic"></i>
+                <p>レギュラー会員</p>
+                <div class="line"></div>
+            </div>
             <!--會員權利-->
             <div class="enjoyBox">
-                <p class="title">ゴールド会員</p>
                 <ul>
                     <li>
                         毎回入金申請最高入金可能額
-                        <p>200,000</p>
+                        <p>10,000,000</p>
                     </li>
                     <li>
                         毎回出金申請最高出金可能額
-                        <p>200,000</p>
+                        <p>3,000,000</p>
                     </li>
                     <li>
                         出金手数料
@@ -79,34 +71,26 @@
                 </ul>
             </div>
             <!--查看VIP詳情-->
-            <div class="checkBtn" onclick="window.location.href='./vip_page.html'">
-                <p>VIP詳細</p>
-                <i class="arrow_ic"></i>
-            </div>
+            <button class="detailBtn" onclick="window.location.href='./vip_page.html'"></button>
         </div>
     </main>
     <!--footer-->
-    <footer>
+    <footer class="user">
         <ul>
-            <li onclick="window.location.href='./index_inner.html'">
-                <i class="menu_ic"></i>
-                <p>ホーム</p>
+            <li>
+                <a href="./index_inner.html"></a>
             </li>
-            <li onclick="window.location.href='./event.html'">
-                <i class="event_ic"></i>
-                <p>プロモーション</p>
+            <li>
+                <a href="./event.html"></a>
             </li>
-            <li onclick="window.location.href='./wallet.html'">
-                <i class="wallet_ic"></i>
-                <p>ウォレット</p>
+            <li>
+                <a href="./wallet.html"></a>
             </li>
-            <li onclick="window.location.href='./help_often_contact.html'">
-                <i class="service_ic"></i>
-                <p>カスタマーサービス</p>
+            <li>
+                <a href="./help_often_contact.html"></a>
             </li>
-            <li onclick="window.location.href='./member.html'">
-                <i class="center_ic"></i>
-                <p>マイページ</p>
+            <li>
+                <a href="./member.html"></a>
             </li>
         </ul>
     </footer>

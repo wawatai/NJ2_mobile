@@ -1,99 +1,71 @@
 //投注紀錄
 .bettingWrap {
-    width: 100%;
-    height: calc(100vh - 95px);
-    background: $mainBG_1;
-    overflow-y: auto;
-    box-sizing: border-box;
+    @include mainBG_1;
 
     .searchContent {
         width: 100%;
         height: auto;
-        box-sizing: border-box;
-        padding: 15px;
-        background: $mainBG_3;
-        margin-top: 10px;
-
-        &.deal {
-            margin: 0;
-        }
+        padding: 0 16px;
+        border-bottom: solid 2px $border_1;
 
         .top {
             width: 100%;
             height: auto;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
 
-            .helf {
-                width: 48%;
+            .smallTitle {
+                color: $mainColor_2;
+                font-size: 3.4vw;
+                font-weight: bold;
+                margin: 10px 0 8px;
+            }
 
-                p {
-                    margin-bottom: 10px;
-                    font-size: 14px;
-                    font-weight: bold;
-                    letter-spacing: 1px;
-                    color: $mainWord_2;
-                }
-    
-                button {
+            .selectBox {
+                width: 100%;
+                height: auto;
+                position: relative;
+
+                select {
                     width: 100%;
-                    height: 42px;
-                    @include fakeSelect;
+                    height: 9.87vw;
+                    @include mainSelect;
+                }
+
+                .arrow_ic {
+                    width: 18px;
+                    height: 9px;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: 16px;
+                    pointer-events: none;
                 }
             }
 
-            .full {
+            .inputBox {
                 width: 100%;
+                height: 9.87vw;
+                @include mainInput;
+                box-shadow: none;
+                position: relative;
 
-                &:nth-of-type(1) {
-
-                    p {
-                        margin-top: 0;
-                    }
-                }
-
-                p {
-                    margin: 20px 0 10px;
-                    font-size: 14px;
+                input {
+                    width: auto;
+                    height: 100%;
+                    background: none;
+                    border: none;
+                    color: $mainColor_3;
+                    font-size: 4vw;
                     font-weight: bold;
-                    letter-spacing: 1px;
-                    color: $mainWord_2;
                 }
 
-                .inputBox {
-                    width: 100%;
-                    height: 42px;
-                    border: solid 1px $mainBorder_1;
-                    border-radius: 3px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-around;
-                    color: $mainWord_3;
-                    font-size: 16px;
-                    font-weight: bold;
-                    background: $mainBG_1;
-
-                    input {
-                        width: auto;
-                        height: 100%;
-                        border: none;
-                        background: none;
-                        color: $mainWord_3;
-                        font-size: 14px;
-                        font-weight: bold;
-                    }
-                }
-
-                .selectBox {
-                    width: 100%;
-                    height: auto;
-
-                    select {
-                        width: 100%;
-                        height: 42px;
-                        @include mainSelect;
-                    }
+                .date_ic {
+                    width: 4vw;
+                    height: 4vw;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: 16px;
+                    pointer-events: none;
                 }
             }
         }
@@ -102,54 +74,39 @@
             width: 100%;
             height: auto;
             display: flex;
-            margin: 20px 0;
+            justify-content: space-between;
+            margin: 16px 0;
 
             button {
-                width: 25%;
-                height: 38px;
-                @include noBgBtn_Normal;
-                border-left-width: 0;
-
-                &:nth-of-type(1) {
-                    border-radius: 5px 0 0 5px;
-                    border-left-width: 1px;
-                }
-
-                &:nth-of-type(2),
-                &:nth-of-type(3) {
-                    border-radius: 0;
-                }
-            
-                &:last-child {
-                    border-radius: 0 5px 5px 0;
-                }
+                width: 23%;
+                height: 9.87vw;
+                @include dateBtn;
             }
         }
 
         .check {
             width: 100%;
-            height: 42px;
-            @include mainBtn;
+            height: 11vw;
+            @include secondBtn;
+            margin-bottom: 16px;
         }
     }
 
     .list {
         width: 100%;
         height: auto;
-        box-sizing: border-box;
-        padding: 10px 14px;
+        padding: 12px 16px;
 
         .noData {
             display: none;
             width: 100%;
             height: auto;
-            box-sizing: border-box;
-            color: $mainWord_4;
+            color: $disable;
             font-weight: bold;
-            font-size: 14px;
+            font-size: 3vw;
             flex-direction: column;
             align-items: center;
-            padding: 20px 0 40px;
+            padding-top: 20px;
 
             &.display {
                 display: flex;
@@ -167,176 +124,74 @@
             display: none;
             width: 100%;
             height: auto;
+            margin-bottom: 10px;
 
             &.display {
                 display: block;
             }
 
-            .titleBox {
+            .title {
                 width: 100%;
-                height: auto;
-                box-sizing: border-box;
-                padding: 16px;
-                border: solid 1px $mainBorder_1;
+                height: 9vw;
+                background: $table_TitleBG;
+                border-radius: 16px 16px 0 0;
+                color: $table_Title;
+                font-size: 4vw;
+                font-weight: bold;
                 display: flex;
                 align-items: center;
-                border-radius: 5px;
-                margin-bottom: 10px;
-
-                i {
-                    display: block;
-                    width: 17px;
-                    height: 17px;
-                    margin-right: 8px;
-                }
-
-                p {
-                    color: $mainWord_1;
-                    font-size: 4vw;
-                    font-weight: bold;
-                }
+                justify-content: space-between;
+                padding: 0 16px;
             }
 
-            .box {
+            ul {
                 width: 100%;
                 height: auto;
-                background: $mainBG_2;
-                border-radius: 5px;
-                box-sizing: border-box;
-                overflow: hidden;
-                margin-bottom: 10px;
+                background: $table_BG;
+                border: solid 1px $table_Border;
+                border-top: none;
+                padding: 0 8px;
 
-                &:last-child {
-                    margin: 0;
-                }
-
-                &>p {
-                    color: $mainWord_1;
-                    font-size: 4vw;
+                li {
+                    width: 100%;
+                    height: 9vw;
+                    border-bottom: solid 1px $table_innerBorder;
+                    color: $mainColor_3;
+                    font-size: 3.7vw;
                     font-weight: bold;
-                    display: flex;
-                    justify-content: space-between;
-                    margin-bottom: 10px;
-                    padding: 0 16px;
-
-                    &:nth-last-of-type(1) {
-                        margin-bottom: 16px;
-                    }
-
-                    &.title {
-                        font-size: 6vw;
-                        padding: 16px;
-                        margin: 0;
-                    }
-
-                    span {
-                        color: $money;
-
-                        &.win {
-                            color: $remind;
-                        }
-                        &.lose {
-                            color: $remind_Sp;
-                        }
-                    }
-                }
-
-                .innerBox {
-                    width: 100%;
-                    height: 0;
-                    padding: 0;
-                    box-sizing: border-box;
-                    background: $mainBG_3;
-                    max-height: 300px;
-                    overflow-y: auto;
-
-                    &.display {
-                        height: auto;
-                        padding: 16px;
-                    }
-
-                    ul {
-                        width: 100%;
-                        height: auto;
-                        border: solid 1px $mainBorder_1;
-                        border-radius: 3px;
-                        background: $mainBG_1;
-                        margin-bottom: 10px;
-                        box-sizing: border-box;
-
-                        &:last-child {
-                            margin: 0;
-                        }
-
-                        li {
-                            width: 100%;
-                            height: auto;
-                            box-sizing: border-box;
-                            padding: 0 10px;
-                            display: flex;
-                            align-items: center;
-                            justify-content: space-between;
-                            margin-bottom: 10px;
-
-                            &.title {
-                                padding: 10px;
-                                border-bottom: solid 1px $mainBorder_1;
-                            }
-
-                            p {
-                                color: $mainWord_1;
-                                font-size: 4vw;
-                                font-weight: bold;
-                            }
-
-                            span {
-                                color: $money;
-                                font-size: 3.7vw;
-                                font-weight: bold;
-                                
-                                &.time {
-                                    color: $mainWord_4;
-                                    font-size: 3vw;
-                                }
-                                &.num {
-                                    color: $remind;
-                                    font-size: 3vw;
-                                }
-                                &.win {
-                                    color: $remind;
-                                }
-                                &.lose {
-                                    color: $remind_Sp;
-                                }
-                            }
-                        }
-                    }
-                }
-
-                .open {
-                    width: 100%;
-                    height: 45px;
-                    background: $mainBG_2;
                     display: flex;
                     align-items: center;
-                    justify-content: center;
-                    color: $mainWord_1;
-                    font-size: 4vw;
-                    font-weight: bold;
-                    border-top: solid 1px $mainBorder_1;
+                    justify-content: space-between;
 
-                    .arrow_ic {
-                        display: block;
-                        width: 12px;
-                        height: 12px;
-                        margin-left: 9px;
-                        transition: 0.3s all;
+                    &:last-child {
+                        border: none;
                     }
 
-                    &.active {
+                    p {
+                        color: $mainColor_1;
 
-                        .arrow_ic {
-                            transform: rotate(180deg);
+                        &.result {
+                            color: $remind;
+                        }
+                    }
+
+                    &.btnBox {
+                        height: 15vw;
+
+                        button {
+                            width: 50%;
+                            height: 9.87vw;
+                            @include lightBtn_1;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            margin: 0 auto;
+
+                            i {
+                                width: 4vw;
+                                height: 4vw;
+                                margin-left: 5px;
+                            }
                         }
                     }
                 }
@@ -347,9 +202,6 @@
             display: none;
             width: 100%;
             height: auto;
-            border-radius: 5px;
-            border: solid 1px $mainBorder_1;
-            background: $mainBG_2;
             margin-bottom: 10px;
 
             &.display {
@@ -358,41 +210,124 @@
 
             .title {
                 width: 100%;
-                height: auto;
-                border-bottom: solid 1px $mainBorder_1;
-                color: $mainWord_1;
+                height: 9vw;
+                background: $table_TitleBG;
+                border-radius: 16px 16px 0 0;
+                color: $table_Title;
                 font-size: 4vw;
                 font-weight: bold;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                box-sizing: border-box;
-                padding: 12px 16px;
+                padding: 0 16px;
                 
                 .date {
-                    font-size: 3vw;
-                    color: $mainWord_4;
+                    color: $table_Title;
+                    font-size: 3.4vw;
                 }
             }
 
             ul {
                 width: 100%;
                 height: auto;
-                box-sizing: border-box;
-                padding: 0 16px;
+                background: $table_BG;
+                border: solid 1px $table_Border;
+                border-top: none;
+                padding: 0 8px;
 
                 li {
                     width: 100%;
-                    height: 38px;
+                    height: 9vw;
+                    border-bottom: solid 1px $table_innerBorder;
+                    color: $mainColor_3;
+                    font-size: 3.7vw;
+                    font-weight: bold;
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
-                    color: $mainWord_1;
-                    font-size: 3.4vw;
-                    font-weight: bold;
 
-                    .num {
-                        color: $money;
+                    &:last-child {
+                        border: none;
+                    }
+
+                    p {
+                        color: $mainColor_1;
+                    }
+                }
+            }
+        }
+
+        .partnerBox {
+            display: none;
+            width: 100%;
+            height: auto;
+            background: $bg_2;
+            border-radius: 16px;
+            box-shadow: 0 2px 2px 1px $mainShadow_1;
+            padding: 0 12px;
+            margin-bottom: 10px;
+
+            &.display {
+                display: block;
+            }
+
+            .title {
+                width: 100%;
+                height: 12vw;
+                border-bottom: solid 1px $border_1;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                button {
+                    width: auto;
+                    height: 8vw;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 0 10px;
+
+                    &:first-child {
+                        @include mainBtn;
+                    }
+
+                    &:last-child {
+                        @include lightBtn_1;
+                    }
+                    
+                    i {
+                        width: 4vw;
+                        height: 4vw;
+                        margin-left: 5px;
+
+                        &.search_ic {
+                            filter: grayscale(1) brightness(15);
+                        }
+                    }
+                }
+            }
+
+            ul {
+                width: 100%;
+                height: auto;
+
+                li {
+                    width: 100%;
+                    height: 9vw;
+                    border-bottom: solid 1px $table_innerBorder;
+                    color: $mainColor_3;
+                    font-size: 3.7vw;
+                    font-weight: bold;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    &:last-child {
+                        border: none;
+                    }
+
+                    p {
+                        color: $mainColor_1;
                     }
                 }
             }
@@ -404,27 +339,23 @@
 .recordTop {
     width: 100%;
     height: auto;
-    background: $choose_BG;
+    padding: 8px 8px 0;
+    background: $bg_1;
 
     ul {
         width: 100%;
         height: auto;
         display: flex;
+        border-bottom: solid 2px $border_1;
 
         li {
             width: 50%;
             height: 45px;
-            box-sizing: border-box;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4vw;
-            font-weight: bold;
-            color: $choose_Word;
+            @include pageStyle_1;
+            margin-right: 5px;
 
-            &.active {
-                color: $choose_ActiveWord;
-                background: $choose_ActiveBG;
+            &:last-child {
+                margin: 0;
             }
         }
     }
@@ -433,20 +364,18 @@
 .waterBox {
     width: 100%;
     height: auto;
-    box-sizing: border-box;
-    padding: 16px;
+    padding: 12px 16px;
 
     .noData {
         display: none;
         width: 100%;
         height: auto;
-        box-sizing: border-box;
-        color: $mainWord_4;
+        color: $disable;
         font-weight: bold;
-        font-size: 14px;
+        font-size: 3vw;
         flex-direction: column;
         align-items: center;
-        padding: 20px 0 40px;
+        padding-top: 20px;
 
         &.display {
             display: flex;
@@ -460,86 +389,73 @@
         }
     }
 
-    ul {
+    .box {
         width: 100%;
         height: auto;
+        margin-bottom: 10px;
 
-        li {
+        .title {
+            width: 100%;
+            height: 9vw;
+            background: $table_TitleBG;
+            border-radius: 16px 16px 0 0;
+            color: $table_Title;
+            font-size: 4vw;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 16px;
+            
+            .date {
+                color: $table_Title;
+                font-size: 3.4vw;
+            }
+        }
+
+        ul {
             width: 100%;
             height: auto;
-            border-radius: 5px;
-            background: $mainBG_2;
-            border: solid 1px $mainBorder_1;
-            margin-bottom: 10px;
+            background: $table_BG;
+            border: solid 1px $table_Border;
+            border-top: none;
+            padding: 0 8px;
 
-            p {
+            li {
                 width: 100%;
-                height: 40px;
+                height: auto;
+                border-bottom: solid 1px $table_innerBorder;
+                color: $mainColor_3;
+                font-size: 3.7vw;
+                font-weight: bold;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                box-sizing: border-box;
-                padding: 0 16px;
-                font-weight: bold;
-                font-size: 4vw;
+                padding: 8px 0;
 
-                &.title {
-                    color: $mainWord_1;
-                    border-bottom: solid 1px $mainBorder_1;
+                &:last-child {
+                    border: none;
                 }
 
-                span {
-                    font-size: 4vw;
-                    font-weight: bold;
-
-                    &:nth-of-type(1) {
-                        color: $mainWord_2;
-                    }
-
-                    &:last-child {
-                        color: $mainWord_1;
-                    }
-
-                    &.sp {
-                        color: $remind;
-                    }
+                p {
+                    color: $mainColor_1;
+                    text-align: right;
                 }
-            }
 
-            .remindBox {
-                width: auto;
-                height: 42px;
-                margin: 0 16px;
-                border-radius: 3px;
-                background: $mainBG_3;
-                box-sizing: border-box;
-                padding: 5px;
-                color: $mainWord_4;
-                font-size: 2vw;
-                font-weight: bold;
-            }
+                &.btnBox {
+                    padding: 24px 0;
 
-            .btnBox {
-                width: 100%;
-                height: auto;
-                margin: 20px 0;
-                box-sizing: border-box;
-                padding: 0 14px;
-                display: flex;
-                justify-content: space-between;
+                    button {
+                        width: 48%;
+                        height: 8vw;
 
-                button {
-                    width: 48%;
-                    height: 38px;
+                        &:first-child {
+                            @include mainBtn;
+                        }
 
-                    &:nth-of-type(1) {
-                        @include secondBtn;
-                        font-size: 3.4vw;
-                    }
-
-                    &:last-child {
-                        @include mainBtn;
-                        font-size: 3.4vw;
+                        &:last-child {
+                            @include secondBtn;
+                        }
                     }
                 }
             }

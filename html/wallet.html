@@ -5,11 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Document</title>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../js/slick-1.8.1/slick/slick.css">
-    <link rel="stylesheet" href="../js/slick-1.8.1/slick/slick-theme.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-    <script src="../js/slick-1.8.1/slick/slick.min.js"></script>
     <script src="../js/javascript.js"></script>
     <link rel="shortcut icon" href="../images/NJLOGO_64x64.ico" type="image/x-icon">
 </head>
@@ -18,7 +14,6 @@
     <header>
         <div class="content">
             <div class="title">マイウォレット</div>
-            <i class="refresh_ic"></i>
         </div>
     </header>
     <!--main-->
@@ -29,25 +24,26 @@
             <div class="walletBox">
                 <!--上視窗-->
                 <div class="content">
-                    <!--總額顯示-->
-                    <div class="amount">
-                        <div class="half">
-                            <div class="title all">
-                                メインウォレット
-                            </div>
-                            <p class="money">¥0.00</p>
+                    <div class="box">
+                        <div class="title">
+                            <p>メインウォレット</p>
+                            <button>ワンクリックリサイクル</button>
                         </div>
-                        <div class="half">
-                            <div class="title">
-                                出金可能額
-                            </div>
-                            <p class="money">¥0.00</p>
+                        <div class="amount">
+                            <p>¥0.00</p>
                         </div>
                     </div>
-                    <!--限制-->
-                    <div class="details">
-                        <p class="mainWallet">ベット額制限</p>
-                        <p>¥0.00</p>
+                    <div class="box">
+                        <div class="title">
+                            <p>出金可能額</p>
+                            <p class="limit">
+                                ベット額制限
+                                <span>¥0.00</span>
+                            </p>
+                        </div>
+                        <div class="amount">
+                            <p>¥0.00</p>
+                        </div>
                     </div>
                 </div>
                 <!--轉存提-->
@@ -66,279 +62,265 @@
                     </li>
                 </ul>
             </div>
+            <div class="lineTitle">
+                <i class="star_ic"></i>
+                <p>プラットフォームウォレット</p>
+                <div class="line"></div>
+            </div>
             <!--錢包列-->
             <div class="walletList">
+                <button class="openBtn display">
+                    オープン
+                    <i class="dbarrow_ic"></i>
+                </button>
                 <div class="forPlatform">
                     <div class="title">
-                        <div>
-                            <p>最終更新時間：</p>
-                            <p>2022-05-24 11:52:59</p>
-                        </div>
-                        <button>ワンクリックリサイクル</button>
+                        <p>
+                            最終更新時間：
+                            <span>2022-05-24 11:52:59</span>
+                        </p>
                     </div>
                     <ul>
                         <li>
                             <div>
                                 36588 SPORTS
                             </div>
-                            <p>$0</p>
-                        </li>
-                        <li>
-                            <div>
-                                GoldenHero
-                            </div>
-                            <p>$0</p>
+                            <p>¥0.00</p>
                         </li>
                         <li>
                             <div>
                                 PNG
                             </div>
-                            <p>$0</p>
+                            <p>¥0.00</p>
                         </li>
                         <li>
                             <div>
-                                HABANERO
+                                MICROGAMING
                             </div>
-                            <p>$0</p>
+                            <p>¥0.00</p>
                         </li>
                         <li>
                             <div>
-                                AG CASINO
+                                GOLDENHERO
                             </div>
-                            <p>$0</p>
+                            <p>¥0.00</p>
                         </li>
                         <li>
                             <div>
-                                AG GAMES
+                                ALLBET
                             </div>
-                            <p>$0</p>
+                            <p>¥0.00</p>
                         </li>
                         <li>
                             <div>
-                                RED TIGER GAMES
+                                ELYSIUM
                             </div>
-                            <p>$0</p>
+                            <p>¥0.00</p>
                         </li>
                         <li>
                             <div>
-                                NETENT GAMES
+                                SA CASINO
                             </div>
-                            <p>$0</p>
-                        </li>
-                        <li>
-                            <div>
-                                RSG GAMES
-                            </div>
-                            <p>$0</p>
-                        </li>
-                        <li>
-                            <div>
-                                PP SLOTS
-                            </div>
-                            <p>$0</p>
-                        </li>
-                        <li>
-                            <div>
-                                JILI SLOTS
-                            </div>
-                            <p>$0</p>
-                        </li>
-                        <li>
-                            <div>
-                                YGG
-                            </div>
-                            <p>$0</p>
-                        </li>
-                        <li>
-                            <div>
-                                Microgaming
-                            </div>
-                            <p>$0</p>
-                        </li>
-                        <li>
-                            <div>
-                                BOOONGO GAMES
-                            </div>
-                            <p>$0</p>
-                        </li>
-                        <li>
-                            <div>
-                                MG CASINO
-                            </div>
-                            <p>$0</p>
-                        </li>
-                        <li>
-                            <div>
-                                IFUN GAMES
-                            </div>
-                            <p>$0</p>
-                        </li>
-                        <li>
-                            <div>
-                                EVO PLAY
-                            </div>
-                            <p>$0</p>
+                            <p>¥0.00</p>
                         </li>
                         <li>
                             <div>
                                 PP CASINO
                             </div>
-                            <p>$0</p>
+                            <p>¥0.00</p>
                         </li>
                         <li>
                             <div>
-                                RELAX
+                                YGG
                             </div>
-                            <p>$0</p>
-                        </li>
-                        <li>
-                            <div>
-                                NO LIMIT CITY
-                            </div>
-                            <p>$0</p>
-                        </li>
-                        <li>
-                            <div>
-                                AUX
-                            </div>
-                            <p>$0</p>
-                        </li>
-                        <li>
-                            <div>
-                                EVO CASINO
-                            </div>
-                            <p>$0</p>
-                        </li>
-                        <li>
-                            <div>
-                                ALL BET CASINO
-                            </div>
-                            <p>$0</p>
-                        </li><li>
-                            <div>
-                                SA CASINO
-                            </div>
-                            <p>$0</p>
-                        </li>
-                        <li>
-                            <div>
-                                TPG GAMES
-                            </div>
-                            <p>$0</p>
-                        </li>
-                        <li>
-                            <div>
-                                OG PLUS CASINO
-                            </div>
-                            <p>$0</p>
+                            <p>¥0.00</p>
                         </li>
                         <li>
                             <div>
                                 WM CASINO
                             </div>
-                            <p>$0</p>
+                            <p>¥0.00</p>
                         </li>
                         <li>
                             <div>
-                                SIMPLEPLAY GAMES
+                                JILI SLOTS
                             </div>
-                            <p>$0</p>
+                            <p>¥0.00</p>
+                        </li>
+                        <li>
+                            <div>
+                                RED RAKE
+                            </div>
+                            <p>¥0.00</p>
+                        </li>
+                        <li>
+                            <div>
+                                PLAYSON
+                            </div>
+                            <p>¥0.00</p>
+                        </li>
+                        <li>
+                            <div>
+                                4ThePlayer
+                            </div>
+                            <p>¥0.00</p>
+                        </li>
+                        <li>
+                            <div>
+                                EVO CASINO
+                            </div>
+                            <p>¥0.00</p>
+                        </li>
+                        <li>
+                            <div>
+                                IFUN
+                            </div>
+                            <p>¥0.00</p>
+                        </li>
+                        <li>
+                            <div>
+                                RELAX
+                            </div>
+                            <p>¥0.00</p>
                         </li>
                         <li>
                             <div>
                                 DG CASINO
                             </div>
-                            <p>$0</p>
+                            <p>¥0.00</p>
                         </li>
                         <li>
                             <div>
-                                PLAYSON GAMES
+                                BOOONGO
                             </div>
-                            <p>$0</p>
+                            <p>¥0.00</p>
                         </li>
                         <li>
                             <div>
-                                BLUEPRINT GAMES
+                                MG CASINO
                             </div>
-                            <p>$0</p>
+                            <p>¥0.00</p>
                         </li>
                         <li>
                             <div>
-                                RED RAKE GAMES
+                                PP SLOT
                             </div>
-                            <p>$0</p>
+                            <p>¥0.00</p>
                         </li>
                         <li>
                             <div>
-                                4ThePlayer GAMES
+                                HABANERO
                             </div>
-                            <p>$0</p>
+                            <p>¥0.00</p>
                         </li>
                         <li>
                             <div>
-                                ELK GAMES
+                                NO LIMIT CITY
                             </div>
-                            <p>$0</p>
+                            <p>¥0.00</p>
+                        </li><li>
+                            <div>
+                                DG CASINO
+                            </div>
+                            <p>¥0.00</p>
                         </li>
                         <li>
                             <div>
-                                ELYSIUM GAMES
+                                QUICKSPIN
                             </div>
-                            <p>$0</p>
+                            <p>¥0.00</p>
                         </li>
                         <li>
                             <div>
-                                QUICKSPIN GAMES
+                                SIMPLEPLAY
                             </div>
-                            <p>$0</p>
+                            <p>¥0.00</p>
+                        </li>
+                        <li>
+                            <div>
+                                BLUEPRINT
+                            </div>
+                            <p>¥0.00</p>
+                        </li>
+                        <li>
+                            <div>
+                                ELK
+                            </div>
+                            <p>¥0.00</p>
+                        </li>
+                        <li>
+                            <div>
+                                OG PLUS CASINO
+                            </div>
+                            <p>¥0.00</p>
+                        </li>
+                        <li>
+                            <div>
+                                JIJL
+                            </div>
+                            <p>¥0.00</p>
+                        </li>
+                        <li>
+                            <div>
+                                RSG
+                            </div>
+                            <p>¥0.00</p>
+                        </li>
+                        <li>
+                            <div>
+                                AUX
+                            </div>
+                            <p>¥0.00</p>
+                        </li>
+                        <li>
+                            <div>
+                                AG CASINO
+                            </div>
+                            <p>¥0.00</p>
+                        </li>
+                        <li>
+                            <div>
+                                EVOPLAY
+                            </div>
+                            <p>¥0.00</p>
                         </li>
                     </ul>
-                    <div class="openBtn">
-                        <div>
-                            オープン
-                            <i class="db_arrow"></i>
-                        </div>
-                    </div>
+                    <button class="closeBtn display">
+                        オープン
+                        <i class="dbarrow_ic"></i>
+                    </button>
                 </div>
             </div>
-            <button class="options" onclick="window.location.href='./bettingRecord.html'">
-                <p>
-                    <i class="betting_ic"></i>
+            <!--options-->
+            <div class="optionBox">
+                <button onclick="window.location.href='./bettingRecord.html'">
+                    <i class="bettingRecord_ic"></i>
                     ベット履歷
-                </p>
-                <i class="arrow_ic"></i>
-            </button>
-            <button class="options" onclick="window.location.href='./dealRecord.html'">
-                <p>
-                    <i class="deal_ic"></i>
+                </button>
+                <button onclick="window.location.href='./dealRecord.html'">
+                    <i class="dealRecord_ic"></i>
                     取引履歷
-                </p>
-                <i class="arrow_ic"></i>
-            </button>
+                </button>
+            </div>
         </div>
     </main>
     <!--footer-->
-    <footer>
+    <footer class="wallet">
         <ul>
-            <li onclick="window.location.href='./index_inner.html'">
-                <i class="menu_ic"></i>
-                <p>ホーム</p>
+            <li>
+                <a href="./index_inner.html"></a>
             </li>
-            <li onclick="window.location.href='./event.html'">
-                <i class="event_ic"></i>
-                <p>プロモーション</p>
+            <li>
+                <a href="./event.html"></a>
             </li>
-            <li class="active" onclick="window.location.href='./wallet.html'">
-                <i class="wallet_ic"></i>
-                <p>ウォレット</p>
+            <li>
+                <a href="./wallet.html"></a>
             </li>
-            <li onclick="window.location.href='./help_often_contact.html'">
-                <i class="service_ic"></i>
-                <p>カスタマーサービス</p>
+            <li>
+                <a href="./help_often_contact.html"></a>
             </li>
-            <li onclick="window.location.href='./member.html'">
-                <i class="center_ic"></i>
-                <p>マイページ</p>
+            <li>
+                <a href="./member.html"></a>
             </li>
         </ul>
     </footer>
