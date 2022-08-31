@@ -77,6 +77,13 @@
                 padding: 0 16px;
                 margin-bottom: 10px;
 
+                &:active,&.active {
+
+                    i {
+                        filter: grayscale(1) brightness(15);
+                    }
+                }
+
                 &:last-child {
                     margin: 0;
                 }
@@ -365,51 +372,6 @@
                     }
                 }
             }
-        }
-
-        .btnBox {
-            width: 100%;
-            height: auto;
-            margin: 20px 0;
-
-            .btn {
-                width: 100%;
-                height: 105px;
-                background: $mainBG_2;
-                border-radius: 16px;
-                display: flex;
-                align-items: center;
-                box-sizing: border-box;
-                padding: 10px 16px;
-
-                i {
-                    display: block;
-                    width: 8.7vw;
-                    height: 8.7vw;
-                    margin-right: 16px;
-                    flex-shrink: 0;
-                }
-
-                p {
-                    font-size: 3.4vw;
-                    font-weight: bold;
-                    margin: 0;
-                    color: $mainWord_1;
-
-                    &:nth-of-type(1) {
-                        font-size: 5vw;
-                    }
-                    &:nth-of-type(2) {
-                        color: $mainWord_4;
-                    }
-                }
-            }
-        }
-
-        .downloadBtn {
-            width: 100%;
-            height: 42px;
-            @include mainBtn;
         }
     }
 }

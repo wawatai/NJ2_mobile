@@ -187,6 +187,13 @@
                             justify-content: center;
                             margin: 0 auto;
 
+                            &:active,&.active {
+
+                                i {
+                                    filter: grayscale(1) brightness(15);
+                                }
+                            }
+
                             i {
                                 width: 4vw;
                                 height: 4vw;

@@ -109,7 +109,8 @@ footer.user {
     background: url('../images/icon/svg/event_all.svg') no-repeat center;
     background-size: contain;
 }
-.eventWrap .active .all_ic {
+.eventWrap li:active .all_ic,
+.eventWrap li.active .all_ic {
     background: url('../images/icon/svg/event_all_active.svg') no-repeat center;
     background-size: contain;
 }
@@ -117,7 +118,8 @@ footer.user {
     background: url('../images/icon/svg/event_sale.svg') no-repeat center;
     background-size: contain;
 }
-.eventWrap .active .sale_ic {
+.eventWrap li:active .sale_ic,
+.eventWrap li.active .sale_ic {
     background: url('../images/icon/svg/event_sale_active.svg') no-repeat center;
     background-size: contain;
 }
@@ -125,7 +127,8 @@ footer.user {
     background: url('../images/icon/svg/event_month.svg') no-repeat center;
     background-size: contain;
 }
-.eventWrap .active .month_ic {
+.eventWrap li:active .month_ic,
+.eventWrap li.active .month_ic {
     background: url('../images/icon/svg/event_month_active.svg') no-repeat center;
     background-size: contain;
 }
@@ -133,7 +136,8 @@ footer.user {
     background: url('../images/icon/svg/event_vip.svg') no-repeat center;
     background-size: contain;
 }
-.eventWrap .active .vip_ic {
+.eventWrap li:active .vip_ic,
+.eventWrap li.active .vip_ic {
     background: url('../images/icon/svg/event_vip_active.svg') no-repeat center;
     background-size: contain;
 }
@@ -165,6 +169,26 @@ footer.user {
 }
 .memberWrap .btnBox .right .card::before {
     background: url('../images/icon/svg/member_card.svg') no-repeat center;
+    background-size: contain;
+}
+.memberWrap .btnBox .right .bettingRecord:active::before,
+.memberWrap .btnBox .right .bettingRecord.active::before {
+    background: url('../images/icon/svg/member_bettingRecord_active.svg') no-repeat center;
+    background-size: contain;
+}
+.memberWrap .btnBox .right .dealRecord:active::before,
+.memberWrap .btnBox .right .dealRecord.active::before {
+    background: url('../images/icon/svg/member_dealRecord_active.svg') no-repeat center;
+    background-size: contain;
+}
+.memberWrap .btnBox .right .mail:active::before,
+.memberWrap .btnBox .right .mail.active::before {
+    background: url('../images/icon/svg/member_mail_active.svg') no-repeat center;
+    background-size: contain;
+}
+.memberWrap .btnBox .right .card:active::before,
+.memberWrap .btnBox .right .card.active::before {
+    background: url('../images/icon/svg/member_card_active.svg') no-repeat center;
     background-size: contain;
 }
 .memberWrap .optionBox .invite_ic::before {
@@ -277,6 +301,21 @@ footer.user {
 }
 .walletWrap .withdrawal_ic {
     background: url('../images/icon/svg/wallet_withdrawal.svg') no-repeat center;
+    background-size: contain;
+}
+.walletWrap li:active .deposit_ic,
+.walletWrap li.active .deposit_ic {
+    background: url('../images/icon/svg/wallet_deposit_active.svg') no-repeat center;
+    background-size: contain;
+}
+.walletWrap li:active .transfer_ic,
+.walletWrap li.active .transfer_ic {
+    background: url('../images/icon/svg/wallet_transfer_active.svg') no-repeat center;
+    background-size: contain;
+}
+.walletWrap li:active .withdrawal_ic,
+.walletWrap li.active .withdrawal_ic {
+    background: url('../images/icon/svg/wallet_withdrawal_active.svg') no-repeat center;
     background-size: contain;
 }
 .walletWrap .dbarrow_ic {
@@ -432,12 +471,20 @@ footer.user {
     background: url('../images/icon/svg/eye.svg') no-repeat;
     background-size: 100%;
 }
+.jumpWindow .eye.active {
+    background: url('../images/icon/svg/eye_active.svg') no-repeat center;
+    background-size: 100%;
+}
 .jumpWindow.news .arrow_ic {
     background: url('../images/icon/arrow_1.png') no-repeat;
     background-size: contain;
 }
 .jumpWindow.news .flower_ic {
     background: url('../images/icon/flower.png') no-repeat;
+    background-size: contain;
+}
+.jumpWindow .dbarrow_ic {
+    background: url('../images/icon/arrow_4.png') no-repeat center;
     background-size: contain;
 }
 .jumpWindow .date_ic {
@@ -450,6 +497,26 @@ footer.user {
 }
 .jumpWindow .skype_ic {
     background: url('../images/icon/svg/skype.svg') no-repeat center;
+    background-size: contain;
+}
+.jumpWindow .pageBox .arrow_ic {
+    background: url('../images/icon/arrow_1.png') no-repeat;
+    background-size: contain;
+}
+.jumpWindow.loading .img {
+    background: url('../images/icon/svg/loading.svg') no-repeat;
+    background-size: contain;
+}
+.jumpWindow.downloadBox .img.twitter {
+    background: url('../images/icon/twitter_2.png') no-repeat;
+    background-size: contain;
+}
+.jumpWindow.downloadBox .img.instergram {
+    background: url('../images/icon/instergram.png') no-repeat;
+    background-size: contain;
+}
+.jumpWindow.downloadBox .img.baido {
+    background: url('../images/icon/baido.png') no-repeat;
     background-size: contain;
 }
 

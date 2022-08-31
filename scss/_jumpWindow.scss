@@ -289,7 +289,7 @@
                         height: 8vw;
                         position: absolute;
                         right: 17px;
-                        @include secondBtn;
+                        @include lightBtn_1;
                         border-radius: 5px;
                         font-size: 3vw;
                         padding: 0 7px;
@@ -321,10 +321,20 @@
 
                 .allBtn {
                     width: 70%;
-                    height: 35px;
-                    @include lightBtn_1;
-                    display: block;
+                    height: 11vw;
+                    @include mainBtn;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                     margin: 16px auto 0;
+
+                    i {
+                        width: 4vw;
+                        height: 4vw;
+                        margin-left: 5px;
+                        filter: grayscale(1) brightness(15);
+                        transform: rotate(90deg);
+                    }
                 }
 
                 .box {
@@ -575,92 +585,88 @@
             }
         }
 
+        //修改手機
+        &.phoneWindow {
 
+            .title {
+                
+                p {
+                    font-size: 4vw;
+                }
+            }
 
-
-
-
-        
-        //lang
-        &.langWindow {
-            width: 92.27vw;
-            height: auto;
-
-            ul {
+            .smallTitle {
                 width: 100%;
                 height: auto;
-                display: flex;
-                flex-wrap: wrap;
-                align-items: center;
-                justify-content: center;
-                box-sizing: border-box;
-                padding: 3.2vw;
-                
-                li {
-                    width: 100%;
-                    height: 9.87vw;
-                    margin-bottom: 2.4vw;
-                    @include noBgBtn_Normal;
+                color: $mainColor_2;
+                font-size: 4vw;
+                font-weight: bold;
+                text-align: center;
+                padding: 16px 0;
+            }
 
-                    &:last-child {
-                        margin: 0;
+            form {
+                width: 100%;
+                height: auto;
+                padding-bottom: 24px;
+
+                label {
+                    display: block;
+                    width: 100%;
+                    height: auto;
+                    position: relative;
+                    padding: 0 24px;
+                    margin-bottom: 20px;
+
+                    &:nth-of-type(2) {
+                        border-bottom: solid 2px $border_1;
+                        padding-bottom: 20px;
                     }
+
+                    input {
+                        width: 100%;
+                        height: 9.87vw;
+                        @include mainInput;
+                    }
+
+                    .cellphoneCheck {
+                        width: 80%;
+                        height: 9.87vw;
+                        @include lightBtn_1;
+                        display: block;
+                        margin: 0 auto;
+                    }
+
+                    .remind {
+                        width: 100%;
+                        color: $remind;
+                        font-size: 3vw;
+                        font-weight: bold;
+                        margin-top: 3px;
+                        line-height: 4vw;
+                    }
+                }
+
+                .checkBtn {
+                    width: 60%;
+                    height: 11vw;
+                    @include mainBtn;
+                    display: block;
+                    margin: 0 auto;
                 }
             }
         }
 
         //更變密碼
         &.passwordWindow {
-            width: 92.27vw;
-            height: auto;
 
             .content {
                 width: 100%;
                 height: auto;
-                text-align: center;
                 padding: 24px;
-                box-sizing: border-box;
 
-                input {
-                    width: 100%;
-                    height: 9.87vw;
-                    margin-bottom: 30px;
-                    @include mainInput;
-                }
-
-                button {
-                    width: 100%;
-                    height: 9.87vw;
-                    @include mainBtn;
-                }
-            }
-        }
-
-        //修改手機
-        &.phoneWindow {
-            width: 92.27vw;
-            height: auto;
-
-            .smallTitle {
-                width: 100%;
-                height: auto;
-                color: $mainWord_1;
-                font-size: 4vw;
-                font-weight: bold;
-                box-sizing: border-box;
-                padding: 24px;
-            }
-
-            form {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                box-sizing: border-box;
-                padding: 0 24px 24px;
-                overflow: auto;
-
-                label {
-                    width: 100%;
+                .inputBox {
+                    width: auto;
                     height: auto;
                     position: relative;
                     margin-bottom: 20px;
@@ -671,116 +677,285 @@
                         @include mainInput;
                     }
 
-                    .cellphoneCheck {
-                        width: 100%;
-                        height: 9.87vw;
-                        @include secondBtn;
+                    i {
+                        width: 6.13vw;
+                        height: 4.26vw;
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        right: 16px;
                     }
                 }
 
-                .remind {
-                    width: 100%;
-                    font-size: 3vw;
-                    color: $remind;
-                    font-weight: bold;
-                    margin-top: 10px;
-                    line-height: 4vw;
-                }
-
-                .checkBtn {
+                button {
                     width: 100%;
                     height: 9.87vw;
                     @include mainBtn;
                 }
             }
         }
+        
+        //lang
+        &.langWindow {
 
-        //下載APP
-        &.downloadBox {
-            width: 92.27vw;
-            height: auto;
-
-            .box {
+            ul {
                 width: 100%;
                 height: auto;
-                box-sizing: border-box;
                 padding: 24px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
+                
+                li {
+                    width: 100%;
+                    height: 9.87vw;
+                    margin-bottom: 20px;
+                    @include lightBtn_1;
+                    border-radius: 5px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
 
-                .img {
-                    width: 48px;
-                    height: 48px;
+                    &:last-child {
+                        margin: 0;
+                    }
                 }
             }
         }
 
-        //任務詳情
-        &.eventWindow {
-            width: 92.27vw;
-            height: auto;
+        //下載APP
+        &.downloadBox {
 
+            .box {
+                width: 100%;
+                height: auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 48px 24px;
+
+                .img {
+                    width: 15vw;
+                    height: 15vw;
+                    margin: 0 10px;
+                }
+            }
+        }
+
+        //流水紀錄
+        &.waterWindow_1,
+        &.waterWindow_2,
+        &.betRecord,
+        &.pointWindow {
+            
             .content {
                 width: 100%;
                 height: auto;
-                max-height: 76vh;
+                padding: 16px;
+                max-height: 50vh;
                 overflow-y: auto;
-                box-sizing: border-box;
-                padding: 24px 24px 0;
 
-                p {
-                    color: $mainWord_1;
-                    font-size: 14px;
-                    letter-spacing: 1px;
-                    font-weight: bold;
-                    line-height: 18px;
-                    margin-bottom: 8px;
-                    word-break: break-all;
-                }
-
-                img {
+                .box {
+                    width: 100%;
+                    height: auto;
+                    border: solid 1px $border_1;
+                    border-radius: 5px;
+                    overflow: hidden;
                     margin-bottom: 10px;
+
+                    .smallTitle {
+                        width: 100%;
+                        height: 9vw;
+                        background: $table_jumpWindow_TitleBG;
+                        border-bottom: solid 1px $table_Border;
+                        color: $mainColor_1;
+                        font-size: 4vw;
+                        font-weight: bold;
+                        display: flex;
+                        align-items: center;
+                        padding: 0 16px;
+                    }
+        
+                    ul {
+                        width: 100%;
+                        height: auto;
+                        background: $table_jumpWindow_BG;
+                        border-top: none;
+                        padding: 0 8px;
+        
+                        li {
+                            width: 100%;
+                            height: 9vw;
+                            border-bottom: solid 1px $table_Border;
+                            color: $mainColor_2;
+                            font-size: 3.7vw;
+                            font-weight: bold;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+        
+                            &:last-child {
+                                border: none;
+                            }
+        
+                            p {
+                                color: $mainColor_3;
+        
+                                &.money {
+                                    color: $remind;
+                                }
+                            }
+                        }
+                    }
                 }
-            }
+                
+                table {
+                    width: 100%;
+                    height: auto;
+                    box-shadow: 0 0 0 1px $border_1;
+                    border-radius: 5px;
+                    overflow: hidden;
 
-            .btnBox {
-                width: 100%;
-                height: auto;
-                padding: 20px 0;
-                text-align: center;
+                    tr {
 
-                button {
-                    width: 92%;
-                    height: 42px;
-                    @include mainBtn;
+                        &:last-child {
+
+                            td {
+
+                                p {
+                                    border: none;
+                                }
+                            }
+                        }
+
+                        th {
+                            height: 9vw;
+                            vertical-align: middle;
+                            background: $table_jumpWindow_TitleBG;
+                            border-bottom: solid 1px $table_Border;
+
+                            p {
+                                width: 100%;
+                                color: $mainColor_1;
+                                font-size: 3.4vw;
+                                font-weight: bold;
+                                text-align: center;
+                                @include hiddenText;
+                            }
+                        }
+
+                        td {
+                            width: 34%;
+                            height: 9vw;
+                            vertical-align: middle;
+
+                            &:nth-of-type(1) {
+                                padding-left: 12px;
+
+                                p {
+                                    color: $mainColor_2;
+                                }
+                            }
+                            &:nth-of-type(3) {
+                                padding-right: 12px;
+                            }
+
+                            p {
+                                width: 100%;
+                                height: 100%;
+                                border-bottom: solid 1px $table_Border;
+                                color: $mainColor_3;
+                                font-size: 3.7vw;
+                                font-weight: bold;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                @include hiddenText;
+                            }
+                        }
+                    }
+                }
+
+                .pageBox {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    align-items: center;
+                    margin-top: 16px;
+
+                    .line {
+                        width: 100%;
+                        height: 1px;
+                        background: $disable;
+                    }
+
+                    i {
+                        width: 16px;
+                        height: 9px;
+                        margin: 0 5px;
+                        flex-shrink: 0;
+
+                        &.disable {
+                            filter: grayscale(1) brightness(3);
+                        }
+
+                        &:nth-of-type(1) {
+                            transform: rotate(90deg);
+                        }
+                        &:nth-of-type(2) {
+                            transform: rotate(-90deg);
+                        }
+                    }
+
+                    p {
+                        width: 5vw;
+                        height: 5vw;
+                        background: $border_1;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-shrink: 0;
+                        padding-bottom: 2px;
+
+                        span {
+                            color: $mainColor_4;
+                            font-size: 3vw;
+                            font-weight: bold;
+                        }
+                    }
+                }
+
+                .pageText {
+                    width: 100%;
+                    color: $disable;
+                    font-size: 3vw;
+                    font-weight: bold;
+                    text-align: center;
+                    margin-top: 5px;
                 }
             }
         }
 
         //loading
-        .loading {
-            width: 92.27vw;
-            height: auto;
+        &.loading {
 
             .content {
                 width: 100%;
-                height: 60vw;
+                height: 26vh;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 flex-direction: column;
 
-                div {
+                .img {
                     width: 30vw;
                     height: 30vw;
                     animation: round 2s linear 0s infinite;
                 }
 
                 p {
-                    margin-top: 20px;
-                    color: $mainWord_4;
+                    color: $mainColor_3;
+                    font-size: 4vw;
                     font-weight: bold;
+                    margin-top: 20px;
                 }
 
                 @keyframes round {
@@ -802,6 +977,19 @@
             display: flex;
             align-items: center;
             justify-content: center;
+
+            &.sp {
+                height: auto;
+                flex-direction: column;
+                padding: 16px 0;
+
+                .smallTitle {
+                    color: $mainColor_3;
+                    font-size: 4vw;
+                    letter-spacing: 0;
+                    margin-top: 8px;
+                }
+            }
 
             p {
                 color: $jumpWindow_Title;

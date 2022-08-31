@@ -204,6 +204,7 @@
             <form>
                 <label>
                     <input type="text" placeholder="新しい電話番号を入力してください">
+                    <p class="remind">電話番号は11桁である必要があります</p>
                 </label>
                 <label>
                     <button type="button" class="cellphoneCheck">認証コードを取得する</button>
@@ -211,26 +212,33 @@
                 <label>
                     <input type="text" placeholder="認証コード">
                 </label>
-                <button class="checkBtn">確認</button>
-                <p class="remind">認証コードを送信した後、すぐにライブチャットに連絡してください</p>
+                <button type="button" class="checkBtn close">確認</button>
             </form>
         </div>
         <!--更變密碼-->
         <div class="jumpWindow passwordWindow">
             <div class="title">
-                バスワード変更
+                <p>バスワード変更</p>
                 <i class="close"></i>
             </div>
             <div class="content">
                 <form>
-                    <input type="text" placeholder="旧パスワード">
-                    <input type="text" placeholder="新しいパスワード">
-                    <input type="text" placeholder="パスワードを確認">
+                    <div class="inputBox">
+                        <input type="text" placeholder="旧パスワード">
+                        <i class="eye"></i>
+                    </div>
+                    <div class="inputBox">
+                        <input type="text" placeholder="新しいパスワード">
+                        <i class="eye"></i>
+                    </div>
+                    <div class="inputBox">
+                        <input type="text" placeholder="パスワードを確認" value="aa1234">
+                        <i class="eye active"></i>
+                    </div>
                     <button type="button" class="close">確認</button>
                 </form>
             </div>
         </div>
     </div>
-    <div class="bg"></div>
 </body>
 </html>

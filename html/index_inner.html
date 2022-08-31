@@ -97,7 +97,39 @@
                     <p>カードゲーム</p>
                 </li>
             </ul>
-            <ul class="downBox">
+            <ul class="downBox hot">
+                <li class="openSlot">
+                    <img src="../images/partner/slot/gameImg_1.png" alt="">
+                </li>
+                <li class="openSlot">
+                    <img src="../images/partner/slot/gameImg_2.png" alt="">
+                </li>
+                <li class="openSlot">
+                    <img src="../images/partner/slot/gameImg_3.png" alt="">
+                </li>
+                <li class="openSlot">
+                    <img src="../images/partner/slot/gameImg_4.png" alt="">
+                </li>
+                <li class="openFish">
+                    <img src="../images/partner/fish/gameImg_1.png" alt="">
+                </li>
+                <li class="openFish">
+                    <img src="../images/partner/fish/gameImg_2.png" alt="">
+                </li>
+                <li class="openFish">
+                    <img src="../images/partner/fish/gameImg_3.png" alt="">
+                </li>
+            </ul>
+            <ul class="downBox sport">
+                <li class="openSport">
+                    <img src="../images/partner/sport/sport_36588.png" alt="">
+                    <div class="textBox">
+                        <p class="title">36588 Sports</p>
+                        <p class="sub">36588 スポーツ</p>
+                    </div>
+                </li>
+            </ul>
+            <ul class="downBox live display">
                 <li class="openLive">
                     <img src="../images/partner/live/liveImg_1.png" alt="">
                     <div class="textBox">
@@ -112,32 +144,45 @@
                         <p class="sub">AG ライブ</p>
                     </div>
                 </li>
-                <li class="openLive">
-                    <img src="../images/partner/live/liveImg_1.png" alt="">
+            </ul>
+            <ul class="downBox slot">
+                <li onclick="window.location.href='./slotPage.html'">
+                    <img src="../images/partner/slot/slot_ag.png" alt="">
                     <div class="textBox">
-                        <p class="title">SA 真人</p>
-                        <p class="sub">SA ライブ</p>
+                        <p class="title">AG SLOT</p>
+                        <p class="sub">AG スロット</p>
                     </div>
                 </li>
-                <li class="openLive">
-                    <img src="../images/partner/live/liveImg_2.png" alt="">
+                <li onclick="window.location.href='./slotPage.html'">
+                    <img src="../images/partner/slot/slot_ifun.png" alt="">
                     <div class="textBox">
-                        <p class="title">AG 真人</p>
-                        <p class="sub">AG ライブ</p>
+                        <p class="title">iFUN SLOT</p>
+                        <p class="sub">iFUN スロット</p>
                     </div>
                 </li>
-                <li class="openLive">
-                    <img src="../images/partner/live/liveImg_1.png" alt="">
+            </ul>
+            <ul class="downBox fish">
+                <li onclick="window.location.href='./fishPage.html'">
+                    <img src="../images/partner/fish/fish_rsg.png" alt="">
                     <div class="textBox">
-                        <p class="title">SA 真人</p>
-                        <p class="sub">SA ライブ</p>
+                        <p class="title">RSG</p>
+                        <p class="sub">AG 釣りゲーム</p>
                     </div>
                 </li>
-                <li class="openLive">
-                    <img src="../images/partner/live/liveImg_2.png" alt="">
+            </ul>
+            <ul class="downBox board">
+                <li onclick="window.location.href='./boardPage.html'">
+                    <img src="../images/partner/board/board_ag.png" alt="">
                     <div class="textBox">
-                        <p class="title">AG 真人</p>
-                        <p class="sub">AG ライブ</p>
+                        <p class="title">AG</p>
+                        <p class="sub">AG カードゲーム</p>
+                    </div>
+                </li>
+                <li onclick="window.location.href='./boardPage.html'">
+                    <img src="../images/partner/board/board_ifun.png" alt="">
+                    <div class="textBox">
+                        <p class="title">iFUN</p>
+                        <p class="sub">iFUN カードゲーム</p>
                     </div>
                 </li>
             </ul>
@@ -272,6 +317,90 @@
             </div>
         </div>
         <div class="jumpWindow betWindow sportGame">
+            <div class="title">
+                <p>ゲームウォレットの振替</p>
+                <i class="close"></i>
+            </div>
+            <div class="top">
+                <p class="smallTitle">ゲームウォレットの残高を確認してください</p>
+                <label class="selectBox">
+                    <select>
+                        <option value="">メインウォレット</option>
+                        <option value="">メインウォレット</option>
+                        <option value="">メインウォレット</option>
+                    </select>
+                    <i class="arrow_ic"></i>
+                </label>
+                <p class="amount">$2.67</p>
+                <button>メインウォレットへ戻す</button>
+            </div>
+            <div class="bottom">
+                <p class="smallTitle">振替先ウォレット</p>
+                <label class="selectBox">
+                    <select>
+                        <option value="">Bwin</option>
+                        <option value="">Bwin</option>
+                        <option value="">Bwin</option>
+                    </select>
+                    <i class="arrow_ic"></i>
+                    <p class="money">$1.237</p>
+                </label>
+                <label class="inputBox">
+                    <input type="text" placeholder="振替金額をご入力ください">
+                </label>
+                <button>振替します</button>
+            </div>
+            <div class="enterGame">
+                <button type="button" class="close">ゲームに入る</button>
+                <div>
+                    <input type="checkbox">
+                    <p>今日は表示しない</p>
+                </div>
+            </div>
+        </div>
+        <div class="jumpWindow betWindow slotGame">
+            <div class="title">
+                <p>ゲームウォレットの振替</p>
+                <i class="close"></i>
+            </div>
+            <div class="top">
+                <p class="smallTitle">ゲームウォレットの残高を確認してください</p>
+                <label class="selectBox">
+                    <select>
+                        <option value="">メインウォレット</option>
+                        <option value="">メインウォレット</option>
+                        <option value="">メインウォレット</option>
+                    </select>
+                    <i class="arrow_ic"></i>
+                </label>
+                <p class="amount">$2.67</p>
+                <button>メインウォレットへ戻す</button>
+            </div>
+            <div class="bottom">
+                <p class="smallTitle">振替先ウォレット</p>
+                <label class="selectBox">
+                    <select>
+                        <option value="">Bwin</option>
+                        <option value="">Bwin</option>
+                        <option value="">Bwin</option>
+                    </select>
+                    <i class="arrow_ic"></i>
+                    <p class="money">$1.237</p>
+                </label>
+                <label class="inputBox">
+                    <input type="text" placeholder="振替金額をご入力ください">
+                </label>
+                <button>振替します</button>
+            </div>
+            <div class="enterGame">
+                <button type="button" class="close">ゲームに入る</button>
+                <div>
+                    <input type="checkbox">
+                    <p>今日は表示しない</p>
+                </div>
+            </div>
+        </div>
+        <div class="jumpWindow betWindow fishGame">
             <div class="title">
                 <p>ゲームウォレットの振替</p>
                 <i class="close"></i>

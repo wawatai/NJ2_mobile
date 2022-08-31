@@ -89,6 +89,13 @@
                 justify-content: center;
                 flex-shrink: 0;
 
+                &:active,&.active {
+
+                    p {
+                        color: $mainColor_4;
+                    }
+                }
+
                 i {
                     width: 9vw;
                     height: 9vw;

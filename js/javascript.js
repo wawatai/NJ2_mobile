@@ -19,6 +19,21 @@ $(document).on('ready', function() {
     })
 })
 
+//home
+$(function(){
+    $(".homeCenter .topBox li").on("click",function(){
+        $(this)
+        .addClass("active")
+        .siblings().removeClass("active");
+
+        var n = $(this).index();
+
+        $(".homeCenter .downBox:eq("+ n +")")
+        .addClass("display")
+        .siblings().removeClass("display");
+    })
+})
+
 //news
 $(function(){
     $(".jumpWindow.news li.smallTitle,.jumpWindow.rules li.smallTitle").on("click",function(){
@@ -343,6 +358,90 @@ $(function(){
         $('.jumpWindow')
         .removeClass('display');
         $('.filter,.plsGo')
+        .addClass('display');
+    })
+
+    $(".edit_ic.changePhone").on("click",function(){
+        $('.jumpWindow')
+        .removeClass('display');
+        $('.filter,.phoneWindow')
+        .addClass('display');
+    })
+
+    $(".pwdBox .edit_ic").on("click",function(){
+        $('.jumpWindow')
+        .removeClass('display');
+        $('.filter,.passwordWindow')
+        .addClass('display');
+    })
+
+    $(".langBtn").on("click",function(){
+        $('.jumpWindow')
+        .removeClass('display');
+        $('.filter,.langWindow')
+        .addClass('display');
+    })
+
+    $(".linkBtn").on("click",function(){
+        $('.jumpWindow')
+        .removeClass('display');
+        $('.filter,.downloadBox')
+        .addClass('display');
+    })
+
+    $(".linkBtn").on("click",function(){
+        $('.jumpWindow')
+        .removeClass('display');
+        $('.filter,.downloadBox')
+        .addClass('display');
+    })
+
+    $(".cardContent .checkBtn").on("click",function(){
+        $('.jumpWindow')
+        .removeClass('display');
+        $('.filter,.plsGo')
+        .addClass('display');
+    })
+
+    $(".plsGo .openBtn").on("click",function(){
+        $('.jumpWindow')
+        .removeClass('display');
+        $('.filter,.plsGo2')
+        .addClass('display');
+    })
+
+    $(".waterBox .openBuy").on("click",function(){
+        $('.jumpWindow')
+        .removeClass('display');
+        $('.filter,.waterWindow_1')
+        .addClass('display');
+    })
+
+    $(".waterBox .openRecord").on("click",function(){
+        $('.jumpWindow')
+        .removeClass('display');
+        $('.filter,.waterWindow_2')
+        .addClass('display');
+    })
+
+    $(".bettingWrap .checkBtn").on("click",function(){
+        $('.jumpWindow')
+        .removeClass('display');
+        $('.filter,.betRecord')
+        .addClass('display');
+    })
+
+    $(".bettingWrap .checkBtn").on("click",function(){
+        $('.jumpWindow')
+        .removeClass('display');
+        $('.filter,.betRecord')
+        .addClass('display');
+    })
+
+    $(".bettingWrap .pointBtn").on("click",function(){
+        $('.jumpWindow')
+        .removeClass('display');
+        $('.filter,.pointWindow')
         .addClass('display');
     })
 })

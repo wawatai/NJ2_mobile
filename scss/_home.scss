@@ -198,9 +198,40 @@
     .downBox {
         width: 100%;
         height: auto;
-        display: grid;
         grid-template-columns: repeat(2,1fr);
         gap: 8px 16px;
+        display: none;
+
+        &.display {
+            display: grid;
+        }
+
+        &.hot {
+
+            li {
+                border-radius: 16px;
+                overflow: hidden;
+            }
+        }
+
+        &.sport {
+            grid-template-columns: repeat(1,1fr);
+
+            li {
+
+                .textBox {
+
+                    .title {
+                        font-size: 7vw;
+                        margin-bottom: 2vw;
+                    }
+
+                    .sub {
+                        font-size: 5vw;
+                    }
+                }
+            }
+        }
 
         li {
             width: auto;
@@ -222,7 +253,7 @@
                 }
 
                 .sub {
-                    color: $mainColor_2;
+                    color: $game_Color;
                     font-size: 3vw;
                     font-weight: bold;
                 }

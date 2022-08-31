@@ -144,7 +144,8 @@ footer.user {
   background-size: contain;
 }
 
-.eventWrap .active .all_ic {
+.eventWrap li:active .all_ic,
+.eventWrap li.active .all_ic {
   background: url("../images/icon/svg/event_all_active.svg") no-repeat center;
   background-size: contain;
 }
@@ -154,7 +155,8 @@ footer.user {
   background-size: contain;
 }
 
-.eventWrap .active .sale_ic {
+.eventWrap li:active .sale_ic,
+.eventWrap li.active .sale_ic {
   background: url("../images/icon/svg/event_sale_active.svg") no-repeat center;
   background-size: contain;
 }
@@ -164,7 +166,8 @@ footer.user {
   background-size: contain;
 }
 
-.eventWrap .active .month_ic {
+.eventWrap li:active .month_ic,
+.eventWrap li.active .month_ic {
   background: url("../images/icon/svg/event_month_active.svg") no-repeat center;
   background-size: contain;
 }
@@ -174,7 +177,8 @@ footer.user {
   background-size: contain;
 }
 
-.eventWrap .active .vip_ic {
+.eventWrap li:active .vip_ic,
+.eventWrap li.active .vip_ic {
   background: url("../images/icon/svg/event_vip_active.svg") no-repeat center;
   background-size: contain;
 }
@@ -211,6 +215,30 @@ footer.user {
 
 .memberWrap .btnBox .right .card::before {
   background: url("../images/icon/svg/member_card.svg") no-repeat center;
+  background-size: contain;
+}
+
+.memberWrap .btnBox .right .bettingRecord:active::before,
+.memberWrap .btnBox .right .bettingRecord.active::before {
+  background: url("../images/icon/svg/member_bettingRecord_active.svg") no-repeat center;
+  background-size: contain;
+}
+
+.memberWrap .btnBox .right .dealRecord:active::before,
+.memberWrap .btnBox .right .dealRecord.active::before {
+  background: url("../images/icon/svg/member_dealRecord_active.svg") no-repeat center;
+  background-size: contain;
+}
+
+.memberWrap .btnBox .right .mail:active::before,
+.memberWrap .btnBox .right .mail.active::before {
+  background: url("../images/icon/svg/member_mail_active.svg") no-repeat center;
+  background-size: contain;
+}
+
+.memberWrap .btnBox .right .card:active::before,
+.memberWrap .btnBox .right .card.active::before {
+  background: url("../images/icon/svg/member_card_active.svg") no-repeat center;
   background-size: contain;
 }
 
@@ -341,6 +369,24 @@ footer.user {
 
 .walletWrap .withdrawal_ic {
   background: url("../images/icon/svg/wallet_withdrawal.svg") no-repeat center;
+  background-size: contain;
+}
+
+.walletWrap li:active .deposit_ic,
+.walletWrap li.active .deposit_ic {
+  background: url("../images/icon/svg/wallet_deposit_active.svg") no-repeat center;
+  background-size: contain;
+}
+
+.walletWrap li:active .transfer_ic,
+.walletWrap li.active .transfer_ic {
+  background: url("../images/icon/svg/wallet_transfer_active.svg") no-repeat center;
+  background-size: contain;
+}
+
+.walletWrap li:active .withdrawal_ic,
+.walletWrap li.active .withdrawal_ic {
+  background: url("../images/icon/svg/wallet_withdrawal_active.svg") no-repeat center;
   background-size: contain;
 }
 
@@ -515,6 +561,11 @@ footer.user {
   background-size: 100%;
 }
 
+.jumpWindow .eye.active {
+  background: url("../images/icon/svg/eye_active.svg") no-repeat center;
+  background-size: 100%;
+}
+
 .jumpWindow.news .arrow_ic {
   background: url("../images/icon/arrow_1.png") no-repeat;
   background-size: contain;
@@ -522,6 +573,11 @@ footer.user {
 
 .jumpWindow.news .flower_ic {
   background: url("../images/icon/flower.png") no-repeat;
+  background-size: contain;
+}
+
+.jumpWindow .dbarrow_ic {
+  background: url("../images/icon/arrow_4.png") no-repeat center;
   background-size: contain;
 }
 
@@ -537,6 +593,31 @@ footer.user {
 
 .jumpWindow .skype_ic {
   background: url("../images/icon/svg/skype.svg") no-repeat center;
+  background-size: contain;
+}
+
+.jumpWindow .pageBox .arrow_ic {
+  background: url("../images/icon/arrow_1.png") no-repeat;
+  background-size: contain;
+}
+
+.jumpWindow.loading .img {
+  background: url("../images/icon/svg/loading.svg") no-repeat;
+  background-size: contain;
+}
+
+.jumpWindow.downloadBox .img.twitter {
+  background: url("../images/icon/twitter_2.png") no-repeat;
+  background-size: contain;
+}
+
+.jumpWindow.downloadBox .img.instergram {
+  background: url("../images/icon/instergram.png") no-repeat;
+  background-size: contain;
+}
+
+.jumpWindow.downloadBox .img.baido {
+  background: url("../images/icon/baido.png") no-repeat;
   background-size: contain;
 }
 
@@ -1316,11 +1397,29 @@ html body .homeCenter .topBox li i.soccer_ic::before, html body .homeCenter .top
 html body .homeCenter .downBox {
   width: 100%;
   height: auto;
-  display: -ms-grid;
-  display: grid;
   -ms-grid-columns: 1fr 16px 1fr;
   grid-template-columns: repeat(2, 1fr);
   gap: 8px 16px;
+  display: none;
+}
+html body .homeCenter .downBox.display {
+  display: -ms-grid;
+  display: grid;
+}
+html body .homeCenter .downBox.hot li {
+  border-radius: 16px;
+  overflow: hidden;
+}
+html body .homeCenter .downBox.sport {
+  -ms-grid-columns: (1fr)[1];
+  grid-template-columns: repeat(1, 1fr);
+}
+html body .homeCenter .downBox.sport li .textBox .title {
+  font-size: 7vw;
+  margin-bottom: 2vw;
+}
+html body .homeCenter .downBox.sport li .textBox .sub {
+  font-size: 5vw;
 }
 html body .homeCenter .downBox li {
   width: auto;
@@ -1341,7 +1440,7 @@ html body .homeCenter .downBox li .textBox .title {
   margin-bottom: 1vw;
 }
 html body .homeCenter .downBox li .textBox .sub {
-  color: #ba9141;
+  color: #7c5b1a;
   font-size: 3vw;
   font-weight: bold;
 }
@@ -1832,10 +1931,11 @@ html body .filter .jumpWindow.registerWindow form label .code {
   height: 8vw;
   position: absolute;
   right: 17px;
-  background: -webkit-gradient(linear, left bottom, left top, from(#970707), color-stop(98%, #cf0505));
-  background: linear-gradient(to top, #970707 0%, #cf0505 98%);
+  background: -webkit-gradient(linear, left bottom, left top, from(#e7e7e7), to(#ffffff));
+  background: linear-gradient(to top, #e7e7e7 0%, #ffffff 100%);
   border-radius: 30px;
-  color: #ffffff;
+  border: solid 1px #b8151a;
+  color: #b8151a;
   font-size: 3.4vw;
   font-weight: bold;
   border-radius: 5px;
@@ -1843,8 +1943,8 @@ html body .filter .jumpWindow.registerWindow form label .code {
   padding: 0 7px;
 }
 html body .filter .jumpWindow.registerWindow form label .code:active, html body .filter .jumpWindow.registerWindow form label .code.active {
-  background: -webkit-gradient(linear, left top, left bottom, from(#970707), color-stop(98%, #cf0505));
-  background: linear-gradient(to bottom, #970707 0%, #cf0505 98%);
+  background: #b8151a;
+  color: #ffffff;
 }
 html body .filter .jumpWindow.registerWindow form .checkBtn {
   width: 100%;
@@ -1871,20 +1971,37 @@ html body .filter .jumpWindow.news.rules .title p, html body .filter .jumpWindow
 }
 html body .filter .jumpWindow.news.rules .allBtn, html body .filter .jumpWindow.rules.rules .allBtn {
   width: 70%;
-  height: 35px;
-  background: -webkit-gradient(linear, left bottom, left top, from(#e7e7e7), to(#ffffff));
-  background: linear-gradient(to top, #e7e7e7 0%, #ffffff 100%);
+  height: 11vw;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(4%, #bc9c64), color-stop(93%, #f3d197));
+  background: linear-gradient(to top, #bc9c64 4%, #f3d197 93%);
   border-radius: 30px;
-  border: solid 1px #b8151a;
-  color: #b8151a;
-  font-size: 3.4vw;
+  color: #ffffff;
+  font-size: 4vw;
   font-weight: bold;
-  display: block;
+  letter-spacing: 1px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 16px auto 0;
 }
 html body .filter .jumpWindow.news.rules .allBtn:active, html body .filter .jumpWindow.news.rules .allBtn.active, html body .filter .jumpWindow.rules.rules .allBtn:active, html body .filter .jumpWindow.rules.rules .allBtn.active {
-  background: #b8151a;
-  color: #ffffff;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(4%, #bc9c64), color-stop(93%, #f3d197));
+  background: linear-gradient(to bottom, #bc9c64 4%, #f3d197 93%);
+}
+html body .filter .jumpWindow.news.rules .allBtn i, html body .filter .jumpWindow.rules.rules .allBtn i {
+  width: 4vw;
+  height: 4vw;
+  margin-left: 5px;
+  -webkit-filter: grayscale(1) brightness(15);
+          filter: grayscale(1) brightness(15);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 html body .filter .jumpWindow.news.rules .box .infoBox, html body .filter .jumpWindow.rules.rules .box .infoBox {
   width: 100%;
@@ -2228,147 +2345,34 @@ html body .filter .jumpWindow.betWindow .enterGame div p {
   font-size: 16px;
   font-weight: bold;
 }
-html body .filter .jumpWindow.langWindow {
-  width: 92.27vw;
-  height: auto;
-}
-html body .filter .jumpWindow.langWindow ul {
-  width: 100%;
-  height: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 3.2vw;
-}
-html body .filter .jumpWindow.langWindow ul li {
-  width: 100%;
-  height: 9.87vw;
-  margin-bottom: 2.4vw;
-  background: #101010;
-  border-radius: 3px;
-  border: solid 1px #a88335;
-  color: #ffc13c;
-  font-size: 13px;
-  font-weight: bold;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-html body .filter .jumpWindow.langWindow ul li:active, html body .filter .jumpWindow.langWindow ul li.active {
-  background: #ffc13c;
-  border-color: #ffc13c;
-  color: #101010;
-}
-html body .filter .jumpWindow.langWindow ul li:last-child {
-  margin: 0;
-}
-html body .filter .jumpWindow.passwordWindow {
-  width: 92.27vw;
-  height: auto;
-}
-html body .filter .jumpWindow.passwordWindow .content {
-  width: 100%;
-  height: auto;
-  text-align: center;
-  padding: 24px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-html body .filter .jumpWindow.passwordWindow .content input {
-  width: 100%;
-  height: 9.87vw;
-  margin-bottom: 30px;
-  background: #ffffff;
-  border-radius: 5px;
-  border: solid 1px #daaf6d;
-  -webkit-box-shadow: 0 2px 5px 0 #0000001d inset;
-          box-shadow: 0 2px 5px 0 #0000001d inset;
-  color: #3a3a3a;
-  font-size: 3.4vw;
-  font-weight: bold;
-  padding-left: 16px;
-}
-html body .filter .jumpWindow.passwordWindow .content input::-webkit-input-placeholder {
-  color: #a3a3a3;
-}
-html body .filter .jumpWindow.passwordWindow .content input::-moz-placeholder {
-  color: #a3a3a3;
-}
-html body .filter .jumpWindow.passwordWindow .content input:-ms-input-placeholder {
-  color: #a3a3a3;
-}
-html body .filter .jumpWindow.passwordWindow .content input::-ms-input-placeholder {
-  color: #a3a3a3;
-}
-html body .filter .jumpWindow.passwordWindow .content input::placeholder {
-  color: #a3a3a3;
-}
-html body .filter .jumpWindow.passwordWindow .content button {
-  width: 100%;
-  height: 9.87vw;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(4%, #bc9c64), color-stop(93%, #f3d197));
-  background: linear-gradient(to top, #bc9c64 4%, #f3d197 93%);
-  border-radius: 30px;
-  color: #ffffff;
+html body .filter .jumpWindow.phoneWindow .title p {
   font-size: 4vw;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
-html body .filter .jumpWindow.passwordWindow .content button:active, html body .filter .jumpWindow.passwordWindow .content button.active {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(4%, #bc9c64), color-stop(93%, #f3d197));
-  background: linear-gradient(to bottom, #bc9c64 4%, #f3d197 93%);
-}
-html body .filter .jumpWindow.phoneWindow {
-  width: 92.27vw;
-  height: auto;
 }
 html body .filter .jumpWindow.phoneWindow .smallTitle {
   width: 100%;
   height: auto;
-  color: #ffc13c;
+  color: #ba9141;
   font-size: 4vw;
   font-weight: bold;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 24px;
+  text-align: center;
+  padding: 16px 0;
 }
 html body .filter .jumpWindow.phoneWindow form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 0 24px 24px;
-  overflow: auto;
+  width: 100%;
+  height: auto;
+  padding-bottom: 24px;
 }
 html body .filter .jumpWindow.phoneWindow form label {
+  display: block;
   width: 100%;
   height: auto;
   position: relative;
+  padding: 0 24px;
   margin-bottom: 20px;
+}
+html body .filter .jumpWindow.phoneWindow form label:nth-of-type(2) {
+  border-bottom: solid 2px #b8151a;
+  padding-bottom: 20px;
 }
 html body .filter .jumpWindow.phoneWindow form label input {
   width: 100%;
@@ -2399,28 +2403,96 @@ html body .filter .jumpWindow.phoneWindow form label input::placeholder {
   color: #a3a3a3;
 }
 html body .filter .jumpWindow.phoneWindow form label .cellphoneCheck {
-  width: 100%;
+  width: 80%;
   height: 9.87vw;
-  background: -webkit-gradient(linear, left bottom, left top, from(#970707), color-stop(98%, #cf0505));
-  background: linear-gradient(to top, #970707 0%, #cf0505 98%);
+  background: -webkit-gradient(linear, left bottom, left top, from(#e7e7e7), to(#ffffff));
+  background: linear-gradient(to top, #e7e7e7 0%, #ffffff 100%);
   border-radius: 30px;
-  color: #ffffff;
+  border: solid 1px #b8151a;
+  color: #b8151a;
   font-size: 3.4vw;
   font-weight: bold;
+  display: block;
+  margin: 0 auto;
 }
 html body .filter .jumpWindow.phoneWindow form label .cellphoneCheck:active, html body .filter .jumpWindow.phoneWindow form label .cellphoneCheck.active {
-  background: -webkit-gradient(linear, left top, left bottom, from(#970707), color-stop(98%, #cf0505));
-  background: linear-gradient(to bottom, #970707 0%, #cf0505 98%);
+  background: #b8151a;
+  color: #ffffff;
 }
-html body .filter .jumpWindow.phoneWindow form .remind {
+html body .filter .jumpWindow.phoneWindow form label .remind {
   width: 100%;
-  font-size: 3vw;
   color: #3c4acc;
+  font-size: 3vw;
   font-weight: bold;
-  margin-top: 10px;
+  margin-top: 3px;
   line-height: 4vw;
 }
 html body .filter .jumpWindow.phoneWindow form .checkBtn {
+  width: 60%;
+  height: 11vw;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(4%, #bc9c64), color-stop(93%, #f3d197));
+  background: linear-gradient(to top, #bc9c64 4%, #f3d197 93%);
+  border-radius: 30px;
+  color: #ffffff;
+  font-size: 4vw;
+  font-weight: bold;
+  letter-spacing: 1px;
+  display: block;
+  margin: 0 auto;
+}
+html body .filter .jumpWindow.phoneWindow form .checkBtn:active, html body .filter .jumpWindow.phoneWindow form .checkBtn.active {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(4%, #bc9c64), color-stop(93%, #f3d197));
+  background: linear-gradient(to bottom, #bc9c64 4%, #f3d197 93%);
+}
+html body .filter .jumpWindow.passwordWindow .content {
+  width: 100%;
+  height: auto;
+  padding: 24px;
+}
+html body .filter .jumpWindow.passwordWindow .content .inputBox {
+  width: auto;
+  height: auto;
+  position: relative;
+  margin-bottom: 20px;
+}
+html body .filter .jumpWindow.passwordWindow .content .inputBox input {
+  width: 100%;
+  height: 9.87vw;
+  background: #ffffff;
+  border-radius: 5px;
+  border: solid 1px #daaf6d;
+  -webkit-box-shadow: 0 2px 5px 0 #0000001d inset;
+          box-shadow: 0 2px 5px 0 #0000001d inset;
+  color: #3a3a3a;
+  font-size: 3.4vw;
+  font-weight: bold;
+  padding-left: 16px;
+}
+html body .filter .jumpWindow.passwordWindow .content .inputBox input::-webkit-input-placeholder {
+  color: #a3a3a3;
+}
+html body .filter .jumpWindow.passwordWindow .content .inputBox input::-moz-placeholder {
+  color: #a3a3a3;
+}
+html body .filter .jumpWindow.passwordWindow .content .inputBox input:-ms-input-placeholder {
+  color: #a3a3a3;
+}
+html body .filter .jumpWindow.passwordWindow .content .inputBox input::-ms-input-placeholder {
+  color: #a3a3a3;
+}
+html body .filter .jumpWindow.passwordWindow .content .inputBox input::placeholder {
+  color: #a3a3a3;
+}
+html body .filter .jumpWindow.passwordWindow .content .inputBox i {
+  width: 6.13vw;
+  height: 4.26vw;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 16px;
+}
+html body .filter .jumpWindow.passwordWindow .content button {
   width: 100%;
   height: 9.87vw;
   background: -webkit-gradient(linear, left bottom, left top, color-stop(4%, #bc9c64), color-stop(93%, #f3d197));
@@ -2431,20 +2503,27 @@ html body .filter .jumpWindow.phoneWindow form .checkBtn {
   font-weight: bold;
   letter-spacing: 1px;
 }
-html body .filter .jumpWindow.phoneWindow form .checkBtn:active, html body .filter .jumpWindow.phoneWindow form .checkBtn.active {
+html body .filter .jumpWindow.passwordWindow .content button:active, html body .filter .jumpWindow.passwordWindow .content button.active {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(4%, #bc9c64), color-stop(93%, #f3d197));
   background: linear-gradient(to bottom, #bc9c64 4%, #f3d197 93%);
 }
-html body .filter .jumpWindow.downloadBox {
-  width: 92.27vw;
-  height: auto;
-}
-html body .filter .jumpWindow.downloadBox .box {
+html body .filter .jumpWindow.langWindow ul {
   width: 100%;
   height: auto;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   padding: 24px;
+}
+html body .filter .jumpWindow.langWindow ul li {
+  width: 100%;
+  height: 9.87vw;
+  margin-bottom: 20px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#e7e7e7), to(#ffffff));
+  background: linear-gradient(to top, #e7e7e7 0%, #ffffff 100%);
+  border-radius: 30px;
+  border: solid 1px #b8151a;
+  color: #b8151a;
+  font-size: 3.4vw;
+  font-weight: bold;
+  border-radius: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2455,63 +2534,228 @@ html body .filter .jumpWindow.downloadBox .box {
       -ms-flex-pack: center;
           justify-content: center;
 }
-html body .filter .jumpWindow.downloadBox .box .img {
-  width: 48px;
-  height: 48px;
+html body .filter .jumpWindow.langWindow ul li:active, html body .filter .jumpWindow.langWindow ul li.active {
+  background: #b8151a;
+  color: #ffffff;
 }
-html body .filter .jumpWindow.eventWindow {
-  width: 92.27vw;
-  height: auto;
+html body .filter .jumpWindow.langWindow ul li:last-child {
+  margin: 0;
 }
-html body .filter .jumpWindow.eventWindow .content {
+html body .filter .jumpWindow.downloadBox .box {
   width: 100%;
   height: auto;
-  max-height: 76vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 48px 24px;
+}
+html body .filter .jumpWindow.downloadBox .box .img {
+  width: 15vw;
+  height: 15vw;
+  margin: 0 10px;
+}
+html body .filter .jumpWindow.waterWindow_1 .content, html body .filter .jumpWindow.waterWindow_2 .content, html body .filter .jumpWindow.betRecord .content, html body .filter .jumpWindow.pointWindow .content {
+  width: 100%;
+  height: auto;
+  padding: 16px;
+  max-height: 50vh;
   overflow-y: auto;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 24px 24px 0;
 }
-html body .filter .jumpWindow.eventWindow .content p {
-  color: #ffc13c;
-  font-size: 14px;
-  letter-spacing: 1px;
-  font-weight: bold;
-  line-height: 18px;
-  margin-bottom: 8px;
-  word-break: break-all;
-}
-html body .filter .jumpWindow.eventWindow .content img {
+html body .filter .jumpWindow.waterWindow_1 .content .box, html body .filter .jumpWindow.waterWindow_2 .content .box, html body .filter .jumpWindow.betRecord .content .box, html body .filter .jumpWindow.pointWindow .content .box {
+  width: 100%;
+  height: auto;
+  border: solid 1px #b8151a;
+  border-radius: 5px;
+  overflow: hidden;
   margin-bottom: 10px;
 }
-html body .filter .jumpWindow.eventWindow .btnBox {
+html body .filter .jumpWindow.waterWindow_1 .content .box .smallTitle, html body .filter .jumpWindow.waterWindow_2 .content .box .smallTitle, html body .filter .jumpWindow.betRecord .content .box .smallTitle, html body .filter .jumpWindow.pointWindow .content .box .smallTitle {
   width: 100%;
-  height: auto;
-  padding: 20px 0;
-  text-align: center;
-}
-html body .filter .jumpWindow.eventWindow .btnBox button {
-  width: 92%;
-  height: 42px;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(4%, #bc9c64), color-stop(93%, #f3d197));
-  background: linear-gradient(to top, #bc9c64 4%, #f3d197 93%);
-  border-radius: 30px;
-  color: #ffffff;
+  height: 9vw;
+  background: -webkit-gradient(linear, left bottom, left top, from(#eeeeee), to(#ffffff));
+  background: linear-gradient(to top, #eeeeee 0%, #ffffff 100%);
+  border-bottom: solid 1px #b78d4b;
+  color: #b8151a;
   font-size: 4vw;
   font-weight: bold;
-  letter-spacing: 1px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 16px;
 }
-html body .filter .jumpWindow.eventWindow .btnBox button:active, html body .filter .jumpWindow.eventWindow .btnBox button.active {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(4%, #bc9c64), color-stop(93%, #f3d197));
-  background: linear-gradient(to bottom, #bc9c64 4%, #f3d197 93%);
-}
-html body .filter .jumpWindow .loading {
-  width: 92.27vw;
-  height: auto;
-}
-html body .filter .jumpWindow .loading .content {
+html body .filter .jumpWindow.waterWindow_1 .content .box ul, html body .filter .jumpWindow.waterWindow_2 .content .box ul, html body .filter .jumpWindow.betRecord .content .box ul, html body .filter .jumpWindow.pointWindow .content .box ul {
   width: 100%;
-  height: 60vw;
+  height: auto;
+  background: #f1f1f1;
+  border-top: none;
+  padding: 0 8px;
+}
+html body .filter .jumpWindow.waterWindow_1 .content .box ul li, html body .filter .jumpWindow.waterWindow_2 .content .box ul li, html body .filter .jumpWindow.betRecord .content .box ul li, html body .filter .jumpWindow.pointWindow .content .box ul li {
+  width: 100%;
+  height: 9vw;
+  border-bottom: solid 1px #b78d4b;
+  color: #ba9141;
+  font-size: 3.7vw;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+html body .filter .jumpWindow.waterWindow_1 .content .box ul li:last-child, html body .filter .jumpWindow.waterWindow_2 .content .box ul li:last-child, html body .filter .jumpWindow.betRecord .content .box ul li:last-child, html body .filter .jumpWindow.pointWindow .content .box ul li:last-child {
+  border: none;
+}
+html body .filter .jumpWindow.waterWindow_1 .content .box ul li p, html body .filter .jumpWindow.waterWindow_2 .content .box ul li p, html body .filter .jumpWindow.betRecord .content .box ul li p, html body .filter .jumpWindow.pointWindow .content .box ul li p {
+  color: #3a3a3a;
+}
+html body .filter .jumpWindow.waterWindow_1 .content .box ul li p.money, html body .filter .jumpWindow.waterWindow_2 .content .box ul li p.money, html body .filter .jumpWindow.betRecord .content .box ul li p.money, html body .filter .jumpWindow.pointWindow .content .box ul li p.money {
+  color: #3c4acc;
+}
+html body .filter .jumpWindow.waterWindow_1 .content table, html body .filter .jumpWindow.waterWindow_2 .content table, html body .filter .jumpWindow.betRecord .content table, html body .filter .jumpWindow.pointWindow .content table {
+  width: 100%;
+  height: auto;
+  -webkit-box-shadow: 0 0 0 1px #b8151a;
+          box-shadow: 0 0 0 1px #b8151a;
+  border-radius: 5px;
+  overflow: hidden;
+}
+html body .filter .jumpWindow.waterWindow_1 .content table tr:last-child td p, html body .filter .jumpWindow.waterWindow_2 .content table tr:last-child td p, html body .filter .jumpWindow.betRecord .content table tr:last-child td p, html body .filter .jumpWindow.pointWindow .content table tr:last-child td p {
+  border: none;
+}
+html body .filter .jumpWindow.waterWindow_1 .content table tr th, html body .filter .jumpWindow.waterWindow_2 .content table tr th, html body .filter .jumpWindow.betRecord .content table tr th, html body .filter .jumpWindow.pointWindow .content table tr th {
+  height: 9vw;
+  vertical-align: middle;
+  background: -webkit-gradient(linear, left bottom, left top, from(#eeeeee), to(#ffffff));
+  background: linear-gradient(to top, #eeeeee 0%, #ffffff 100%);
+  border-bottom: solid 1px #b78d4b;
+}
+html body .filter .jumpWindow.waterWindow_1 .content table tr th p, html body .filter .jumpWindow.waterWindow_2 .content table tr th p, html body .filter .jumpWindow.betRecord .content table tr th p, html body .filter .jumpWindow.pointWindow .content table tr th p {
+  width: 100%;
+  color: #b8151a;
+  font-size: 3.4vw;
+  font-weight: bold;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+html body .filter .jumpWindow.waterWindow_1 .content table tr td, html body .filter .jumpWindow.waterWindow_2 .content table tr td, html body .filter .jumpWindow.betRecord .content table tr td, html body .filter .jumpWindow.pointWindow .content table tr td {
+  width: 34%;
+  height: 9vw;
+  vertical-align: middle;
+}
+html body .filter .jumpWindow.waterWindow_1 .content table tr td:nth-of-type(1), html body .filter .jumpWindow.waterWindow_2 .content table tr td:nth-of-type(1), html body .filter .jumpWindow.betRecord .content table tr td:nth-of-type(1), html body .filter .jumpWindow.pointWindow .content table tr td:nth-of-type(1) {
+  padding-left: 12px;
+}
+html body .filter .jumpWindow.waterWindow_1 .content table tr td:nth-of-type(1) p, html body .filter .jumpWindow.waterWindow_2 .content table tr td:nth-of-type(1) p, html body .filter .jumpWindow.betRecord .content table tr td:nth-of-type(1) p, html body .filter .jumpWindow.pointWindow .content table tr td:nth-of-type(1) p {
+  color: #ba9141;
+}
+html body .filter .jumpWindow.waterWindow_1 .content table tr td:nth-of-type(3), html body .filter .jumpWindow.waterWindow_2 .content table tr td:nth-of-type(3), html body .filter .jumpWindow.betRecord .content table tr td:nth-of-type(3), html body .filter .jumpWindow.pointWindow .content table tr td:nth-of-type(3) {
+  padding-right: 12px;
+}
+html body .filter .jumpWindow.waterWindow_1 .content table tr td p, html body .filter .jumpWindow.waterWindow_2 .content table tr td p, html body .filter .jumpWindow.betRecord .content table tr td p, html body .filter .jumpWindow.pointWindow .content table tr td p {
+  width: 100%;
+  height: 100%;
+  border-bottom: solid 1px #b78d4b;
+  color: #3a3a3a;
+  font-size: 3.7vw;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+html body .filter .jumpWindow.waterWindow_1 .content .pageBox, html body .filter .jumpWindow.waterWindow_2 .content .pageBox, html body .filter .jumpWindow.betRecord .content .pageBox, html body .filter .jumpWindow.pointWindow .content .pageBox {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 16px;
+}
+html body .filter .jumpWindow.waterWindow_1 .content .pageBox .line, html body .filter .jumpWindow.waterWindow_2 .content .pageBox .line, html body .filter .jumpWindow.betRecord .content .pageBox .line, html body .filter .jumpWindow.pointWindow .content .pageBox .line {
+  width: 100%;
+  height: 1px;
+  background: #7f7f7f;
+}
+html body .filter .jumpWindow.waterWindow_1 .content .pageBox i, html body .filter .jumpWindow.waterWindow_2 .content .pageBox i, html body .filter .jumpWindow.betRecord .content .pageBox i, html body .filter .jumpWindow.pointWindow .content .pageBox i {
+  width: 16px;
+  height: 9px;
+  margin: 0 5px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+html body .filter .jumpWindow.waterWindow_1 .content .pageBox i.disable, html body .filter .jumpWindow.waterWindow_2 .content .pageBox i.disable, html body .filter .jumpWindow.betRecord .content .pageBox i.disable, html body .filter .jumpWindow.pointWindow .content .pageBox i.disable {
+  -webkit-filter: grayscale(1) brightness(3);
+          filter: grayscale(1) brightness(3);
+}
+html body .filter .jumpWindow.waterWindow_1 .content .pageBox i:nth-of-type(1), html body .filter .jumpWindow.waterWindow_2 .content .pageBox i:nth-of-type(1), html body .filter .jumpWindow.betRecord .content .pageBox i:nth-of-type(1), html body .filter .jumpWindow.pointWindow .content .pageBox i:nth-of-type(1) {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+html body .filter .jumpWindow.waterWindow_1 .content .pageBox i:nth-of-type(2), html body .filter .jumpWindow.waterWindow_2 .content .pageBox i:nth-of-type(2), html body .filter .jumpWindow.betRecord .content .pageBox i:nth-of-type(2), html body .filter .jumpWindow.pointWindow .content .pageBox i:nth-of-type(2) {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+html body .filter .jumpWindow.waterWindow_1 .content .pageBox p, html body .filter .jumpWindow.waterWindow_2 .content .pageBox p, html body .filter .jumpWindow.betRecord .content .pageBox p, html body .filter .jumpWindow.pointWindow .content .pageBox p {
+  width: 5vw;
+  height: 5vw;
+  background: #b8151a;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  padding-bottom: 2px;
+}
+html body .filter .jumpWindow.waterWindow_1 .content .pageBox p span, html body .filter .jumpWindow.waterWindow_2 .content .pageBox p span, html body .filter .jumpWindow.betRecord .content .pageBox p span, html body .filter .jumpWindow.pointWindow .content .pageBox p span {
+  color: #ffffff;
+  font-size: 3vw;
+  font-weight: bold;
+}
+html body .filter .jumpWindow.waterWindow_1 .content .pageText, html body .filter .jumpWindow.waterWindow_2 .content .pageText, html body .filter .jumpWindow.betRecord .content .pageText, html body .filter .jumpWindow.pointWindow .content .pageText {
+  width: 100%;
+  color: #7f7f7f;
+  font-size: 3vw;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 5px;
+}
+html body .filter .jumpWindow.loading .content {
+  width: 100%;
+  height: 26vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2526,16 +2770,17 @@ html body .filter .jumpWindow .loading .content {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-html body .filter .jumpWindow .loading .content div {
+html body .filter .jumpWindow.loading .content .img {
   width: 30vw;
   height: 30vw;
   -webkit-animation: round 2s linear 0s infinite;
           animation: round 2s linear 0s infinite;
 }
-html body .filter .jumpWindow .loading .content p {
-  margin-top: 20px;
-  color: #cd8c2f;
+html body .filter .jumpWindow.loading .content p {
+  color: #3a3a3a;
+  font-size: 4vw;
   font-weight: bold;
+  margin-top: 20px;
 }
 @-webkit-keyframes round {
   0% {
@@ -2570,6 +2815,20 @@ html body .filter .jumpWindow .title {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+html body .filter .jumpWindow .title.sp {
+  height: auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 16px 0;
+}
+html body .filter .jumpWindow .title.sp .smallTitle {
+  color: #3a3a3a;
+  font-size: 4vw;
+  letter-spacing: 0;
+  margin-top: 8px;
 }
 html body .filter .jumpWindow .title p {
   color: #b8151a;
@@ -3156,6 +3415,9 @@ html body .walletWrap .walletBox ul li {
 }
 html body .walletWrap .walletBox ul li:active, html body .walletWrap .walletBox ul li.active {
   background: #b8151a;
+  color: #ffffff;
+}
+html body .walletWrap .walletBox ul li:active p, html body .walletWrap .walletBox ul li.active p {
   color: #ffffff;
 }
 html body .walletWrap .walletBox ul li i {
@@ -4069,6 +4331,10 @@ html body .helpWrap .helpBody ul li:active, html body .helpWrap .helpBody ul li.
   background: #b8151a;
   color: #ffffff;
 }
+html body .helpWrap .helpBody ul li:active i, html body .helpWrap .helpBody ul li.active i {
+  -webkit-filter: grayscale(1) brightness(15);
+          filter: grayscale(1) brightness(15);
+}
 html body .helpWrap .helpBody ul li:last-child {
   margin: 0;
 }
@@ -4394,61 +4660,6 @@ html body .helpInner li .box .content p:last-child {
 html body .helpInner li .box .content p a {
   color: #ff5a00;
   text-decoration: none;
-}
-html body .helpInner li .btnBox {
-  width: 100%;
-  height: auto;
-  margin: 20px 0;
-}
-html body .helpInner li .btnBox .btn {
-  width: 100%;
-  height: 105px;
-  background: #252525;
-  border-radius: 16px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 10px 16px;
-}
-html body .helpInner li .btnBox .btn i {
-  display: block;
-  width: 8.7vw;
-  height: 8.7vw;
-  margin-right: 16px;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-}
-html body .helpInner li .btnBox .btn p {
-  font-size: 3.4vw;
-  font-weight: bold;
-  margin: 0;
-  color: #ffc13c;
-}
-html body .helpInner li .btnBox .btn p:nth-of-type(1) {
-  font-size: 5vw;
-}
-html body .helpInner li .btnBox .btn p:nth-of-type(2) {
-  color: #cd8c2f;
-}
-html body .helpInner li .downloadBtn {
-  width: 100%;
-  height: 42px;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(4%, #bc9c64), color-stop(93%, #f3d197));
-  background: linear-gradient(to top, #bc9c64 4%, #f3d197 93%);
-  border-radius: 30px;
-  color: #ffffff;
-  font-size: 4vw;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
-html body .helpInner li .downloadBtn:active, html body .helpInner li .downloadBtn.active {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(4%, #bc9c64), color-stop(93%, #f3d197));
-  background: linear-gradient(to bottom, #bc9c64 4%, #f3d197 93%);
 }
 html body .helpContact {
   width: 100%;
@@ -6464,6 +6675,10 @@ html body .bettingWrap .list .recordBox ul li.btnBox button {
 html body .bettingWrap .list .recordBox ul li.btnBox button:active, html body .bettingWrap .list .recordBox ul li.btnBox button.active {
   background: #b8151a;
   color: #ffffff;
+}
+html body .bettingWrap .list .recordBox ul li.btnBox button:active i, html body .bettingWrap .list .recordBox ul li.btnBox button.active i {
+  -webkit-filter: grayscale(1) brightness(15);
+          filter: grayscale(1) brightness(15);
 }
 html body .bettingWrap .list .recordBox ul li.btnBox button i {
   width: 4vw;
