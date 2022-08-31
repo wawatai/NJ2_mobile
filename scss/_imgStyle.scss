@@ -43,6 +43,14 @@ header .link_ic {
     background: url('../images/icon/home_quick_board.png') no-repeat center;
     background-size: contain;
 }
+.homeCenter .smallLove_ic {
+    background: url('../images/icon/svg/slotPage_smallLove.svg') no-repeat;
+    background-size: contain;
+}
+.homeCenter .active .smallLove_ic {
+    background: url('../images/icon/svg/slotPage_smallLove_active.svg') no-repeat;
+    background-size: contain;
+}
 
 //footer
 footer.index {
@@ -595,6 +603,12 @@ header .logo {
     object-fit: contain;
 }
 .eventDetail img {
+    width: 100%;
+    object-fit: contain;
+}
+
+//eventApply
+.jumpWindow.eventWindow img {
     width: 100%;
     object-fit: contain;
 }

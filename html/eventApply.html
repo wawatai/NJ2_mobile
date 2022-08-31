@@ -76,8 +76,8 @@
                             <p>100</p>
                         </li>
                         <li class="btnBox">
-                            <button>割引を申し込む</button>
-                            <button>イベントを見る</button>
+                            <button class="sendBtn">割引を申し込む</button>
+                            <button class="checkBtn">イベントを見る</button>
                         </li>
                     </ul>
                 </li>
@@ -123,8 +123,8 @@
                             <p>100</p>
                         </li>
                         <li class="btnBox">
-                            <button disabled>割引を申し込む</button>
-                            <button disabled>イベントを見る</button>
+                            <button class="sendBtn" disabled>割引を申し込む</button>
+                            <button class="checkBtn" disabled>イベントを見る</button>
                         </li>
                     </ul>
                     <li class="list">
@@ -169,8 +169,8 @@
                                 <p>100</p>
                             </li>
                             <li class="btnBox">
-                                <button disabled>割引を申し込む</button>
-                                <button>イベントを見る</button>
+                                <button class="sendBtn" disabled>割引を申し込む</button>
+                                <button class="checkBtn" onclick="window.location.href='./event_page.html'">イベントを見る</button>
                             </li>
                         </ul>
                     </li>
@@ -221,7 +221,7 @@
                             <p>100</p>
                         </li>
                         <li class="btnBox">
-                            <button disabled>イベントを見る</button>
+                            <button class="checkBtn" disabled>イベントを見る</button>
                         </li>
                     </ul>
                 </li>
@@ -335,11 +335,49 @@
                         </li>
                     </ul>
                 </div>
-                <div class="recordBox display">
+                <div class="recordBox display fail">
                     <div class="title">
                         測試1
                         <div class="review fail">
                             <p>審查失敗</p>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>
+                            リベート
+                            <p>50</p>
+                        </li>
+                        <li>
+                            現在のリベート
+                            <p>-</p>
+                        </li>
+                        <li>
+                            ギフトポイント
+                            <p>598</p>
+                        </li>
+                        <li>
+                            パーセンテージ
+                            <p>-</p>
+                        </li>
+                        <li>
+                            最大ギフトポイント
+                            <p>50</p>
+                        </li>
+                        <li>
+                            最小リベート
+                            <p>-</p>
+                        </li>
+                        <li>
+                            理由
+                            <p>-</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="recordBox display">
+                    <div class="title">
+                        測試1
+                        <div class="review">
+                            <p>待っています</p>
                         </div>
                     </div>
                     <ul>
@@ -411,21 +449,21 @@
         </div>
         <!--任務詳情-->
         <div class="jumpWindow eventWindow">
-            <div class="title">ミッションの詳細</div>
+            <div class="title">
+                <p>ミッションの詳細</p>
+                <i class="close"></i>
+            </div>
             <div class="content">
-                <img src="../images/event_1.png" alt="">
-                <p>testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest</p>
-                <p>testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest</p>
-                <p>testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest</p>
-                <p>testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest</p>
-                <p>testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest</p>
-                <p>testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest</p>
-                <p>testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest</p>
-                <p>testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest</p>
+                <img src="../images/event_banner.jpg" alt="">
+                <p class="smallTitle">ミッションの詳細</p>
+                <p>ミッションの詳細ミッションの詳細ミッションの詳細ミッションの詳細ミッションの詳細ミッションの詳細</p>
+                <p>ミッションの詳細ミッションの詳細ミッションの詳細ミッションの詳細ミッションの詳細ミッションの詳細</p>
+                <p>ミッションの詳細ミッションの詳細ミッションの詳細ミッションの詳細ミッションの詳細ミッションの詳細</p>
+                <p>ミッションの詳細ミッションの詳細ミッションの詳細ミッションの詳細ミッションの詳細ミッションの詳細</p>
+                <p>ミッションの詳細ミッションの詳細ミッションの詳細ミッションの詳細ミッションの詳細ミッションの詳細</p>
+                <p>ミッションの詳細ミッションの詳細ミッションの詳細ミッションの詳細ミッションの詳細ミッションの詳細</p>
             </div>
-            <div class="btnBox">
-                <button class="close">確認</button>
-            </div>
+            <button class="close">確認</button>
         </div>
     </div>
 </body>

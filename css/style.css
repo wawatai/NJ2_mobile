@@ -69,6 +69,16 @@ header .link_ic {
   background-size: contain;
 }
 
+.homeCenter .smallLove_ic {
+  background: url("../images/icon/svg/slotPage_smallLove.svg") no-repeat;
+  background-size: contain;
+}
+
+.homeCenter .active .smallLove_ic {
+  background: url("../images/icon/svg/slotPage_smallLove_active.svg") no-repeat;
+  background-size: contain;
+}
+
 footer.index {
   background: url("../images/footer_index.png") no-repeat;
   background-size: 100%;
@@ -697,6 +707,12 @@ header .logo {
      object-fit: contain;
 }
 
+.jumpWindow.eventWindow img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -937,6 +953,9 @@ html body header .content .title {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+html body header .content .title.small {
+  font-size: 4.5vw;
+}
 html body header .content .back_arrow {
   width: auto;
   height: 7vw;
@@ -1152,8 +1171,8 @@ html body .marqueeBox {
   height: 7vw;
   background: #ffffff;
   border: solid 1px #daaf6d;
-  -webkit-box-shadow: 0 2px 5px 0 #0000001d inset;
-          box-shadow: 0 2px 5px 0 #0000001d inset;
+  -webkit-box-shadow: 0 2px 5px 0 #00000033 inset;
+          box-shadow: 0 2px 5px 0 #00000033 inset;
   border-radius: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1183,7 +1202,7 @@ html body .marqueeBox .title {
           justify-content: center;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  padding: 0 3vw;
+  padding: 0 3vw 2px;
 }
 html body .marqueeBox .title p {
   color: #ffffff;
@@ -1397,22 +1416,146 @@ html body .homeCenter .topBox li i.soccer_ic::before, html body .homeCenter .top
 html body .homeCenter .downBox {
   width: 100%;
   height: auto;
-  -ms-grid-columns: 1fr 16px 1fr;
+  -ms-grid-columns: 1fr 8px 1fr;
   grid-template-columns: repeat(2, 1fr);
-  gap: 8px 16px;
+  gap: 8px;
   display: none;
 }
 html body .homeCenter .downBox.display {
   display: -ms-grid;
   display: grid;
 }
-html body .homeCenter .downBox.hot li {
-  border-radius: 16px;
+html body .homeCenter .downBox.hot .gameBox {
+  width: auto;
+  height: auto;
+  background: #ffffff;
+  border-radius: 10px;
+  border: solid 1px #dfbe84;
+  font-size: 0;
   overflow: hidden;
+}
+html body .homeCenter .downBox.hot .gameBox .title {
+  width: 100%;
+  height: 8vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+html body .homeCenter .downBox.hot .gameBox .title p {
+  width: 73%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 8px;
+}
+html body .homeCenter .downBox.hot .gameBox .title p span {
+  width: 100%;
+  color: #3a3a3a;
+  font-size: 3.4vw;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+html body .homeCenter .downBox.hot .gameBox .title .loveBox {
+  width: 18%;
+  height: 100%;
+  background: #ba9141;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+html body .homeCenter .downBox.hot .gameBox .title .loveBox::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -4vw;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 8vw 0 0 4vw;
+  border-color: #ba9141 transparent;
+}
+html body .homeCenter .downBox.hot .gameBox .title .loveBox.active {
+  background: #cf0505;
+}
+html body .homeCenter .downBox.hot .gameBox .title .loveBox.active::before {
+  border-color: #cf0505 transparent;
+}
+html body .homeCenter .downBox.hot .gameBox .title .loveBox i {
+  width: 5vw;
+  height: 4vw;
+  margin-left: 1vw;
+}
+html body .homeCenter .downBox.hot .gameBox .btnBox {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 8px;
+}
+html body .homeCenter .downBox.hot .gameBox .btnBox button {
+  width: 80%;
+  height: 8vw;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(4%, #bc9c64), color-stop(93%, #f3d197));
+  background: linear-gradient(to top, #bc9c64 4%, #f3d197 93%);
+  border-radius: 30px;
+  color: #ffffff;
+  font-size: 4vw;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 3vw;
+}
+html body .homeCenter .downBox.hot .gameBox .btnBox button:active, html body .homeCenter .downBox.hot .gameBox .btnBox button.active {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(4%, #bc9c64), color-stop(93%, #f3d197));
+  background: linear-gradient(to bottom, #bc9c64 4%, #f3d197 93%);
+}
+html body .homeCenter .downBox.hot .gameBox .btnBox button.try {
+  background: -webkit-gradient(linear, left bottom, left top, from(#e7e7e7), to(#ffffff));
+  background: linear-gradient(to top, #e7e7e7 0%, #ffffff 100%);
+  border-radius: 30px;
+  border: solid 1px #b8151a;
+  color: #b8151a;
+  font-size: 3.4vw;
+  font-weight: bold;
+  font-size: 3vw;
+  margin-right: 5px;
+}
+html body .homeCenter .downBox.hot .gameBox .btnBox button.try:active, html body .homeCenter .downBox.hot .gameBox .btnBox button.try.active {
+  background: #b8151a;
+  color: #ffffff;
+}
+html body .homeCenter .downBox.hot .gameBox .btnBox button span {
+  display: block;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
 }
 html body .homeCenter .downBox.sport {
   -ms-grid-columns: (1fr)[1];
   grid-template-columns: repeat(1, 1fr);
+  padding: 0 8px;
+}
+html body .homeCenter .downBox.sport li .textBox {
+  top: 16px;
+  left: 16px;
 }
 html body .homeCenter .downBox.sport li .textBox .title {
   font-size: 7vw;
@@ -1742,7 +1885,7 @@ html body .filter .jumpWindow.forgetWindow form button:active, html body .filter
 html body .filter .jumpWindow.forgetWindow form p {
   width: 100%;
   height: auto;
-  color: #3c4acc;
+  color: #173fde;
   font-size: 3.4vw;
   font-weight: bold;
   line-height: 5vw;
@@ -1861,7 +2004,7 @@ html body .filter .jumpWindow.registerWindow form label div .skype_ic {
 }
 html body .filter .jumpWindow.registerWindow form label .remind {
   width: 100%;
-  color: #3c4acc;
+  color: #173fde;
   font-size: 3.4vw;
   font-weight: bold;
   line-height: 4vw;
@@ -2421,7 +2564,7 @@ html body .filter .jumpWindow.phoneWindow form label .cellphoneCheck:active, htm
 }
 html body .filter .jumpWindow.phoneWindow form label .remind {
   width: 100%;
-  color: #3c4acc;
+  color: #173fde;
   font-size: 3vw;
   font-weight: bold;
   margin-top: 3px;
@@ -2510,12 +2653,12 @@ html body .filter .jumpWindow.passwordWindow .content button:active, html body .
 html body .filter .jumpWindow.langWindow ul {
   width: 100%;
   height: auto;
-  padding: 24px;
+  padding: 24px 24px 32px;
 }
 html body .filter .jumpWindow.langWindow ul li {
   width: 100%;
   height: 9.87vw;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   background: -webkit-gradient(linear, left bottom, left top, from(#e7e7e7), to(#ffffff));
   background: linear-gradient(to top, #e7e7e7 0%, #ffffff 100%);
   border-radius: 30px;
@@ -2523,7 +2666,7 @@ html body .filter .jumpWindow.langWindow ul li {
   color: #b8151a;
   font-size: 3.4vw;
   font-weight: bold;
-  border-radius: 5px;
+  font-size: 4vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2553,21 +2696,24 @@ html body .filter .jumpWindow.downloadBox .box {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 48px 24px;
+  padding: 32px 24px;
 }
 html body .filter .jumpWindow.downloadBox .box .img {
   width: 15vw;
   height: 15vw;
   margin: 0 10px;
 }
-html body .filter .jumpWindow.waterWindow_1 .content, html body .filter .jumpWindow.waterWindow_2 .content, html body .filter .jumpWindow.betRecord .content, html body .filter .jumpWindow.pointWindow .content {
+html body .filter .jumpWindow.waterWindow_1, html body .filter .jumpWindow.waterWindow_2, html body .filter .jumpWindow.betRecord, html body .filter .jumpWindow.pointWindow, html body .filter .jumpWindow.partnerBox {
+  padding: 0 16px 25px;
+}
+html body .filter .jumpWindow.waterWindow_1 .content, html body .filter .jumpWindow.waterWindow_2 .content, html body .filter .jumpWindow.betRecord .content, html body .filter .jumpWindow.pointWindow .content, html body .filter .jumpWindow.partnerBox .content {
   width: 100%;
   height: auto;
-  padding: 16px;
+  padding: 16px 16px 0;
   max-height: 50vh;
   overflow-y: auto;
 }
-html body .filter .jumpWindow.waterWindow_1 .content .box, html body .filter .jumpWindow.waterWindow_2 .content .box, html body .filter .jumpWindow.betRecord .content .box, html body .filter .jumpWindow.pointWindow .content .box {
+html body .filter .jumpWindow.waterWindow_1 .content .box, html body .filter .jumpWindow.waterWindow_2 .content .box, html body .filter .jumpWindow.betRecord .content .box, html body .filter .jumpWindow.pointWindow .content .box, html body .filter .jumpWindow.partnerBox .content .box {
   width: 100%;
   height: auto;
   border: solid 1px #b8151a;
@@ -2575,7 +2721,7 @@ html body .filter .jumpWindow.waterWindow_1 .content .box, html body .filter .ju
   overflow: hidden;
   margin-bottom: 10px;
 }
-html body .filter .jumpWindow.waterWindow_1 .content .box .smallTitle, html body .filter .jumpWindow.waterWindow_2 .content .box .smallTitle, html body .filter .jumpWindow.betRecord .content .box .smallTitle, html body .filter .jumpWindow.pointWindow .content .box .smallTitle {
+html body .filter .jumpWindow.waterWindow_1 .content .box .smallTitle, html body .filter .jumpWindow.waterWindow_2 .content .box .smallTitle, html body .filter .jumpWindow.betRecord .content .box .smallTitle, html body .filter .jumpWindow.pointWindow .content .box .smallTitle, html body .filter .jumpWindow.partnerBox .content .box .smallTitle {
   width: 100%;
   height: 9vw;
   background: -webkit-gradient(linear, left bottom, left top, from(#eeeeee), to(#ffffff));
@@ -2592,14 +2738,14 @@ html body .filter .jumpWindow.waterWindow_1 .content .box .smallTitle, html body
           align-items: center;
   padding: 0 16px;
 }
-html body .filter .jumpWindow.waterWindow_1 .content .box ul, html body .filter .jumpWindow.waterWindow_2 .content .box ul, html body .filter .jumpWindow.betRecord .content .box ul, html body .filter .jumpWindow.pointWindow .content .box ul {
+html body .filter .jumpWindow.waterWindow_1 .content .box ul, html body .filter .jumpWindow.waterWindow_2 .content .box ul, html body .filter .jumpWindow.betRecord .content .box ul, html body .filter .jumpWindow.pointWindow .content .box ul, html body .filter .jumpWindow.partnerBox .content .box ul {
   width: 100%;
   height: auto;
   background: #f1f1f1;
   border-top: none;
   padding: 0 8px;
 }
-html body .filter .jumpWindow.waterWindow_1 .content .box ul li, html body .filter .jumpWindow.waterWindow_2 .content .box ul li, html body .filter .jumpWindow.betRecord .content .box ul li, html body .filter .jumpWindow.pointWindow .content .box ul li {
+html body .filter .jumpWindow.waterWindow_1 .content .box ul li, html body .filter .jumpWindow.waterWindow_2 .content .box ul li, html body .filter .jumpWindow.betRecord .content .box ul li, html body .filter .jumpWindow.pointWindow .content .box ul li, html body .filter .jumpWindow.partnerBox .content .box ul li {
   width: 100%;
   height: 9vw;
   border-bottom: solid 1px #b78d4b;
@@ -2616,16 +2762,16 @@ html body .filter .jumpWindow.waterWindow_1 .content .box ul li, html body .filt
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-html body .filter .jumpWindow.waterWindow_1 .content .box ul li:last-child, html body .filter .jumpWindow.waterWindow_2 .content .box ul li:last-child, html body .filter .jumpWindow.betRecord .content .box ul li:last-child, html body .filter .jumpWindow.pointWindow .content .box ul li:last-child {
+html body .filter .jumpWindow.waterWindow_1 .content .box ul li:last-child, html body .filter .jumpWindow.waterWindow_2 .content .box ul li:last-child, html body .filter .jumpWindow.betRecord .content .box ul li:last-child, html body .filter .jumpWindow.pointWindow .content .box ul li:last-child, html body .filter .jumpWindow.partnerBox .content .box ul li:last-child {
   border: none;
 }
-html body .filter .jumpWindow.waterWindow_1 .content .box ul li p, html body .filter .jumpWindow.waterWindow_2 .content .box ul li p, html body .filter .jumpWindow.betRecord .content .box ul li p, html body .filter .jumpWindow.pointWindow .content .box ul li p {
+html body .filter .jumpWindow.waterWindow_1 .content .box ul li p, html body .filter .jumpWindow.waterWindow_2 .content .box ul li p, html body .filter .jumpWindow.betRecord .content .box ul li p, html body .filter .jumpWindow.pointWindow .content .box ul li p, html body .filter .jumpWindow.partnerBox .content .box ul li p {
   color: #3a3a3a;
 }
-html body .filter .jumpWindow.waterWindow_1 .content .box ul li p.money, html body .filter .jumpWindow.waterWindow_2 .content .box ul li p.money, html body .filter .jumpWindow.betRecord .content .box ul li p.money, html body .filter .jumpWindow.pointWindow .content .box ul li p.money {
-  color: #3c4acc;
+html body .filter .jumpWindow.waterWindow_1 .content .box ul li p.money, html body .filter .jumpWindow.waterWindow_2 .content .box ul li p.money, html body .filter .jumpWindow.betRecord .content .box ul li p.money, html body .filter .jumpWindow.pointWindow .content .box ul li p.money, html body .filter .jumpWindow.partnerBox .content .box ul li p.money {
+  color: #173fde;
 }
-html body .filter .jumpWindow.waterWindow_1 .content table, html body .filter .jumpWindow.waterWindow_2 .content table, html body .filter .jumpWindow.betRecord .content table, html body .filter .jumpWindow.pointWindow .content table {
+html body .filter .jumpWindow.waterWindow_1 .content table, html body .filter .jumpWindow.waterWindow_2 .content table, html body .filter .jumpWindow.betRecord .content table, html body .filter .jumpWindow.pointWindow .content table, html body .filter .jumpWindow.partnerBox .content table {
   width: 100%;
   height: auto;
   -webkit-box-shadow: 0 0 0 1px #b8151a;
@@ -2633,17 +2779,17 @@ html body .filter .jumpWindow.waterWindow_1 .content table, html body .filter .j
   border-radius: 5px;
   overflow: hidden;
 }
-html body .filter .jumpWindow.waterWindow_1 .content table tr:last-child td p, html body .filter .jumpWindow.waterWindow_2 .content table tr:last-child td p, html body .filter .jumpWindow.betRecord .content table tr:last-child td p, html body .filter .jumpWindow.pointWindow .content table tr:last-child td p {
+html body .filter .jumpWindow.waterWindow_1 .content table tr:last-child td p, html body .filter .jumpWindow.waterWindow_2 .content table tr:last-child td p, html body .filter .jumpWindow.betRecord .content table tr:last-child td p, html body .filter .jumpWindow.pointWindow .content table tr:last-child td p, html body .filter .jumpWindow.partnerBox .content table tr:last-child td p {
   border: none;
 }
-html body .filter .jumpWindow.waterWindow_1 .content table tr th, html body .filter .jumpWindow.waterWindow_2 .content table tr th, html body .filter .jumpWindow.betRecord .content table tr th, html body .filter .jumpWindow.pointWindow .content table tr th {
+html body .filter .jumpWindow.waterWindow_1 .content table tr th, html body .filter .jumpWindow.waterWindow_2 .content table tr th, html body .filter .jumpWindow.betRecord .content table tr th, html body .filter .jumpWindow.pointWindow .content table tr th, html body .filter .jumpWindow.partnerBox .content table tr th {
   height: 9vw;
   vertical-align: middle;
   background: -webkit-gradient(linear, left bottom, left top, from(#eeeeee), to(#ffffff));
   background: linear-gradient(to top, #eeeeee 0%, #ffffff 100%);
   border-bottom: solid 1px #b78d4b;
 }
-html body .filter .jumpWindow.waterWindow_1 .content table tr th p, html body .filter .jumpWindow.waterWindow_2 .content table tr th p, html body .filter .jumpWindow.betRecord .content table tr th p, html body .filter .jumpWindow.pointWindow .content table tr th p {
+html body .filter .jumpWindow.waterWindow_1 .content table tr th p, html body .filter .jumpWindow.waterWindow_2 .content table tr th p, html body .filter .jumpWindow.betRecord .content table tr th p, html body .filter .jumpWindow.pointWindow .content table tr th p, html body .filter .jumpWindow.partnerBox .content table tr th p {
   width: 100%;
   color: #b8151a;
   font-size: 3.4vw;
@@ -2653,21 +2799,21 @@ html body .filter .jumpWindow.waterWindow_1 .content table tr th p, html body .f
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-html body .filter .jumpWindow.waterWindow_1 .content table tr td, html body .filter .jumpWindow.waterWindow_2 .content table tr td, html body .filter .jumpWindow.betRecord .content table tr td, html body .filter .jumpWindow.pointWindow .content table tr td {
+html body .filter .jumpWindow.waterWindow_1 .content table tr td, html body .filter .jumpWindow.waterWindow_2 .content table tr td, html body .filter .jumpWindow.betRecord .content table tr td, html body .filter .jumpWindow.pointWindow .content table tr td, html body .filter .jumpWindow.partnerBox .content table tr td {
   width: 34%;
   height: 9vw;
   vertical-align: middle;
 }
-html body .filter .jumpWindow.waterWindow_1 .content table tr td:nth-of-type(1), html body .filter .jumpWindow.waterWindow_2 .content table tr td:nth-of-type(1), html body .filter .jumpWindow.betRecord .content table tr td:nth-of-type(1), html body .filter .jumpWindow.pointWindow .content table tr td:nth-of-type(1) {
+html body .filter .jumpWindow.waterWindow_1 .content table tr td:nth-of-type(1), html body .filter .jumpWindow.waterWindow_2 .content table tr td:nth-of-type(1), html body .filter .jumpWindow.betRecord .content table tr td:nth-of-type(1), html body .filter .jumpWindow.pointWindow .content table tr td:nth-of-type(1), html body .filter .jumpWindow.partnerBox .content table tr td:nth-of-type(1) {
   padding-left: 12px;
 }
-html body .filter .jumpWindow.waterWindow_1 .content table tr td:nth-of-type(1) p, html body .filter .jumpWindow.waterWindow_2 .content table tr td:nth-of-type(1) p, html body .filter .jumpWindow.betRecord .content table tr td:nth-of-type(1) p, html body .filter .jumpWindow.pointWindow .content table tr td:nth-of-type(1) p {
+html body .filter .jumpWindow.waterWindow_1 .content table tr td:nth-of-type(1) p, html body .filter .jumpWindow.waterWindow_2 .content table tr td:nth-of-type(1) p, html body .filter .jumpWindow.betRecord .content table tr td:nth-of-type(1) p, html body .filter .jumpWindow.pointWindow .content table tr td:nth-of-type(1) p, html body .filter .jumpWindow.partnerBox .content table tr td:nth-of-type(1) p {
   color: #ba9141;
 }
-html body .filter .jumpWindow.waterWindow_1 .content table tr td:nth-of-type(3), html body .filter .jumpWindow.waterWindow_2 .content table tr td:nth-of-type(3), html body .filter .jumpWindow.betRecord .content table tr td:nth-of-type(3), html body .filter .jumpWindow.pointWindow .content table tr td:nth-of-type(3) {
+html body .filter .jumpWindow.waterWindow_1 .content table tr td:last-child, html body .filter .jumpWindow.waterWindow_2 .content table tr td:last-child, html body .filter .jumpWindow.betRecord .content table tr td:last-child, html body .filter .jumpWindow.pointWindow .content table tr td:last-child, html body .filter .jumpWindow.partnerBox .content table tr td:last-child {
   padding-right: 12px;
 }
-html body .filter .jumpWindow.waterWindow_1 .content table tr td p, html body .filter .jumpWindow.waterWindow_2 .content table tr td p, html body .filter .jumpWindow.betRecord .content table tr td p, html body .filter .jumpWindow.pointWindow .content table tr td p {
+html body .filter .jumpWindow.waterWindow_1 .content table tr td p, html body .filter .jumpWindow.waterWindow_2 .content table tr td p, html body .filter .jumpWindow.betRecord .content table tr td p, html body .filter .jumpWindow.pointWindow .content table tr td p, html body .filter .jumpWindow.partnerBox .content table tr td p {
   width: 100%;
   height: 100%;
   border-bottom: solid 1px #b78d4b;
@@ -2687,7 +2833,7 @@ html body .filter .jumpWindow.waterWindow_1 .content table tr td p, html body .f
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-html body .filter .jumpWindow.waterWindow_1 .content .pageBox, html body .filter .jumpWindow.waterWindow_2 .content .pageBox, html body .filter .jumpWindow.betRecord .content .pageBox, html body .filter .jumpWindow.pointWindow .content .pageBox {
+html body .filter .jumpWindow.waterWindow_1 .content .pageBox, html body .filter .jumpWindow.waterWindow_2 .content .pageBox, html body .filter .jumpWindow.betRecord .content .pageBox, html body .filter .jumpWindow.pointWindow .content .pageBox, html body .filter .jumpWindow.partnerBox .content .pageBox {
   width: 100%;
   height: auto;
   display: -webkit-box;
@@ -2698,31 +2844,31 @@ html body .filter .jumpWindow.waterWindow_1 .content .pageBox, html body .filter
           align-items: center;
   margin-top: 16px;
 }
-html body .filter .jumpWindow.waterWindow_1 .content .pageBox .line, html body .filter .jumpWindow.waterWindow_2 .content .pageBox .line, html body .filter .jumpWindow.betRecord .content .pageBox .line, html body .filter .jumpWindow.pointWindow .content .pageBox .line {
+html body .filter .jumpWindow.waterWindow_1 .content .pageBox .line, html body .filter .jumpWindow.waterWindow_2 .content .pageBox .line, html body .filter .jumpWindow.betRecord .content .pageBox .line, html body .filter .jumpWindow.pointWindow .content .pageBox .line, html body .filter .jumpWindow.partnerBox .content .pageBox .line {
   width: 100%;
   height: 1px;
   background: #7f7f7f;
 }
-html body .filter .jumpWindow.waterWindow_1 .content .pageBox i, html body .filter .jumpWindow.waterWindow_2 .content .pageBox i, html body .filter .jumpWindow.betRecord .content .pageBox i, html body .filter .jumpWindow.pointWindow .content .pageBox i {
+html body .filter .jumpWindow.waterWindow_1 .content .pageBox i, html body .filter .jumpWindow.waterWindow_2 .content .pageBox i, html body .filter .jumpWindow.betRecord .content .pageBox i, html body .filter .jumpWindow.pointWindow .content .pageBox i, html body .filter .jumpWindow.partnerBox .content .pageBox i {
   width: 16px;
   height: 9px;
   margin: 0 5px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
-html body .filter .jumpWindow.waterWindow_1 .content .pageBox i.disable, html body .filter .jumpWindow.waterWindow_2 .content .pageBox i.disable, html body .filter .jumpWindow.betRecord .content .pageBox i.disable, html body .filter .jumpWindow.pointWindow .content .pageBox i.disable {
+html body .filter .jumpWindow.waterWindow_1 .content .pageBox i.disable, html body .filter .jumpWindow.waterWindow_2 .content .pageBox i.disable, html body .filter .jumpWindow.betRecord .content .pageBox i.disable, html body .filter .jumpWindow.pointWindow .content .pageBox i.disable, html body .filter .jumpWindow.partnerBox .content .pageBox i.disable {
   -webkit-filter: grayscale(1) brightness(3);
           filter: grayscale(1) brightness(3);
 }
-html body .filter .jumpWindow.waterWindow_1 .content .pageBox i:nth-of-type(1), html body .filter .jumpWindow.waterWindow_2 .content .pageBox i:nth-of-type(1), html body .filter .jumpWindow.betRecord .content .pageBox i:nth-of-type(1), html body .filter .jumpWindow.pointWindow .content .pageBox i:nth-of-type(1) {
+html body .filter .jumpWindow.waterWindow_1 .content .pageBox i:nth-of-type(1), html body .filter .jumpWindow.waterWindow_2 .content .pageBox i:nth-of-type(1), html body .filter .jumpWindow.betRecord .content .pageBox i:nth-of-type(1), html body .filter .jumpWindow.pointWindow .content .pageBox i:nth-of-type(1), html body .filter .jumpWindow.partnerBox .content .pageBox i:nth-of-type(1) {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
 }
-html body .filter .jumpWindow.waterWindow_1 .content .pageBox i:nth-of-type(2), html body .filter .jumpWindow.waterWindow_2 .content .pageBox i:nth-of-type(2), html body .filter .jumpWindow.betRecord .content .pageBox i:nth-of-type(2), html body .filter .jumpWindow.pointWindow .content .pageBox i:nth-of-type(2) {
+html body .filter .jumpWindow.waterWindow_1 .content .pageBox i:nth-of-type(2), html body .filter .jumpWindow.waterWindow_2 .content .pageBox i:nth-of-type(2), html body .filter .jumpWindow.betRecord .content .pageBox i:nth-of-type(2), html body .filter .jumpWindow.pointWindow .content .pageBox i:nth-of-type(2), html body .filter .jumpWindow.partnerBox .content .pageBox i:nth-of-type(2) {
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
 }
-html body .filter .jumpWindow.waterWindow_1 .content .pageBox p, html body .filter .jumpWindow.waterWindow_2 .content .pageBox p, html body .filter .jumpWindow.betRecord .content .pageBox p, html body .filter .jumpWindow.pointWindow .content .pageBox p {
+html body .filter .jumpWindow.waterWindow_1 .content .pageBox p, html body .filter .jumpWindow.waterWindow_2 .content .pageBox p, html body .filter .jumpWindow.betRecord .content .pageBox p, html body .filter .jumpWindow.pointWindow .content .pageBox p, html body .filter .jumpWindow.partnerBox .content .pageBox p {
   width: 5vw;
   height: 5vw;
   background: #b8151a;
@@ -2740,18 +2886,54 @@ html body .filter .jumpWindow.waterWindow_1 .content .pageBox p, html body .filt
       flex-shrink: 0;
   padding-bottom: 2px;
 }
-html body .filter .jumpWindow.waterWindow_1 .content .pageBox p span, html body .filter .jumpWindow.waterWindow_2 .content .pageBox p span, html body .filter .jumpWindow.betRecord .content .pageBox p span, html body .filter .jumpWindow.pointWindow .content .pageBox p span {
+html body .filter .jumpWindow.waterWindow_1 .content .pageBox p span, html body .filter .jumpWindow.waterWindow_2 .content .pageBox p span, html body .filter .jumpWindow.betRecord .content .pageBox p span, html body .filter .jumpWindow.pointWindow .content .pageBox p span, html body .filter .jumpWindow.partnerBox .content .pageBox p span {
   color: #ffffff;
   font-size: 3vw;
   font-weight: bold;
 }
-html body .filter .jumpWindow.waterWindow_1 .content .pageText, html body .filter .jumpWindow.waterWindow_2 .content .pageText, html body .filter .jumpWindow.betRecord .content .pageText, html body .filter .jumpWindow.pointWindow .content .pageText {
+html body .filter .jumpWindow.waterWindow_1 .content .pageText, html body .filter .jumpWindow.waterWindow_2 .content .pageText, html body .filter .jumpWindow.betRecord .content .pageText, html body .filter .jumpWindow.pointWindow .content .pageText, html body .filter .jumpWindow.partnerBox .content .pageText {
   width: 100%;
   color: #7f7f7f;
   font-size: 3vw;
   font-weight: bold;
   text-align: center;
   margin-top: 5px;
+}
+html body .filter .jumpWindow.eventWindow .content {
+  max-height: 50vh;
+  overflow-y: auto;
+}
+html body .filter .jumpWindow.eventWindow .content img {
+  margin: 10px 0;
+}
+html body .filter .jumpWindow.eventWindow .content p {
+  color: #3a3a3a;
+  font-size: 3.7vw;
+  font-weight: bold;
+  line-height: 4.5vw;
+}
+html body .filter .jumpWindow.eventWindow .content p.smallTitle {
+  color: #ba9141;
+  font-size: 4vw;
+  margin-bottom: 10px;
+  text-align: center;
+}
+html body .filter .jumpWindow.eventWindow button {
+  width: 70%;
+  height: 11vw;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(4%, #bc9c64), color-stop(93%, #f3d197));
+  background: linear-gradient(to top, #bc9c64 4%, #f3d197 93%);
+  border-radius: 30px;
+  color: #ffffff;
+  font-size: 4vw;
+  font-weight: bold;
+  letter-spacing: 1px;
+  display: block;
+  margin: 24px auto;
+}
+html body .filter .jumpWindow.eventWindow button:active, html body .filter .jumpWindow.eventWindow button.active {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(4%, #bc9c64), color-stop(93%, #f3d197));
+  background: linear-gradient(to bottom, #bc9c64 4%, #f3d197 93%);
 }
 html body .filter .jumpWindow.loading .content {
   width: 100%;
@@ -3544,10 +3726,10 @@ html body .walletWrap .walletList .forPlatform ul {
 html body .walletWrap .walletList .forPlatform ul li {
   width: auto;
   height: auto;
-  border-radius: 16px;
+  border-radius: 10px;
   background: #ffffff;
-  -webkit-box-shadow: 1px 1px 2px 0 #00000080;
-          box-shadow: 1px 1px 2px 0 #00000080;
+  -webkit-box-shadow: 1px 1px 2px 0 #00000033;
+          box-shadow: 1px 1px 2px 0 #00000033;
   padding: 10px 16px;
 }
 html body .walletWrap .walletList .forPlatform ul li div {
@@ -3564,7 +3746,7 @@ html body .walletWrap .walletList .forPlatform ul li p {
   color: #b8151a;
   font-size: 5vw;
   font-weight: bold;
-  margin-top: 16px;
+  margin-top: 10px;
 }
 html body .walletWrap .walletList .forPlatform .closeBtn {
   margin-top: 16px;
@@ -3672,7 +3854,7 @@ html body .memberWrap .user .info .box:last-child {
 }
 html body .memberWrap .user .info .box .account {
   color: #3a3a3a;
-  font-size: 3.4vw;
+  font-size: 4vw;
   font-weight: bold;
 }
 html body .memberWrap .user .info .box .account span {
@@ -3762,8 +3944,8 @@ html body .memberWrap .user .btnBox .right li {
   text-align: center;
 }
 html body .memberWrap .user .btnBox .right li button {
-  width: 12vw;
-  height: 12vw;
+  width: 14vw;
+  height: 14vw;
   background: -webkit-gradient(linear, left bottom, left top, from(#e7e7e7), to(#ffffff));
   background: linear-gradient(to top, #e7e7e7 0%, #ffffff 100%);
   border-radius: 30px;
@@ -3781,8 +3963,8 @@ html body .memberWrap .user .btnBox .right li button:active, html body .memberWr
 html body .memberWrap .user .btnBox .right li button::before {
   content: "";
   position: absolute;
-  width: 5vw;
-  height: 5vw;
+  width: 6vw;
+  height: 6vw;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -4080,8 +4262,8 @@ html body .memberInfo .info_2 ul li {
   height: 9.87vw;
   background: #ffffff;
   border-radius: 3px;
-  -webkit-box-shadow: 0 2px 3px 0 #0000001d;
-          box-shadow: 0 2px 3px 0 #0000001d;
+  -webkit-box-shadow: 0 2px 3px 0 #00000033;
+          box-shadow: 0 2px 3px 0 #00000033;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4127,8 +4309,8 @@ html body .memberInfo .pwdBox .inputBox {
   width: 100%;
   height: 9.87vw;
   background: #ffffff;
-  -webkit-box-shadow: 0 2px 3px 0 #0000001d;
-          box-shadow: 0 2px 3px 0 #0000001d;
+  -webkit-box-shadow: 0 2px 3px 0 #00000033;
+          box-shadow: 0 2px 3px 0 #00000033;
   border-radius: 3px;
   position: relative;
   display: -webkit-box;
@@ -4362,7 +4544,7 @@ html body .helpInner li {
   width: 100%;
   height: auto;
   display: none;
-  padding-top: 8px;
+  padding-top: 16px;
 }
 html body .helpInner li.display {
   display: block;
@@ -4421,7 +4603,7 @@ html body .helpInner li .text a {
   text-decoration: none;
 }
 html body .helpInner li .text .remind {
-  color: #3c4acc;
+  color: #173fde;
 }
 html body .helpInner li .img {
   width: 100%;
@@ -4502,7 +4684,7 @@ html body .helpInner li .uploadBox .box button:active, html body .helpInner li .
   background: linear-gradient(to bottom, #bc9c64 4%, #f3d197 93%);
 }
 html body .helpInner li .uploadBox .box .remind {
-  color: #3c4acc;
+  color: #173fde;
   font-size: 3vw;
 }
 html body .helpInner li .uploadBox .sendBtn {
@@ -4593,8 +4775,8 @@ html body .helpInner li .box {
   background: #ffffff;
   border-radius: 16px;
   border: solid 1px #daaf6d;
-  -webkit-box-shadow: 0 2px 1px 0 #0000001d;
-          box-shadow: 0 2px 1px 0 #0000001d;
+  -webkit-box-shadow: 0 2px 1px 0 #00000033;
+          box-shadow: 0 2px 1px 0 #00000033;
   overflow: hidden;
   margin: 0 auto 10px;
 }
@@ -4849,8 +5031,8 @@ html body .applyList .listBox .list {
   width: 100%;
   height: auto;
   background: #ffffff;
-  -webkit-box-shadow: 0 1px 1px 1px #0000001d;
-          box-shadow: 0 1px 1px 1px #0000001d;
+  -webkit-box-shadow: 0 1px 1px 1px #00000033;
+          box-shadow: 0 1px 1px 1px #00000033;
   border-radius: 10px;
   position: relative;
   padding: 0 12px;
@@ -4971,7 +5153,7 @@ html body .applyList .listBox .list ul li p {
   font-weight: bold;
 }
 html body .applyList .listBox .list ul li p span {
-  color: #3c4acc;
+  color: #173fde;
 }
 html body .applyList .listBox .list .btnBox {
   width: 100%;
@@ -5140,7 +5322,7 @@ html body .applyRecord .searchContent .date button {
   border-radius: 30px;
   border: solid 1px #daaf6d;
   color: #b6832d;
-  font-size: 3.4vw;
+  font-size: 4vw;
   font-weight: bold;
 }
 html body .applyRecord .searchContent .date button:active, html body .applyRecord .searchContent .date button.active {
@@ -5205,6 +5387,19 @@ html body .applyRecord .reviewBody .recordBox {
 }
 html body .applyRecord .reviewBody .recordBox.display {
   display: block;
+}
+html body .applyRecord .reviewBody .recordBox.fail ul {
+  position: relative;
+}
+html body .applyRecord .reviewBody .recordBox.fail ul::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #00000066;
+  opacity: 0.5;
 }
 html body .applyRecord .reviewBody .recordBox .title {
   width: 100%;
@@ -5399,7 +5594,7 @@ html body .vipWrap .lineTitle .line {
 html body .vipWrap .enjoyBox {
   width: 100%;
   height: auto;
-  padding: 0 8px 24px;
+  padding: 0 12px 24px;
   border-bottom: solid 2px #b8151a;
 }
 html body .vipWrap .enjoyBox ul {
@@ -5446,10 +5641,10 @@ html body .vipWrap .enjoyBox ul li p {
   color: #b8151a;
 }
 html body .vipWrap .detailBtn {
-  width: 100%;
+  width: 92%;
   height: 42vw;
   display: block;
-  margin: 24px auto;
+  margin: 40px auto;
 }
 html body .vipDetail {
   width: 100%;
@@ -5699,7 +5894,7 @@ html body .vipDetail .remindBox .text {
   line-height: 4.5vw;
 }
 html body .vipDetail .remindBox .remind {
-  color: #3c4acc;
+  color: #173fde;
   font-size: 3.4vw;
   font-weight: bold;
   line-height: 4.5vw;
@@ -6166,11 +6361,11 @@ html body .mailWrap.post .mailBox.hot.display, html body .mailWrap.post .mailBox
 html body .mailWrap.post .mailBox ul {
   width: 100%;
   height: auto;
-  padding-top: 24px;
+  padding: 0 16px;
 }
 html body .mailWrap.post .mailBox ul li {
   width: 100%;
-  height: 12vw;
+  height: 15vw;
   background: #ffffff;
   border-radius: 5px 10px 10px 5px;
   -webkit-box-shadow: 1px 2px 1px 0 #0000001d;
@@ -6189,7 +6384,7 @@ html body .mailWrap.post .mailBox ul li {
   position: relative;
   padding: 0 16px 0 21px;
   overflow: visible;
-  margin-bottom: 32px;
+  margin-bottom: 10px;
 }
 html body .mailWrap.post .mailBox ul li::before {
   content: "";
@@ -6204,7 +6399,7 @@ html body .mailWrap.post .mailBox ul li::before {
   border-radius: 30px 0 0 30px;
 }
 html body .mailWrap.post .mailBox ul li p {
-  width: 52vw;
+  width: 46vw;
   height: auto;
   color: #ba9141;
   font-size: 4vw;
@@ -6218,8 +6413,7 @@ html body .mailWrap.post .mailBox ul li p.date {
   color: #7f7f7f;
   font-weight: bold;
   position: absolute;
-  top: -20px;
-  right: 0;
+  right: 40px;
 }
 html body .mailWrap.post .mailBox ul li i {
   width: 16px;
@@ -6386,7 +6580,7 @@ html body .cardWrap .cardContent ul li .selectBox .arrow_ic {
   right: 16px;
 }
 html body .cardWrap .cardContent ul li .remind {
-  color: #3c4acc;
+  color: #173fde;
   font-size: 3vw;
   font-weight: bold;
   line-height: 4vw;
@@ -6530,7 +6724,7 @@ html body .bettingWrap .searchContent .date button {
   border-radius: 30px;
   border: solid 1px #daaf6d;
   color: #b6832d;
-  font-size: 3.4vw;
+  font-size: 4vw;
   font-weight: bold;
 }
 html body .bettingWrap .searchContent .date button:active, html body .bettingWrap .searchContent .date button.active {
@@ -6539,7 +6733,7 @@ html body .bettingWrap .searchContent .date button:active, html body .bettingWra
   color: #ffffff;
 }
 html body .bettingWrap .searchContent .check {
-  width: 100%;
+  width: 70%;
   height: 11vw;
   background: -webkit-gradient(linear, left bottom, left top, from(#970707), color-stop(98%, #cf0505));
   background: linear-gradient(to top, #970707 0%, #cf0505 98%);
@@ -6547,7 +6741,9 @@ html body .bettingWrap .searchContent .check {
   color: #ffffff;
   font-size: 3.4vw;
   font-weight: bold;
-  margin-bottom: 16px;
+  display: block;
+  font-size: 4vw;
+  margin: 0 auto 16px;
 }
 html body .bettingWrap .searchContent .check:active, html body .bettingWrap .searchContent .check.active {
   background: -webkit-gradient(linear, left top, left bottom, from(#970707), color-stop(98%, #cf0505));
@@ -6638,6 +6834,7 @@ html body .bettingWrap .list .recordBox ul li {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding: 0 8px;
 }
 html body .bettingWrap .list .recordBox ul li:last-child {
   border: none;
@@ -6646,7 +6843,7 @@ html body .bettingWrap .list .recordBox ul li p {
   color: #b8151a;
 }
 html body .bettingWrap .list .recordBox ul li p.result {
-  color: #3c4acc;
+  color: #173fde;
 }
 html body .bettingWrap .list .recordBox ul li.btnBox {
   height: 15vw;
@@ -6742,6 +6939,7 @@ html body .bettingWrap .list .dealBox ul li {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding: 0 8px;
 }
 html body .bettingWrap .list .dealBox ul li:last-child {
   border: none;
@@ -6755,9 +6953,9 @@ html body .bettingWrap .list .partnerBox {
   height: auto;
   background: #ffffff;
   border-radius: 16px;
-  -webkit-box-shadow: 0 2px 2px 1px #0000001d;
-          box-shadow: 0 2px 2px 1px #0000001d;
-  padding: 0 12px;
+  -webkit-box-shadow: 0 1px 2px 1px #00000033;
+          box-shadow: 0 1px 2px 1px #00000033;
+  padding: 0 8px;
   margin-bottom: 10px;
 }
 html body .bettingWrap .list .partnerBox.display {
@@ -6818,8 +7016,8 @@ html body .bettingWrap .list .partnerBox .title button:last-child:active, html b
   color: #ffffff;
 }
 html body .bettingWrap .list .partnerBox .title button i {
-  width: 4vw;
-  height: 4vw;
+  width: 3.4vw;
+  height: 3.4vw;
   margin-left: 5px;
 }
 html body .bettingWrap .list .partnerBox .title button i.search_ic {
@@ -6846,6 +7044,7 @@ html body .bettingWrap .list .partnerBox ul li {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding: 0 8px;
 }
 html body .bettingWrap .list .partnerBox ul li:last-child {
   border: none;
@@ -7196,7 +7395,7 @@ html body .depositWrap .depContent .inputBox input::placeholder {
   color: #a3a3a3;
 }
 html body .depositWrap .depContent .remind {
-  color: #3c4acc;
+  color: #173fde;
   font-size: 3.4vw;
   line-height: 4.5vw;
   font-weight: bold;
@@ -7245,7 +7444,7 @@ html body .depositWrap .remindBox .text {
   line-height: 4.5vw;
 }
 html body .depositWrap .remindBox .remind {
-  color: #3c4acc;
+  color: #173fde;
   font-size: 3.4vw;
   font-weight: bold;
   line-height: 4.5vw;
@@ -7580,10 +7779,10 @@ html body .transWrap .walletList .forPlatform ul {
 html body .transWrap .walletList .forPlatform ul li {
   width: auto;
   height: auto;
-  border-radius: 16px;
+  border-radius: 10px;
   background: #ffffff;
-  -webkit-box-shadow: 1px 1px 2px 0 #00000080;
-          box-shadow: 1px 1px 2px 0 #00000080;
+  -webkit-box-shadow: 1px 1px 2px 0 #00000033;
+          box-shadow: 1px 1px 2px 0 #00000033;
   padding: 10px 16px;
 }
 html body .transWrap .walletList .forPlatform ul li div {
@@ -7600,7 +7799,7 @@ html body .transWrap .walletList .forPlatform ul li p {
   color: #b8151a;
   font-size: 5vw;
   font-weight: bold;
-  margin-top: 16px;
+  margin-top: 10px;
 }
 html body .transWrap .walletList .forPlatform .closeBtn {
   margin-top: 16px;
@@ -7810,10 +8009,10 @@ html body .withWrap .walletList .forPlatform ul {
 html body .withWrap .walletList .forPlatform ul li {
   width: auto;
   height: auto;
-  border-radius: 16px;
+  border-radius: 10px;
   background: #ffffff;
-  -webkit-box-shadow: 1px 1px 2px 0 #00000080;
-          box-shadow: 1px 1px 2px 0 #00000080;
+  -webkit-box-shadow: 1px 1px 2px 0 #00000033;
+          box-shadow: 1px 1px 2px 0 #00000033;
   padding: 10px 16px;
 }
 html body .withWrap .walletList .forPlatform ul li div {
@@ -7830,7 +8029,7 @@ html body .withWrap .walletList .forPlatform ul li p {
   color: #b8151a;
   font-size: 5vw;
   font-weight: bold;
-  margin-top: 16px;
+  margin-top: 10px;
 }
 html body .withWrap .walletList .forPlatform .closeBtn {
   margin-top: 16px;
@@ -7924,7 +8123,7 @@ html body .withWrap .withContent .inputBox input::placeholder {
   color: #a3a3a3;
 }
 html body .withWrap .withContent .remind {
-  color: #3c4acc;
+  color: #173fde;
   font-size: 3.4vw;
   font-weight: bold;
   margin: 5px 0 24px;
@@ -7975,7 +8174,7 @@ html body .withWrap .remindBox .text.sp {
   margin-top: 10px;
 }
 html body .withWrap .remindBox .remind {
-  color: #3c4acc;
+  color: #173fde;
   font-size: 3.4vw;
   font-weight: bold;
   line-height: 4.5vw;
@@ -7997,6 +8196,7 @@ html body .inviteWrap .top .smallTitle {
   color: #ba9141;
   font-size: 4vw;
   font-weight: bold;
+  line-height: 5.5vw;
   margin: 10px 0 5px;
 }
 html body .inviteWrap .top .inputBox {
@@ -8079,7 +8279,7 @@ html body .inviteWrap .lineTitle {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
 }
 html body .inviteWrap .lineTitle .star_ic {
   width: 4vw;
@@ -8128,5 +8328,6 @@ html body .inviteWrap .down .text {
 html body .inviteWrap .inviteImg {
   width: 100%;
   height: 0;
+  margin-top: 10px;
   padding-top: 118vw;
 }

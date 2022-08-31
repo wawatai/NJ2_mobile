@@ -32,6 +32,11 @@ $(function(){
         .addClass("display")
         .siblings().removeClass("display");
     })
+
+    $(".homeCenter .smallLove_ic").on("click",function(){
+        $(this).closest(".loveBox")
+        .toggleClass("active");
+    })
 })
 
 //news
@@ -442,6 +447,27 @@ $(function(){
         $('.jumpWindow')
         .removeClass('display');
         $('.filter,.pointWindow')
+        .addClass('display');
+    })
+
+    $(".bettingWrap .partnerBtn").on("click",function(){
+        $('.jumpWindow')
+        .removeClass('display');
+        $('.filter,.partnerBox')
+        .addClass('display');
+    })
+
+    $(".applyList .sendBtn").on("click",function(){
+        $('.jumpWindow')
+        .removeClass('display');
+        $('.filter,.plsGo')
+        .addClass('display');
+    })
+
+    $(".applyList .checkBtn").on("click",function(){
+        $('.jumpWindow')
+        .removeClass('display');
+        $('.filter,.eventWindow')
         .addClass('display');
     })
 })

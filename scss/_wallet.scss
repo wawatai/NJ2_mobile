@@ -204,9 +204,9 @@
                 li {
                     width: auto;
                     height: auto;
-                    border-radius: 16px;
+                    border-radius: 10px;
                     background: $bg_2;
-                    box-shadow: 1px 1px 2px 0 $mainShadow_2;
+                    box-shadow: 1px 1px 2px 0 $mainShadow_1;
                     padding: 10px 16px;
 
                     div {
@@ -222,7 +222,7 @@
                         color: $mainColor_1;
                         font-size: 5vw;
                         font-weight: bold;
-                        margin-top: 16px;
+                        margin-top: 10px;
                     }
                 }
             }

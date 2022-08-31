@@ -78,6 +78,10 @@ header {
             left: 50%;
             transform: translateX(-50%);
             @include hiddenText;
+
+            &.small {
+                font-size: 4.5vw;
+            }
         }
 
         .back_arrow {
