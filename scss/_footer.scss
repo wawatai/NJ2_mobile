@@ -24,9 +24,12 @@ footer {
         content: " ";
         width: 0;
         height: 0;
+        background: $footerHov_BG;
+        border-radius: 50%;
         position: absolute;
-        top: -18px;
-        left: 8px;
+        top: -35%;
+        left: 50%;
+        transform: translateX(-50%);
       }
 
       a {
@@ -45,22 +48,14 @@ footer {
       &.active {
 
         &::before {
-          content: " ";
           width: 15vw;
           height: 15vw;
-          background: $footerHov_BG;
-          border-radius: 50%;
-          top: -35%;
-          left: 50%;
-          transform: translateX(-50%);
         }
 
        a {
           top: -6%;
-          left: 50%;
-          transform: translateX(-50%);
+          transform: translate(-50%, 0);
        }
-
       }
     }
   }
