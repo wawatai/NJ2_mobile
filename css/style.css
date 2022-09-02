@@ -79,28 +79,28 @@ header .link_ic {
   background-size: contain;
 }
 
-footer.index {
-  background: url("../images/footer_index.png") no-repeat;
+footer .home {
+  background: url("../images/icon/svg/home.svg") no-repeat;
   background-size: 100%;
 }
 
-footer.event {
-  background: url("../images/footer_event.png") no-repeat;
+footer .promotion {
+  background: url("../images/icon/svg/promotion.svg") no-repeat;
   background-size: 100%;
 }
 
-footer.wallet {
-  background: url("../images/footer_wallet.png") no-repeat;
+footer .wallet {
+  background: url("../images/icon/svg/wallet.svg") no-repeat;
   background-size: 100%;
 }
 
-footer.service {
-  background: url("../images/footer_service.png") no-repeat;
+footer .cs {
+  background: url("../images/icon/svg/customer.svg") no-repeat;
   background-size: 100%;
 }
 
-footer.user {
-  background: url("../images/footer_user.png") no-repeat;
+footer .member {
+  background: url("../images/icon/svg/user.svg") no-repeat;
   background-size: 100%;
 }
 
@@ -1076,10 +1076,10 @@ html body .multiple-items.card .slick-list {
   height: 100%;
 }
 html body .multiple-items.card .slick-list .slick-track li.slick-center .cardBG .nameBox p {
-  text-shadow: 2px 4px 3px #00000080;
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.5019607843);
 }
 html body .multiple-items.card .slick-list .slick-track li.slick-center .cardBG .num {
-  text-shadow: 2px 4px 3px #00000080;
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.5019607843);
 }
 html body .multiple-items.card .slick-list .slick-track li .cardBG {
   width: 275px;
@@ -1171,8 +1171,8 @@ html body .marqueeBox {
   height: 7vw;
   background: #ffffff;
   border: solid 1px #daaf6d;
-  -webkit-box-shadow: 0 2px 5px 0 #00000033 inset;
-          box-shadow: 0 2px 5px 0 #00000033 inset;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2) inset;
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2) inset;
   border-radius: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1601,46 +1601,64 @@ html body footer {
           align-items: flex-end;
   z-index: 100;
 }
-html body footer.index ul li:nth-of-type(1) a {
-  width: 16vw;
-  height: 16vw;
-  border-radius: 50%;
-  top: -5vw;
-  left: 3vw;
+html body footer.index ul {
+  width: 100%;
+  height: 52px;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(4%, #bc9c64), color-stop(93%, #f3d197));
+  background: linear-gradient(to top, #bc9c64 4%, #f3d197 93%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
-html body footer.event ul li:nth-of-type(2) a {
-  width: 16vw;
-  height: 16vw;
-  border-radius: 50%;
-  top: -5vw;
-  left: 3vw;
+html body footer.index ul li {
+  width: 20%;
+  height: 100%;
+  position: relative;
 }
-html body footer.wallet ul li:nth-of-type(3) a {
-  width: 16vw;
-  height: 16vw;
+html body footer.index ul li::before {
+  content: " ";
+  width: 15vw;
+  height: 15vw;
+  background: #b8151a;
   border-radius: 50%;
-  top: -5vw;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  position: absolute;
+  top: -18px;
+  left: 8px;
+  opacity: 0;
 }
-html body footer.service ul li:nth-of-type(4) a {
-  width: 16vw;
-  height: 16vw;
-  border-radius: 50%;
-  top: -5vw;
-  left: 1.5vw;
+html body footer.index ul li a {
+  width: 6.5vw;
+  height: 6.5vw;
+  display: block;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 12px;
+  left: 26px;
 }
-html body footer.user ul li:nth-of-type(5) a {
-  width: 16vw;
-  height: 16vw;
-  border-radius: 50%;
-  top: -5.2vw;
-  left: 1vw;
+html body footer.index ul li:hover::before, html body footer.index ul li:active::before, html body footer.index ul li.active::before {
+  opacity: 1;
+}
+html body footer.index ul li:hover a, html body footer.index ul li:active a, html body footer.index ul li.active a {
+  -webkit-transform: translateX(-0.5px);
+          transform: translateX(-0.5px);
+  -webkit-transform: translateY(-15px);
+          transform: translateY(-15px);
+}
+html body footer.index ul li:hover a.home, html body footer.index ul li:active a.home, html body footer.index ul li.active a.home {
+  -webkit-transform: translate(-1px, -15px);
+          transform: translate(-1px, -15px);
+}
+html body footer.index ul li:hover a.wallet, html body footer.index ul li:active a.wallet, html body footer.index ul li.active a.wallet {
+  -webkit-transform: translateY(-14px);
+          transform: translateY(-14px);
 }
 html body footer ul {
   width: 100%;
-  height: 13vw;
+  height: 52px;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(4%, #bc9c64), color-stop(93%, #f3d197));
+  background: linear-gradient(to top, #bc9c64 4%, #f3d197 93%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1650,13 +1668,44 @@ html body footer ul li {
   height: 100%;
   position: relative;
 }
-html body footer ul li a {
+html body footer ul li::before {
+  content: " ";
+  width: 15vw;
+  height: 15vw;
+  background: #b8151a;
+  border-radius: 50%;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -18px;
+  left: 8px;
+  opacity: 0;
+}
+html body footer ul li a {
+  width: 6.5vw;
+  height: 6.5vw;
   display: block;
-  width: 100%;
-  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 12px;
+  left: 26px;
+}
+html body footer ul li:active::before, html body footer ul li.active::before {
+  opacity: 1;
+}
+html body footer ul li:active a, html body footer ul li.active a {
+  -webkit-transform: translateX(-0.5px);
+          transform: translateX(-0.5px);
+  -webkit-transform: translateY(-15px);
+          transform: translateY(-15px);
+}
+html body footer ul li:active a.home, html body footer ul li.active a.home {
+  -webkit-transform: translate(-1px, -15px);
+          transform: translate(-1px, -15px);
+}
+html body footer ul li:active a.wallet, html body footer ul li.active a.wallet {
+  -webkit-transform: translateY(-14px);
+          transform: translateY(-14px);
 }
 html body .filter {
   width: 100%;
@@ -1664,7 +1713,7 @@ html body .filter {
   position: fixed;
   top: 0;
   left: 0;
-  background: #00000066;
+  background: rgba(0, 0, 0, 0.4);
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1752,8 +1801,8 @@ html body .filter .jumpWindow.loginWindow form label input {
   background: #ffffff;
   border-radius: 5px;
   border: solid 1px #daaf6d;
-  -webkit-box-shadow: 0 2px 5px 0 #0000001d inset;
-          box-shadow: 0 2px 5px 0 #0000001d inset;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
   color: #3a3a3a;
   font-size: 3.4vw;
   font-weight: bold;
@@ -1843,8 +1892,8 @@ html body .filter .jumpWindow.forgetWindow form input {
   background: #ffffff;
   border-radius: 5px;
   border: solid 1px #daaf6d;
-  -webkit-box-shadow: 0 2px 5px 0 #0000001d inset;
-          box-shadow: 0 2px 5px 0 #0000001d inset;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
   color: #3a3a3a;
   font-size: 3.4vw;
   font-weight: bold;
@@ -1958,8 +2007,8 @@ html body .filter .jumpWindow.registerWindow form label div input {
   background: #ffffff;
   border-radius: 5px;
   border: solid 1px #daaf6d;
-  -webkit-box-shadow: 0 2px 5px 0 #0000001d inset;
-          box-shadow: 0 2px 5px 0 #0000001d inset;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
   color: #3a3a3a;
   font-size: 3.4vw;
   font-weight: bold;
@@ -2040,8 +2089,8 @@ html body .filter .jumpWindow.registerWindow form label.isCheck input[type=check
   background: #f9f9f9;
   border-radius: 50%;
   border: solid 1px #daaf6d;
-  -webkit-box-shadow: 0 2px 3px 0 #0000001d inset;
-          box-shadow: 0 2px 3px 0 #0000001d inset;
+  -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1137254902) inset;
+          box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1137254902) inset;
 }
 html body .filter .jumpWindow.registerWindow form label.isCheck input[type=checkbox]::after {
   display: none;
@@ -2090,21 +2139,20 @@ html body .filter .jumpWindow.registerWindow form label .code:active, html body 
   color: #ffffff;
 }
 html body .filter .jumpWindow.registerWindow form .checkBtn {
-  width: 100%;
+  width: 70%;
   height: 9.87vw;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(4%, #bc9c64), color-stop(93%, #f3d197));
-  background: linear-gradient(to top, #bc9c64 4%, #f3d197 93%);
+  background: -webkit-gradient(linear, left bottom, left top, from(#970707), color-stop(98%, #cf0505));
+  background: linear-gradient(to top, #970707 0%, #cf0505 98%);
   border-radius: 30px;
   color: #ffffff;
-  font-size: 4vw;
+  font-size: 3.4vw;
   font-weight: bold;
-  letter-spacing: 1px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
 html body .filter .jumpWindow.registerWindow form .checkBtn:active, html body .filter .jumpWindow.registerWindow form .checkBtn.active {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(4%, #bc9c64), color-stop(93%, #f3d197));
-  background: linear-gradient(to bottom, #bc9c64 4%, #f3d197 93%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#970707), color-stop(98%, #cf0505));
+  background: linear-gradient(to bottom, #970707 0%, #cf0505 98%);
 }
 html body .filter .jumpWindow.news, html body .filter .jumpWindow.rules {
   padding-bottom: 16px;
@@ -2210,8 +2258,8 @@ html body .filter .jumpWindow.news .box .infoBox, html body .filter .jumpWindow.
 html body .filter .jumpWindow.news .box .infoBox.active, html body .filter .jumpWindow.rules .box .infoBox.active {
   background: #ffffff;
   border-color: #b8151a;
-  -webkit-box-shadow: 0 2px 5px 0 #0000001d inset;
-          box-shadow: 0 2px 5px 0 #0000001d inset;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
 }
 html body .filter .jumpWindow.news .box .infoBox:last-child, html body .filter .jumpWindow.rules .box .infoBox:last-child {
   margin-bottom: 0;
@@ -2358,8 +2406,8 @@ html body .filter .jumpWindow.betWindow .bottom .inputBox input {
   background: #ffffff;
   border-radius: 5px;
   border: solid 1px #daaf6d;
-  -webkit-box-shadow: 0 2px 5px 0 #0000001d inset;
-          box-shadow: 0 2px 5px 0 #0000001d inset;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
   color: #3a3a3a;
   font-size: 3.4vw;
   font-weight: bold;
@@ -2419,18 +2467,17 @@ html body .filter .jumpWindow.betWindow .enterGame {
 html body .filter .jumpWindow.betWindow .enterGame button {
   width: 70%;
   height: 42px;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(4%, #bc9c64), color-stop(93%, #f3d197));
-  background: linear-gradient(to top, #bc9c64 4%, #f3d197 93%);
+  background: -webkit-gradient(linear, left bottom, left top, from(#970707), color-stop(98%, #cf0505));
+  background: linear-gradient(to top, #970707 0%, #cf0505 98%);
   border-radius: 30px;
   color: #ffffff;
-  font-size: 4vw;
+  font-size: 3.4vw;
   font-weight: bold;
-  letter-spacing: 1px;
   margin-bottom: 12px;
 }
 html body .filter .jumpWindow.betWindow .enterGame button:active, html body .filter .jumpWindow.betWindow .enterGame button.active {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(4%, #bc9c64), color-stop(93%, #f3d197));
-  background: linear-gradient(to bottom, #bc9c64 4%, #f3d197 93%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#970707), color-stop(98%, #cf0505));
+  background: linear-gradient(to bottom, #970707 0%, #cf0505 98%);
 }
 html body .filter .jumpWindow.betWindow .enterGame div {
   width: 100%;
@@ -2463,8 +2510,8 @@ html body .filter .jumpWindow.betWindow .enterGame div input::before {
   background: #f9f9f9;
   border-radius: 50%;
   border: solid 1px #daaf6d;
-  -webkit-box-shadow: 0 2px 3px 0 #0000001d inset;
-          box-shadow: 0 2px 3px 0 #0000001d inset;
+  -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1137254902) inset;
+          box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1137254902) inset;
 }
 html body .filter .jumpWindow.betWindow .enterGame div input::after {
   display: none;
@@ -2523,8 +2570,8 @@ html body .filter .jumpWindow.phoneWindow form label input {
   background: #ffffff;
   border-radius: 5px;
   border: solid 1px #daaf6d;
-  -webkit-box-shadow: 0 2px 5px 0 #0000001d inset;
-          box-shadow: 0 2px 5px 0 #0000001d inset;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
   color: #3a3a3a;
   font-size: 3.4vw;
   font-weight: bold;
@@ -2604,8 +2651,8 @@ html body .filter .jumpWindow.passwordWindow .content .inputBox input {
   background: #ffffff;
   border-radius: 5px;
   border: solid 1px #daaf6d;
-  -webkit-box-shadow: 0 2px 5px 0 #0000001d inset;
-          box-shadow: 0 2px 5px 0 #0000001d inset;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
   color: #3a3a3a;
   font-size: 3.4vw;
   font-weight: bold;
@@ -3117,8 +3164,8 @@ html body .slotWrap .slotHeader .searchBox input {
   background: #ffffff;
   border-radius: 5px;
   border: solid 1px #daaf6d;
-  -webkit-box-shadow: 0 2px 5px 0 #0000001d inset;
-          box-shadow: 0 2px 5px 0 #0000001d inset;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
   color: #3a3a3a;
   font-size: 3.4vw;
   font-weight: bold;
@@ -3728,8 +3775,8 @@ html body .walletWrap .walletList .forPlatform ul li {
   height: auto;
   border-radius: 10px;
   background: #ffffff;
-  -webkit-box-shadow: 1px 1px 2px 0 #00000033;
-          box-shadow: 1px 1px 2px 0 #00000033;
+  -webkit-box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.2);
   padding: 10px 16px;
 }
 html body .walletWrap .walletList .forPlatform ul li div {
@@ -3924,7 +3971,7 @@ html body .memberWrap .user .btnBox .left button {
   color: #ffffff;
   font-size: 5vw;
   font-weight: bold;
-  text-shadow: 2px 3px 0 #00000080;
+  text-shadow: 2px 3px 0 rgba(0, 0, 0, 0.5019607843);
 }
 html body .memberWrap .user .btnBox .left button:last-child {
   margin-top: 3vw;
@@ -4123,8 +4170,8 @@ html body .memberInfo form ul li .inputBox input {
   background: #ffffff;
   border-radius: 5px;
   border: solid 1px #daaf6d;
-  -webkit-box-shadow: 0 2px 5px 0 #0000001d inset;
-          box-shadow: 0 2px 5px 0 #0000001d inset;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
   color: #3a3a3a;
   font-size: 3.4vw;
   font-weight: bold;
@@ -4211,8 +4258,8 @@ html body .memberInfo .info_1 ul li .inputBox input {
   background: #ffffff;
   border-radius: 5px;
   border: solid 1px #daaf6d;
-  -webkit-box-shadow: 0 2px 5px 0 #0000001d inset;
-          box-shadow: 0 2px 5px 0 #0000001d inset;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
   color: #3a3a3a;
   font-size: 3.4vw;
   font-weight: bold;
@@ -4262,8 +4309,8 @@ html body .memberInfo .info_2 ul li {
   height: 9.87vw;
   background: #ffffff;
   border-radius: 3px;
-  -webkit-box-shadow: 0 2px 3px 0 #00000033;
-          box-shadow: 0 2px 3px 0 #00000033;
+  -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4309,8 +4356,8 @@ html body .memberInfo .pwdBox .inputBox {
   width: 100%;
   height: 9.87vw;
   background: #ffffff;
-  -webkit-box-shadow: 0 2px 3px 0 #00000033;
-          box-shadow: 0 2px 3px 0 #00000033;
+  -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
   border-radius: 3px;
   position: relative;
   display: -webkit-box;
@@ -4775,8 +4822,8 @@ html body .helpInner li .box {
   background: #ffffff;
   border-radius: 16px;
   border: solid 1px #daaf6d;
-  -webkit-box-shadow: 0 2px 1px 0 #00000033;
-          box-shadow: 0 2px 1px 0 #00000033;
+  -webkit-box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2);
   overflow: hidden;
   margin: 0 auto 10px;
 }
@@ -5031,8 +5078,8 @@ html body .applyList .listBox .list {
   width: 100%;
   height: auto;
   background: #ffffff;
-  -webkit-box-shadow: 0 1px 1px 1px #00000033;
-          box-shadow: 0 1px 1px 1px #00000033;
+  -webkit-box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   position: relative;
   padding: 0 12px;
@@ -5259,8 +5306,8 @@ html body .applyRecord .searchContent .top .inputBox {
   background: #ffffff;
   border-radius: 5px;
   border: solid 1px #daaf6d;
-  -webkit-box-shadow: 0 2px 5px 0 #0000001d inset;
-          box-shadow: 0 2px 5px 0 #0000001d inset;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
   color: #3a3a3a;
   font-size: 3.4vw;
   font-weight: bold;
@@ -5398,7 +5445,7 @@ html body .applyRecord .reviewBody .recordBox.fail ul::before {
   top: 0;
   width: 100%;
   height: 100%;
-  background: #00000066;
+  background: rgba(0, 0, 0, 0.4);
   opacity: 0.5;
 }
 html body .applyRecord .reviewBody .recordBox .title {
@@ -5524,8 +5571,8 @@ html body .vipWrap .topBox .cardBG {
 html body .vipWrap .topBox .cardBG .medal {
   width: 28vw;
   height: 30vw;
-  -webkit-filter: drop-shadow(2px 3px 5px #00000080);
-          filter: drop-shadow(2px 3px 5px #00000080);
+  -webkit-filter: drop-shadow(2px 3px 5px rgba(0, 0, 0, 0.5019607843));
+          filter: drop-shadow(2px 3px 5px rgba(0, 0, 0, 0.5019607843));
   margin-right: 20px;
 }
 html body .vipWrap .topBox .cardBG .textBox {
@@ -5536,7 +5583,7 @@ html body .vipWrap .topBox .cardBG .textBox .title {
   color: #ffffff;
   font-size: 6vw;
   font-weight: bold;
-  text-shadow: 2px 3px 0 #00000080;
+  text-shadow: 2px 3px 0 rgba(0, 0, 0, 0.5019607843);
   margin-bottom: 16px;
 }
 html body .vipWrap .topBox .cardBG .textBox .row {
@@ -5551,14 +5598,14 @@ html body .vipWrap .topBox .cardBG .textBox .row .smallTitle {
   color: #ffd38a;
   font-size: 4vw;
   font-weight: bold;
-  text-shadow: 2px 3px 0 #00000080;
+  text-shadow: 2px 3px 0 rgba(0, 0, 0, 0.5019607843);
   margin-bottom: 5px;
 }
 html body .vipWrap .topBox .cardBG .textBox .row .text {
   color: #ffffff;
   font-size: 4vw;
   font-weight: bold;
-  text-shadow: 2px 3px 0 #00000080;
+  text-shadow: 2px 3px 0 rgba(0, 0, 0, 0.5019607843);
 }
 html body .vipWrap .lineTitle {
   width: 100%;
@@ -5606,8 +5653,8 @@ html body .vipWrap .enjoyBox ul li {
   height: 11vw;
   background: #ffffff;
   border-radius: 5px 10px 10px 5px;
-  -webkit-box-shadow: 1px 2px 1px 0 #0000001d;
-          box-shadow: 1px 2px 1px 0 #0000001d;
+  -webkit-box-shadow: 1px 2px 1px 0 rgba(0, 0, 0, 0.1137254902);
+          box-shadow: 1px 2px 1px 0 rgba(0, 0, 0, 0.1137254902);
   position: relative;
   overflow: hidden;
   color: #ba9141;
@@ -5873,8 +5920,8 @@ html body .vipDetail .remindBox {
   height: auto;
   background: #ffffff;
   border-radius: 5px;
-  -webkit-box-shadow: 1px 1px 2px 0 #00000080;
-          box-shadow: 1px 1px 2px 0 #00000080;
+  -webkit-box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.5019607843);
+          box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.5019607843);
   padding: 0 16px 16px;
 }
 html body .vipDetail .remindBox .lineTitle {
@@ -6087,8 +6134,8 @@ html body .mailWrap.normal .editBox .all input::before {
   background: #f9f9f9;
   border-radius: 50%;
   border: solid 1px #daaf6d;
-  -webkit-box-shadow: 0 2px 3px 0 #0000001d inset;
-          box-shadow: 0 2px 3px 0 #0000001d inset;
+  -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1137254902) inset;
+          box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1137254902) inset;
 }
 html body .mailWrap.normal .editBox .all input::after {
   display: none;
@@ -6169,8 +6216,8 @@ html body .mailWrap.normal .mailBox ul li {
   height: auto;
   background: #ffffff;
   border-radius: 5px 10px 10px 5px;
-  -webkit-box-shadow: 1px 2px 1px 0 #0000001d;
-          box-shadow: 1px 2px 1px 0 #0000001d;
+  -webkit-box-shadow: 1px 2px 1px 0 rgba(0, 0, 0, 0.1137254902);
+          box-shadow: 1px 2px 1px 0 rgba(0, 0, 0, 0.1137254902);
   position: relative;
   overflow: hidden;
   display: -webkit-box;
@@ -6220,8 +6267,8 @@ html body .mailWrap.normal .mailBox ul li input::before {
   background: #f9f9f9;
   border-radius: 50%;
   border: solid 1px #daaf6d;
-  -webkit-box-shadow: 0 2px 3px 0 #0000001d inset;
-          box-shadow: 0 2px 3px 0 #0000001d inset;
+  -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1137254902) inset;
+          box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1137254902) inset;
 }
 html body .mailWrap.normal .mailBox ul li input::after {
   display: none;
@@ -6368,8 +6415,8 @@ html body .mailWrap.post .mailBox ul li {
   height: 15vw;
   background: #ffffff;
   border-radius: 5px 10px 10px 5px;
-  -webkit-box-shadow: 1px 2px 1px 0 #0000001d;
-          box-shadow: 1px 2px 1px 0 #0000001d;
+  -webkit-box-shadow: 1px 2px 1px 0 rgba(0, 0, 0, 0.1137254902);
+          box-shadow: 1px 2px 1px 0 rgba(0, 0, 0, 0.1137254902);
   position: relative;
   overflow: hidden;
   display: -webkit-box;
@@ -6529,8 +6576,8 @@ html body .cardWrap .cardContent ul li .inputBox input {
   background: #ffffff;
   border-radius: 5px;
   border: solid 1px #daaf6d;
-  -webkit-box-shadow: 0 2px 5px 0 #0000001d inset;
-          box-shadow: 0 2px 5px 0 #0000001d inset;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
   color: #3a3a3a;
   font-size: 3.4vw;
   font-weight: bold;
@@ -6661,8 +6708,8 @@ html body .bettingWrap .searchContent .top .inputBox {
   background: #ffffff;
   border-radius: 5px;
   border: solid 1px #daaf6d;
-  -webkit-box-shadow: 0 2px 5px 0 #0000001d inset;
-          box-shadow: 0 2px 5px 0 #0000001d inset;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
   color: #3a3a3a;
   font-size: 3.4vw;
   font-weight: bold;
@@ -6953,8 +7000,8 @@ html body .bettingWrap .list .partnerBox {
   height: auto;
   background: #ffffff;
   border-radius: 16px;
-  -webkit-box-shadow: 0 1px 2px 1px #00000033;
-          box-shadow: 0 1px 2px 1px #00000033;
+  -webkit-box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.2);
   padding: 0 8px;
   margin-bottom: 10px;
 }
@@ -7372,8 +7419,8 @@ html body .depositWrap .depContent .inputBox input {
   background: #ffffff;
   border-radius: 5px;
   border: solid 1px #daaf6d;
-  -webkit-box-shadow: 0 2px 5px 0 #0000001d inset;
-          box-shadow: 0 2px 5px 0 #0000001d inset;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
   color: #3a3a3a;
   font-size: 3.4vw;
   font-weight: bold;
@@ -7421,8 +7468,8 @@ html body .depositWrap .remindBox {
   width: 100%;
   height: auto;
   background: #ffffff;
-  -webkit-box-shadow: 1px 1px 2px 0 #00000080;
-          box-shadow: 1px 1px 2px 0 #00000080;
+  -webkit-box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.5019607843);
+          box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.5019607843);
   border-radius: 5px;
   margin-top: 16px;
   padding: 0 16px 16px;
@@ -7648,8 +7695,8 @@ html body .transWrap .transBox .inputBox input {
   background: #ffffff;
   border-radius: 5px;
   border: solid 1px #daaf6d;
-  -webkit-box-shadow: 0 2px 5px 0 #0000001d inset;
-          box-shadow: 0 2px 5px 0 #0000001d inset;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
   color: #3a3a3a;
   font-size: 3.4vw;
   font-weight: bold;
@@ -7781,8 +7828,8 @@ html body .transWrap .walletList .forPlatform ul li {
   height: auto;
   border-radius: 10px;
   background: #ffffff;
-  -webkit-box-shadow: 1px 1px 2px 0 #00000033;
-          box-shadow: 1px 1px 2px 0 #00000033;
+  -webkit-box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.2);
   padding: 10px 16px;
 }
 html body .transWrap .walletList .forPlatform ul li div {
@@ -8011,8 +8058,8 @@ html body .withWrap .walletList .forPlatform ul li {
   height: auto;
   border-radius: 10px;
   background: #ffffff;
-  -webkit-box-shadow: 1px 1px 2px 0 #00000033;
-          box-shadow: 1px 1px 2px 0 #00000033;
+  -webkit-box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.2);
   padding: 10px 16px;
 }
 html body .withWrap .walletList .forPlatform ul li div {
@@ -8100,8 +8147,8 @@ html body .withWrap .withContent .inputBox input {
   background: #ffffff;
   border-radius: 5px;
   border: solid 1px #daaf6d;
-  -webkit-box-shadow: 0 2px 5px 0 #0000001d inset;
-          box-shadow: 0 2px 5px 0 #0000001d inset;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
   color: #3a3a3a;
   font-size: 3.4vw;
   font-weight: bold;
@@ -8148,8 +8195,8 @@ html body .withWrap .remindBox {
   width: 100%;
   height: auto;
   background: #ffffff;
-  -webkit-box-shadow: 1px 1px 2px 0 #00000080;
-          box-shadow: 1px 1px 2px 0 #00000080;
+  -webkit-box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.5019607843);
+          box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.5019607843);
   border-radius: 5px;
   margin-top: 16px;
   padding: 0 16px 16px;
@@ -8210,8 +8257,8 @@ html body .inviteWrap .top .inputBox input {
   background: #ffffff;
   border-radius: 5px;
   border: solid 1px #daaf6d;
-  -webkit-box-shadow: 0 2px 5px 0 #0000001d inset;
-          box-shadow: 0 2px 5px 0 #0000001d inset;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
   color: #3a3a3a;
   font-size: 3.4vw;
   font-weight: bold;
@@ -8248,8 +8295,8 @@ html body .inviteWrap .top .btnBox {
   background: linear-gradient(to bottom, #fdeec6 32%, #e2c28d 100%);
   border-radius: 16px;
   border: solid 1px #daaf6d;
-  -webkit-box-shadow: 0 2px 5px 2px #0000001d;
-          box-shadow: 0 2px 5px 2px #0000001d;
+  -webkit-box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.1137254902);
+          box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.1137254902);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

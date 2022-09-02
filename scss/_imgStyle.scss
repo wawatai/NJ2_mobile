@@ -53,24 +53,24 @@ header .link_ic {
 }
 
 //footer
-footer.index {
-    background: url('../images/footer_index.png') no-repeat;
+footer .home {
+    background: url('../images/icon/svg/home.svg') no-repeat;
     background-size: 100%;
 }
-footer.event {
-    background: url('../images/footer_event.png') no-repeat;
+footer .promotion {
+    background: url('../images/icon/svg/promotion.svg') no-repeat;
     background-size: 100%;
 }
-footer.wallet {
-    background: url('../images/footer_wallet.png') no-repeat;
+footer .wallet {
+    background: url('../images/icon/svg/wallet.svg') no-repeat;
     background-size: 100%;
 }
-footer.service {
-    background: url('../images/footer_service.png') no-repeat;
+footer  .cs {
+    background: url('../images/icon/svg/customer.svg') no-repeat;
     background-size: 100%;
 }
-footer.user {
-    background: url('../images/footer_user.png') no-repeat;
+footer .member {
+    background: url('../images/icon/svg/user.svg') no-repeat;
     background-size: 100%;
 }
 
