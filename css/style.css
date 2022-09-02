@@ -79,27 +79,27 @@ header .link_ic {
   background-size: contain;
 }
 
-footer .home {
+footer .home::before {
   background: url("../images/icon/svg/home.svg") no-repeat;
   background-size: 100%;
 }
 
-footer .promotion {
+footer .promotion::before {
   background: url("../images/icon/svg/promotion.svg") no-repeat;
   background-size: 100%;
 }
 
-footer .wallet {
+footer .wallet::before {
   background: url("../images/icon/svg/wallet.svg") no-repeat;
   background-size: 100%;
 }
 
-footer .cs {
+footer .cs::before {
   background: url("../images/icon/svg/customer.svg") no-repeat;
   background-size: 100%;
 }
 
-footer .member {
+footer .member::before {
   background: url("../images/icon/svg/user.svg") no-repeat;
   background-size: 100%;
 }
@@ -1615,10 +1615,26 @@ html body footer ul li {
   height: 100%;
   position: relative;
 }
-html body footer ul li::before {
+html body footer ul li a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-size: contain;
+  position: relative;
+}
+html body footer ul li a::before {
   content: " ";
-  width: 0;
-  height: 0;
+  width: 6.5vw;
+  height: 6.5vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+html body footer ul li:active a, html body footer ul li.active a {
+  width: 15vw;
+  height: 15vw;
   background: #b8151a;
   border-radius: 50%;
   position: absolute;
@@ -1627,25 +1643,8 @@ html body footer ul li::before {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
-html body footer ul li a {
-  width: 6.5vw;
-  height: 6.5vw;
-  display: block;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-html body footer ul li:active::before, html body footer ul li.active::before {
-  width: 15vw;
-  height: 15vw;
-}
-html body footer ul li:active a, html body footer ul li.active a {
-  top: -6%;
+html body footer ul li:active a::before, html body footer ul li.active a::before {
+  top: 25%;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
 }

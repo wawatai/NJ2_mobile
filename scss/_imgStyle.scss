@@ -53,23 +53,23 @@ header .link_ic {
 }
 
 //footer
-footer .home {
+footer .home::before {
     background: url('../images/icon/svg/home.svg') no-repeat;
     background-size: 100%;
 }
-footer .promotion {
+footer .promotion::before {
     background: url('../images/icon/svg/promotion.svg') no-repeat;
     background-size: 100%;
 }
-footer .wallet {
+footer .wallet::before {
     background: url('../images/icon/svg/wallet.svg') no-repeat;
     background-size: 100%;
 }
-footer  .cs {
+footer  .cs::before {
     background: url('../images/icon/svg/customer.svg') no-repeat;
     background-size: 100%;
 }
-footer .member {
+footer .member::before {
     background: url('../images/icon/svg/user.svg') no-repeat;
     background-size: 100%;
 }
