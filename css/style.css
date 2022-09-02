@@ -1636,7 +1636,7 @@ html body footer ul li a {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
-html body footer ul li:hover::before, html body footer ul li:active::before, html body footer ul li.active::before {
+html body footer ul li:active::before, html body footer ul li.active::before {
   content: " ";
   width: 15vw;
   height: 15vw;
@@ -1647,7 +1647,7 @@ html body footer ul li:hover::before, html body footer ul li:active::before, htm
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
-html body footer ul li:hover a, html body footer ul li:active a, html body footer ul li.active a {
+html body footer ul li:active a, html body footer ul li.active a {
   top: -6%;
   left: 50%;
   -webkit-transform: translateX(-50%);
