@@ -496,6 +496,11 @@ footer .member::before {
   background-size: contain;
 }
 
+.helpInner .img.depositWay {
+  background: url("../images/help/help_depositWay.jpg") no-repeat;
+  background-size: contain;
+}
+
 .depositWrap .depList .vega_ic {
   background: url("../images/icon/deposit_vega.png") no-repeat center;
   background-size: contain;
@@ -4605,6 +4610,9 @@ html body .helpInner li .img.help_new_2 {
 }
 html body .helpInner li .img.help_about_license {
   height: 135vw;
+}
+html body .helpInner li .img.depositWay {
+  height: 53vw;
 }
 html body .helpInner li .uploadBox {
   width: 100%;
