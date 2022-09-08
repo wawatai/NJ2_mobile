@@ -104,6 +104,26 @@ footer .member::before {
   background-size: contain;
 }
 
+footer .agentHome::before {
+  background: url("../images/icon/svg/agent_home.svg") no-repeat center;
+  background-size: contain;
+}
+
+footer .agentRule::before {
+  background: url("../images/icon/svg/agent_rule.svg") no-repeat center;
+  background-size: contain;
+}
+
+footer .agentNormal::before {
+  background: url("../images/icon/svg/agent_normal.svg") no-repeat center;
+  background-size: contain;
+}
+
+footer .agentPrivacy::before {
+  background: url("../images/icon/svg/agent_privacy.svg") no-repeat center;
+  background-size: contain;
+}
+
 .slotWrap .all_ic {
   background: url("../images/icon/svg/slotPage_all.svg") no-repeat center;
   background-size: contain;
@@ -636,6 +656,61 @@ footer .member::before {
   background-size: contain;
 }
 
+.agentWrap .topBanner {
+  background: url("../images/agent_banner.png") no-repeat;
+  background-size: contain;
+}
+
+.agentWrap .bigTitle .infoImg {
+  background: url("../images/agent_topImg.png") no-repeat;
+  background-size: contain;
+}
+
+.agentWrap .introBox li:nth-of-type(1) .img {
+  background: url("../images/agent_introImg_1.png") no-repeat center;
+  background-size: contain;
+}
+
+.agentWrap .introBox li:nth-of-type(2) .img {
+  background: url("../images/agent_introImg_2.png") no-repeat center;
+  background-size: contain;
+}
+
+.agentWrap .introBox li:nth-of-type(3) .img {
+  background: url("../images/agent_introImg_3.png") no-repeat center;
+  background-size: contain;
+}
+
+.agentWrap .introBox li:nth-of-type(4) .img {
+  background: url("../images/agent_introImg_4.png") no-repeat center;
+  background-size: contain;
+}
+
+.agentWrap .floatIC_1 {
+  background: url("../images/agent_floatIC_1.png") no-repeat;
+  background-size: contain;
+}
+
+.agentWrap .floatIC_2 {
+  background: url("../images/agent_floatIC_2.png") no-repeat;
+  background-size: contain;
+}
+
+.agentWrap .form_1 {
+  background: url("../images/agent_form_1.png") no-repeat;
+  background-size: contain;
+}
+
+.agentWrap .form_2 {
+  background: url("../images/agent_form_2.png") no-repeat;
+  background-size: contain;
+}
+
+.agentWrap .applyBox button {
+  background: url("../images/agent_applyBtn.png") no-repeat;
+  background-size: contain;
+}
+
 .selectBox .arrow_ic {
   background: url("../images/icon/arrow_1.png") no-repeat;
   background-size: contain;
@@ -807,7 +882,9 @@ i {
 
 input[type=date]::-webkit-inner-spin-button,
 input[type=date]::-webkit-calendar-picker-indicator {
-  opacity: 0;
+  display: none;
+  -webkit-appearance: none;
+          appearance: none;
 }
 
 html {
@@ -1022,6 +1099,21 @@ html body header .content .detailBtn.display {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+html body header .content .agentRegisterBtn {
+  width: auto;
+  height: 7vw;
+  background: -webkit-gradient(linear, left bottom, left top, from(#970707), color-stop(98%, #cf0505));
+  background: linear-gradient(to top, #970707 0%, #cf0505 98%);
+  border-radius: 30px;
+  color: #ffffff;
+  font-size: 3.4vw;
+  font-weight: bold;
+  padding: 0 10px;
+}
+html body header .content .agentRegisterBtn:active, html body header .content .agentRegisterBtn.active {
+  background: -webkit-gradient(linear, left top, left bottom, from(#970707), color-stop(98%, #cf0505));
+  background: linear-gradient(to bottom, #970707 0%, #cf0505 98%);
 }
 html body header .content.helpPage {
   display: none;
@@ -8321,4 +8413,391 @@ html body .inviteWrap .inviteImg {
   height: 0;
   margin-top: 10px;
   padding-top: 118vw;
+}
+html body .agentWrap {
+  width: 100%;
+  height: calc(100vh - 50px);
+  overflow-y: auto;
+  padding-bottom: 20vw;
+}
+html body .agentWrap .topBanner {
+  width: 100%;
+  height: 60vw;
+  margin-bottom: 16px;
+}
+html body .agentWrap .bigTitle {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 16px;
+}
+html body .agentWrap .bigTitle .title {
+  color: #d38c19;
+  font-size: 10vw;
+  font-weight: bold;
+}
+html body .agentWrap .bigTitle .sub {
+  width: 100%;
+  border-bottom: solid 3px #b8151a;
+  color: #b8151a;
+  font-size: 4vw;
+  font-weight: bold;
+  line-height: 5.5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  padding: 12px 0;
+  margin-bottom: 32px;
+}
+html body .agentWrap .bigTitle .sub::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-style: solid;
+  border-width: 0 3px 3px 0;
+  border-color: transparent #b8151a #b8151a transparent;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  bottom: -12px;
+}
+html body .agentWrap .bigTitle .sub::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: #ffffff;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  bottom: -8px;
+}
+html body .agentWrap .bigTitle .sub .floatIC_1 {
+  width: 8vw;
+  height: 20vw;
+  position: absolute;
+  left: -5px;
+  bottom: 0;
+}
+html body .agentWrap .bigTitle .sub .floatIC_2 {
+  width: 20vw;
+  height: 20vw;
+  position: absolute;
+  right: -5px;
+  top: -115px;
+}
+html body .agentWrap .bigTitle .imgBox {
+  width: 100%;
+  height: auto;
+  padding: 0 8px;
+}
+html body .agentWrap .bigTitle .imgBox .infoImg {
+  width: 100%;
+  height: 143vw;
+}
+html body .agentWrap .bigTitle .imgBox .form_1 {
+  width: 100%;
+  height: 69vw;
+  margin-bottom: 24px;
+}
+html body .agentWrap .bigTitle .imgBox .form_2 {
+  width: 100%;
+  height: 62vw;
+  margin-bottom: 24px;
+}
+html body .agentWrap .introBox {
+  width: 100%;
+  height: auto;
+  background: #ffebcb;
+  padding: 48px 32px;
+  margin: -25px 0 36px;
+}
+html body .agentWrap .introBox ul {
+  width: 100%;
+  height: auto;
+}
+html body .agentWrap .introBox ul li {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 24px;
+}
+html body .agentWrap .introBox ul li:last-child {
+  margin: 0;
+}
+html body .agentWrap .introBox ul li:nth-of-type(1) .img, html body .agentWrap .introBox ul li:nth-of-type(3) .img {
+  margin-right: 20px;
+}
+html body .agentWrap .introBox ul li:nth-of-type(2) .img, html body .agentWrap .introBox ul li:nth-of-type(4) .img {
+  margin-left: 20px;
+}
+html body .agentWrap .introBox ul li .img {
+  width: 35vw;
+  height: 35vw;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+html body .agentWrap .introBox ul li .textBox {
+  width: 100%;
+  height: auto;
+}
+html body .agentWrap .introBox ul li .textBox .title {
+  color: #b8151a;
+  font-size: 7vw;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+html body .agentWrap .introBox ul li .textBox .title span {
+  display: block;
+  font-size: 6vw;
+}
+html body .agentWrap .introBox ul li .textBox p:not(.title) {
+  color: #4d4d4d;
+  font-size: 4vw;
+  font-weight: bold;
+  line-height: 5.5vw;
+}
+html body .agentWrap .secondTitle {
+  width: 100%;
+  height: auto;
+  margin-bottom: 16px;
+}
+html body .agentWrap .secondTitle .title {
+  color: #d38c19;
+  font-size: 5vw;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+html body .agentWrap .secondTitle .sub {
+  color: #b8151a;
+  font-size: 3.4vw;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+html body .agentWrap .secondTitle .sub span {
+  line-height: 5.5vw;
+}
+html body .agentWrap .applyBox {
+  width: 100%;
+  height: auto;
+  background: #ffebcb;
+  padding: 24px 0;
+}
+html body .agentWrap .applyBox .bigTitle .title {
+  font-size: 7vw;
+  line-height: 9vw;
+  text-align: center;
+}
+html body .agentWrap .applyBox .bigTitle .sub {
+  font-size: 3.4vw;
+}
+html body .agentWrap .applyBox .bigTitle .sub::after {
+  background: #ffebcb;
+}
+html body .agentWrap .applyBox button {
+  width: 56vw;
+  height: 13vw;
+  display: block;
+  margin: 0 auto;
+}
+html body .agentHelpWrap {
+  width: 100%;
+  height: calc(100vh - 50px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+html body .agentHelpWrap .helpHeader {
+  width: 100%;
+  height: 70px;
+  background: #ab1116;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+html body .agentHelpWrap .helpHeader .selectBox {
+  width: 70%;
+  height: 9.87vw;
+  border-bottom: solid 1px #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+html body .agentHelpWrap .helpHeader .selectBox p {
+  color: #ffffff;
+  font-size: 4vw;
+  font-weight: bold;
+}
+html body .agentHelpWrap .helpHeader .selectBox i {
+  width: 16px;
+  height: 9px;
+  position: absolute;
+  right: 0;
+  -webkit-filter: grayscale(1) brightness(15);
+          filter: grayscale(1) brightness(15);
+  pointer-events: none;
+}
+html body .agentHelpWrap .helpHeader .selectBox select {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #3a3a3a;
+  font-size: 4vw;
+  font-weight: bold;
+  opacity: 0;
+}
+html body .agentHelpWrap .helpBody {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  padding-bottom: 20vw;
+}
+html body .agentHelpWrap .helpBody .bigTitle {
+  width: 92%;
+  height: 23vw;
+  border-bottom: solid 3px #b8151a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  margin: 0 auto 32px;
+}
+html body .agentHelpWrap .helpBody .bigTitle::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-style: solid;
+  border-width: 0 3px 3px 0;
+  border-color: transparent #b8151a #b8151a transparent;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  bottom: -12px;
+}
+html body .agentHelpWrap .helpBody .bigTitle::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: #ffffff;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  bottom: -8px;
+}
+html body .agentHelpWrap .helpBody .bigTitle p {
+  color: #d38c19;
+  font-size: 10vw;
+  font-weight: bold;
+}
+html body .agentHelpWrap .helpBody .content {
+  width: 100%;
+  height: auto;
+  padding: 0 16px;
+  margin-bottom: 24px;
+}
+html body .agentHelpWrap .helpBody .content:last-child {
+  margin: 0;
+}
+html body .agentHelpWrap .helpBody .content .smallTitle {
+  width: 100%;
+  color: #ba9141;
+  font-size: 6vw;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 24px;
+}
+html body .agentHelpWrap .helpBody .content p:not(.smallTitle) {
+  color: #3a3a3a;
+  font-size: 3.7vw;
+  font-weight: bold;
+  line-height: 6vw;
+}
+html body .agentHelpWrap .helpBody .content p:not(.smallTitle).sp {
+  padding-left: 16px;
+}
+html body .agentHelpWrap .helpBody .content p:not(.smallTitle).qa {
+  margin: 15px 0 5px;
+}
+html body .agentHelpWrap .helpBody .content p:not(.smallTitle).qa:first-child {
+  margin-top: 0;
+}
+html body .agentHelpWrap .helpBody .content p:not(.smallTitle) span {
+  color: #b8151a;
+}
+html body .agentBottom {
+  width: 100%;
+  height: 9vw;
+  background: #b8151a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+html body .agentBottom p {
+  color: #ffffff;
+  font-size: 3vw;
+  font-weight: bold;
 }

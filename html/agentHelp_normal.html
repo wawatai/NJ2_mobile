@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/javascript.js"></script>
+    <link rel="shortcut icon" href="../images/NJLOGO_64x64.ico" type="image/x-icon">
+</head>
+<body>
+    <!--header-->
+    <header>
+        <!--content-->
+        <div class="content">
+            <!--logo-->
+            <img src="../images/icon/logo.png" class="logo" onclick="window.location.href='./index_inner.html'">
+            <!--lang-->
+            <label class="lang">
+                <select>
+                    <option value="">日本語</option>
+                    <option value="">繁體中文</option>
+                    <option value="">简体中文</option>
+                </select>
+            </label>
+            <button class="agentRegisterBtn">申請します</button>
+        </div>
+    </header>
+    <!--main-->
+    <main>
+        <div class="agentHelpWrap">
+            <!--開頭選單-->
+            <div class="helpHeader">
+                <div class="selectBox">
+                    <p>1· はじめに</p>
+                    <i class="arrow_ic"></i>
+                    <select>
+                        <option value="" disabled>選んでください</option>
+                        <option value="">1· 登録</option>
+                        <option value="">2· コミッション</option>
+                        <option value="">3· 出金</option>
+                    </select>
+                </div>
+            </div>
+            <!--內容-->
+            <div class="helpBody">
+                <div class="bigTitle">
+                    <p>よくある質問</p>
+                </div>
+                <div class="content">
+                    <p class="smallTitle">1 · 登録</p>
+                    <p class="qa"><span>１．MANEKIのアフィリエイトになりたいです。</span></p>
+                    <p>ありがとうございます！ホームページの「登録」よりご登録するようお願い申し上げます。</p>
+                    <p>登録する前には必ず「利用規約」をご確認いただき、内容をご了承の上でご登録をいただきますようお願い致します。</p>
+                    <p>登録を申し込む時点で「利用規約」を全てご承諾いただいたものとみなします。</p>
+                    <p class="qa"><span>２．登録時、「ウェブサイトのURL」を入力しなければなりませんが、サイトを持たないとアフィリエイト登録できませんか？</span></p>
+                    <p>はい、登録できます。ご自身のウェブサイトを持たない場合は宣伝手段になるURL（ツイッターのURLなど）を入力してください。</p>
+                    <p>もしくはMANEKIのホームページURL：https://maneki.biz を入力すればAU8アフィリエイトチームから宣伝手段の確認メールをお送り致します。</p>
+                    <p class="qa"><span>３．アフィリエイトアカウントを複数作成することは可能ですか？</span></p>
+                    <p>いいえ、できません。お一人様につき1アカウントとさせていただいております。いかなる場合においても、各顧客、各世帯、各アドレス、</p>
+                    <p>各共有コンピュータ、および共有IPアドレスごとに、1つのアカウントのみAU8をご利用いただけます。「重複アカウント」を発見した場合は、</p>
+                    <p>予告なしに閉鎖することがあります。</p>
+                </div>
+                <div class="content">
+                    <p class="smallTitle">2 · コミッション</p>
+                    <p class="qa"><span>１．コミッションの支払いはいつですか？</span></p>
+                    <p>コミッションは毎月10日の18：00前に配布致します。</p>
+                    <p>システム調整のため配布が遅れる場合もあることをご了承ください。その際には延期お知らせをお送り致します。</p>
+                    <p>万が一延期お知らせが届いておりませんが、11日の朝になってもコミッションが配布されていない場合、お手数ですがアフィリエイトシステムのメッセージまでお気軽にご連絡ください。</p>
+                    <p class="qa"><span>2．コミッションの発生原理がわかりません。レベニューシェアはなんですか？</span></p>
+                    <p>コミッションの計算公式は以下の通り：</p>
+                    <p>（勝負値（ベット額 - ペイアウト）- ボーナス費用 - プラットフォーム費用 - ジャックポット - 手数料 ）× コミッション％レベニューシェアというのは会社の利益をアフィリエイトに分けるシステムでございます。</p>
+                </div>
+                <div class="content">
+                    <p class="smallTitle">3 · 出金</p>
+                    <p class="qa"><span>１．出金時、プレイヤーアカウントは必要ですか？</span></p>
+                    <p>いいえ、必要がございません。</p>
+                    <p>【コミッション出金までの流れ】</p>
+                    <p>振込口座を提供⇨報酬支払います。</p>
+                    <p class="qa"><span>2.出金するにはKYCが必要ですか？</span></p>
+                    <p>いいえ、必要がございません。</p>
+                </div>
+                <div class="agentBottom">
+                    <p>© 2022 MANEKI Affiliates. すべての権利を保有しています。</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!--footer-->
+    <footer>
+        <ul>
+            <li>
+                <a class="home" href="./index_inner.html"></a>
+            </li>
+            <li>
+                <a class="agentHome" href="./agent.html"></a>
+            </li>
+            <li>
+                <a class="agentRule" href="./agentHelp_rule.html"></a>
+            </li>
+            <li  class="active">
+                <a class="agentNormal" href="./agentHelp_normal.html"></a>
+            </li>
+            <li>
+                <a class="agentPrivacy" href="./agentHelp_privacy.html"></a>
+            </li>
+        </ul>
+    </footer>
+    <!--彈窗-->
+    <div class="filter"></div>
+    <!--背景-->
+    <div class="bg"></div>
+</body>
+</html>
