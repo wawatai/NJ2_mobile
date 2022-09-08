@@ -307,6 +307,11 @@ footer .agentPrivacy::before {
   background-size: contain;
 }
 
+.memberWrap .optionBox .agent_ic::before {
+  background: url("../images/icon/svg/member_option_agent.svg") no-repeat center;
+  background-size: contain;
+}
+
 .memberWrap .optionBox .logout_ic::before {
   background: url("../images/icon/svg/member_option_logout.svg") no-repeat center;
   background-size: contain;

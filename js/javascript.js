@@ -471,7 +471,7 @@ $(function(){
         .addClass('display');
     })
 
-    $(".agentRegisterBtn").on("click",function(){
+    $(".agentRegisterBtn,.agentWrap .applyBox button").on("click",function(){
         $('.jumpWindow')
         .removeClass('display');
         $('.filter,.agentWindow')
