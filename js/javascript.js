@@ -492,4 +492,124 @@ $(function(){
         $(this).closest("li")
         .toggleClass("active");
     })
+
+    $('.helpHeader.rule select').on("change",function(){
+        var n = $(this).val();
+        var target = $(".helpBody .content:eq("+ (n - 1) +")").offset().top - 24;
+        var ori = $(".helpBody").offset().top;
+        var scrollVal = $(".helpBody").scrollTop();
+
+        $(".helpBody").animate({
+            scrollTop: target - ori + scrollVal,
+        },300)
+        
+        if($(this).val() == 1)
+        {
+            $(".helpHeader.rule .selectBox p")
+            .text("1· はじめに")
+        }
+        if($(this).val() == 2)
+        {
+            $(".helpHeader.rule .selectBox p")
+            .text("2· 定義と解釈")
+        }
+        if($(this).val() == 3)
+        {
+            $(".helpHeader.rule .selectBox p")
+            .text("3· パートナー適用条件")
+        }
+        if($(this).val() == 4)
+        {
+            $(".helpHeader.rule .selectBox p")
+            .text("4· 当社の権利と義務")
+        }
+        if($(this).val() == 5)
+        {
+            $(".helpHeader.rule .selectBox p")
+            .text("5· パートナーの権利と義務")
+        }
+        if($(this).val() == 6)
+        {
+            $(".helpHeader.rule .selectBox p")
+            .text("6· コミッション")
+        }
+        if($(this).val() == 7)
+        {
+            $(".helpHeader.rule .selectBox p")
+            .text("7· 禁止事項")
+        }
+        if($(this).val() == 8)
+        {
+            $(".helpHeader.rule .selectBox p")
+            .text("8· 負債および責任制限")
+        }
+        if($(this).val() == 9)
+        {
+            $(".helpHeader.rule .selectBox p")
+            .text("9· 機密情報")
+        }
+        if($(this).val() == 10)
+        {
+            $(".helpHeader.rule .selectBox p")
+            .text("10· 解約または契約の終了")
+        }
+        if($(this).val() == 11)
+        {
+            $(".helpHeader.rule .selectBox p")
+            .text("11· 本規約および本契約の改正")
+        }
+    });
+
+    $('.helpHeader.privacy select').on("change",function(){
+        var n = $(this).val();
+        var target = $(".helpBody .content:eq("+ (n - 1) +")").offset().top - 24;
+        var ori = $(".helpBody").offset().top;
+        var scrollVal = $(".helpBody").scrollTop();
+
+        $(".helpBody").animate({
+            scrollTop: target - ori + scrollVal,
+        },300)
+
+        if($(this).val() == 1)
+        {
+            $(".helpHeader.privacy .selectBox p")
+            .text("1· 個人情報保護方針")
+        }
+        if($(this).val() == 2)
+        {
+            $(".helpHeader.privacy .selectBox p")
+            .text("2· 顧客情報保護方針")
+        }
+        if($(this).val() == 3)
+        {
+            $(".helpHeader.privacy .selectBox p")
+            .text("3· ドメイン認証SSL")
+        }
+    });
+
+    $('.helpHeader.normal select').on("change",function(){
+        var n = $(this).val();
+        var target = $(".helpBody .content:eq("+ (n - 1) +")").offset().top - 24;
+        var ori = $(".helpBody").offset().top;
+        var scrollVal = $(".helpBody").scrollTop();
+
+        $(".helpBody").animate({
+            scrollTop: target - ori + scrollVal,
+        },300)
+        if($(this).val() == 1)
+        {
+            $(".helpHeader.normal .selectBox p")
+            .text("1· 登録")
+        }
+        if($(this).val() == 2)
+        {
+            $(".helpHeader.normal .selectBox p")
+            .text("2· コミッション")
+        }
+        if($(this).val() == 3)
+        {
+            $(".helpHeader.normal .selectBox p")
+            .text("3· 出金")
+        }
+    });
 })
