@@ -41,7 +41,7 @@ $(function(){
 
 //news
 $(function(){
-    $(".jumpWindow.news li.smallTitle,.jumpWindow.rules li.smallTitle").on("click",function(){
+    $(".jumpWindow.news li.smallTitle,.jumpWindow.rules li.smallTitle,.jumpWindow.agentRules li.smallTitle").on("click",function(){
         $(this).closest(".infoBox")
         .toggleClass("active");
     })
@@ -469,5 +469,27 @@ $(function(){
         .removeClass('display');
         $('.filter,.eventWindow')
         .addClass('display');
+    })
+
+    $(".agentRegisterBtn").on("click",function(){
+        $('.jumpWindow')
+        .removeClass('display');
+        $('.filter,.agentWindow')
+        .addClass('display');
+    })
+
+    $(".agentWindow .isCheck p").on("click",function(){
+        $('.jumpWindow')
+        .removeClass('display');
+        $('.filter,.agentRules')
+        .addClass('display');
+    })
+})
+
+//agent
+$(function(){
+    $(".agentWindow .box li input").on("click",function(){
+        $(this).closest("li")
+        .toggleClass("active");
     })
 })

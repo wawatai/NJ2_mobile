@@ -2187,13 +2187,13 @@ html body .filter .jumpWindow.registerWindow form .checkBtn:active, html body .f
   background: -webkit-gradient(linear, left top, left bottom, from(#970707), color-stop(98%, #cf0505));
   background: linear-gradient(to bottom, #970707 0%, #cf0505 98%);
 }
-html body .filter .jumpWindow.news, html body .filter .jumpWindow.rules {
+html body .filter .jumpWindow.news, html body .filter .jumpWindow.rules, html body .filter .jumpWindow.agentRules {
   padding-bottom: 16px;
 }
-html body .filter .jumpWindow.news.rules .title p, html body .filter .jumpWindow.rules.rules .title p {
+html body .filter .jumpWindow.news.rules .title p, html body .filter .jumpWindow.news.agentRules .title p, html body .filter .jumpWindow.rules.rules .title p, html body .filter .jumpWindow.rules.agentRules .title p, html body .filter .jumpWindow.agentRules.rules .title p, html body .filter .jumpWindow.agentRules.agentRules .title p {
   font-size: 4vw;
 }
-html body .filter .jumpWindow.news.rules .allBtn, html body .filter .jumpWindow.rules.rules .allBtn {
+html body .filter .jumpWindow.news.rules .allBtn, html body .filter .jumpWindow.news.agentRules .allBtn, html body .filter .jumpWindow.rules.rules .allBtn, html body .filter .jumpWindow.rules.agentRules .allBtn, html body .filter .jumpWindow.agentRules.rules .allBtn, html body .filter .jumpWindow.agentRules.agentRules .allBtn {
   width: 70%;
   height: 11vw;
   background: -webkit-gradient(linear, left bottom, left top, color-stop(4%, #bc9c64), color-stop(93%, #f3d197));
@@ -2214,11 +2214,11 @@ html body .filter .jumpWindow.news.rules .allBtn, html body .filter .jumpWindow.
           justify-content: center;
   margin: 16px auto 0;
 }
-html body .filter .jumpWindow.news.rules .allBtn:active, html body .filter .jumpWindow.news.rules .allBtn.active, html body .filter .jumpWindow.rules.rules .allBtn:active, html body .filter .jumpWindow.rules.rules .allBtn.active {
+html body .filter .jumpWindow.news.rules .allBtn:active, html body .filter .jumpWindow.news.rules .allBtn.active, html body .filter .jumpWindow.news.agentRules .allBtn:active, html body .filter .jumpWindow.news.agentRules .allBtn.active, html body .filter .jumpWindow.rules.rules .allBtn:active, html body .filter .jumpWindow.rules.rules .allBtn.active, html body .filter .jumpWindow.rules.agentRules .allBtn:active, html body .filter .jumpWindow.rules.agentRules .allBtn.active, html body .filter .jumpWindow.agentRules.rules .allBtn:active, html body .filter .jumpWindow.agentRules.rules .allBtn.active, html body .filter .jumpWindow.agentRules.agentRules .allBtn:active, html body .filter .jumpWindow.agentRules.agentRules .allBtn.active {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(4%, #bc9c64), color-stop(93%, #f3d197));
   background: linear-gradient(to bottom, #bc9c64 4%, #f3d197 93%);
 }
-html body .filter .jumpWindow.news.rules .allBtn i, html body .filter .jumpWindow.rules.rules .allBtn i {
+html body .filter .jumpWindow.news.rules .allBtn i, html body .filter .jumpWindow.news.agentRules .allBtn i, html body .filter .jumpWindow.rules.rules .allBtn i, html body .filter .jumpWindow.rules.agentRules .allBtn i, html body .filter .jumpWindow.agentRules.rules .allBtn i, html body .filter .jumpWindow.agentRules.agentRules .allBtn i {
   width: 4vw;
   height: 4vw;
   margin-left: 5px;
@@ -2227,13 +2227,13 @@ html body .filter .jumpWindow.news.rules .allBtn i, html body .filter .jumpWindo
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
 }
-html body .filter .jumpWindow.news.rules .box .infoBox, html body .filter .jumpWindow.rules.rules .box .infoBox {
+html body .filter .jumpWindow.news.rules .box .infoBox, html body .filter .jumpWindow.news.agentRules .box .infoBox, html body .filter .jumpWindow.rules.rules .box .infoBox, html body .filter .jumpWindow.rules.agentRules .box .infoBox, html body .filter .jumpWindow.agentRules.rules .box .infoBox, html body .filter .jumpWindow.agentRules.agentRules .box .infoBox {
   width: 100%;
 }
-html body .filter .jumpWindow.news.rules .box .infoBox ul .smallTitle, html body .filter .jumpWindow.rules.rules .box .infoBox ul .smallTitle {
+html body .filter .jumpWindow.news.rules .box .infoBox ul .smallTitle, html body .filter .jumpWindow.news.agentRules .box .infoBox ul .smallTitle, html body .filter .jumpWindow.rules.rules .box .infoBox ul .smallTitle, html body .filter .jumpWindow.rules.agentRules .box .infoBox ul .smallTitle, html body .filter .jumpWindow.agentRules.rules .box .infoBox ul .smallTitle, html body .filter .jumpWindow.agentRules.agentRules .box .infoBox ul .smallTitle {
   padding: 0;
 }
-html body .filter .jumpWindow.news.rules .box .infoBox ul li:not(.smallTitle), html body .filter .jumpWindow.rules.rules .box .infoBox ul li:not(.smallTitle) {
+html body .filter .jumpWindow.news.rules .box .infoBox ul li:not(.smallTitle), html body .filter .jumpWindow.news.agentRules .box .infoBox ul li:not(.smallTitle), html body .filter .jumpWindow.rules.rules .box .infoBox ul li:not(.smallTitle), html body .filter .jumpWindow.rules.agentRules .box .infoBox ul li:not(.smallTitle), html body .filter .jumpWindow.agentRules.rules .box .infoBox ul li:not(.smallTitle), html body .filter .jumpWindow.agentRules.agentRules .box .infoBox ul li:not(.smallTitle) {
   height: auto;
   padding: 8px 0;
   -webkit-box-orient: vertical;
@@ -2244,16 +2244,22 @@ html body .filter .jumpWindow.news.rules .box .infoBox ul li:not(.smallTitle), h
       -ms-flex-align: start;
           align-items: flex-start;
 }
-html body .filter .jumpWindow.news.rules .box .infoBox ul li:not(.smallTitle) p, html body .filter .jumpWindow.rules.rules .box .infoBox ul li:not(.smallTitle) p {
+html body .filter .jumpWindow.news.rules .box .infoBox ul li:not(.smallTitle) p, html body .filter .jumpWindow.news.agentRules .box .infoBox ul li:not(.smallTitle) p, html body .filter .jumpWindow.rules.rules .box .infoBox ul li:not(.smallTitle) p, html body .filter .jumpWindow.rules.agentRules .box .infoBox ul li:not(.smallTitle) p, html body .filter .jumpWindow.agentRules.rules .box .infoBox ul li:not(.smallTitle) p, html body .filter .jumpWindow.agentRules.agentRules .box .infoBox ul li:not(.smallTitle) p {
   font-size: 14px;
-  white-space: pre-wrap;
+  white-space: unset;
   line-height: 20px;
   margin-bottom: 10px;
 }
-html body .filter .jumpWindow.news.rules .box .infoBox ul li:not(.smallTitle) p:last-child, html body .filter .jumpWindow.rules.rules .box .infoBox ul li:not(.smallTitle) p:last-child {
+html body .filter .jumpWindow.news.rules .box .infoBox ul li:not(.smallTitle) p.sp, html body .filter .jumpWindow.news.agentRules .box .infoBox ul li:not(.smallTitle) p.sp, html body .filter .jumpWindow.rules.rules .box .infoBox ul li:not(.smallTitle) p.sp, html body .filter .jumpWindow.rules.agentRules .box .infoBox ul li:not(.smallTitle) p.sp, html body .filter .jumpWindow.agentRules.rules .box .infoBox ul li:not(.smallTitle) p.sp, html body .filter .jumpWindow.agentRules.agentRules .box .infoBox ul li:not(.smallTitle) p.sp {
+  padding-left: 10px;
+}
+html body .filter .jumpWindow.news.rules .box .infoBox ul li:not(.smallTitle) p:last-child, html body .filter .jumpWindow.news.agentRules .box .infoBox ul li:not(.smallTitle) p:last-child, html body .filter .jumpWindow.rules.rules .box .infoBox ul li:not(.smallTitle) p:last-child, html body .filter .jumpWindow.rules.agentRules .box .infoBox ul li:not(.smallTitle) p:last-child, html body .filter .jumpWindow.agentRules.rules .box .infoBox ul li:not(.smallTitle) p:last-child, html body .filter .jumpWindow.agentRules.agentRules .box .infoBox ul li:not(.smallTitle) p:last-child {
   margin: 0;
 }
-html body .filter .jumpWindow.news.rules .checkBtn, html body .filter .jumpWindow.rules.rules .checkBtn {
+html body .filter .jumpWindow.news.rules .box .infoBox ul li:not(.smallTitle) p span, html body .filter .jumpWindow.news.agentRules .box .infoBox ul li:not(.smallTitle) p span, html body .filter .jumpWindow.rules.rules .box .infoBox ul li:not(.smallTitle) p span, html body .filter .jumpWindow.rules.agentRules .box .infoBox ul li:not(.smallTitle) p span, html body .filter .jumpWindow.agentRules.rules .box .infoBox ul li:not(.smallTitle) p span, html body .filter .jumpWindow.agentRules.agentRules .box .infoBox ul li:not(.smallTitle) p span {
+  color: #b8151a;
+}
+html body .filter .jumpWindow.news.rules .checkBtn, html body .filter .jumpWindow.news.agentRules .checkBtn, html body .filter .jumpWindow.rules.rules .checkBtn, html body .filter .jumpWindow.rules.agentRules .checkBtn, html body .filter .jumpWindow.agentRules.rules .checkBtn, html body .filter .jumpWindow.agentRules.agentRules .checkBtn {
   width: 70%;
   height: 42px;
   background: -webkit-gradient(linear, left bottom, left top, color-stop(4%, #bc9c64), color-stop(93%, #f3d197));
@@ -2266,18 +2272,18 @@ html body .filter .jumpWindow.news.rules .checkBtn, html body .filter .jumpWindo
   display: block;
   margin: 16px auto 0;
 }
-html body .filter .jumpWindow.news.rules .checkBtn:active, html body .filter .jumpWindow.news.rules .checkBtn.active, html body .filter .jumpWindow.rules.rules .checkBtn:active, html body .filter .jumpWindow.rules.rules .checkBtn.active {
+html body .filter .jumpWindow.news.rules .checkBtn:active, html body .filter .jumpWindow.news.rules .checkBtn.active, html body .filter .jumpWindow.news.agentRules .checkBtn:active, html body .filter .jumpWindow.news.agentRules .checkBtn.active, html body .filter .jumpWindow.rules.rules .checkBtn:active, html body .filter .jumpWindow.rules.rules .checkBtn.active, html body .filter .jumpWindow.rules.agentRules .checkBtn:active, html body .filter .jumpWindow.rules.agentRules .checkBtn.active, html body .filter .jumpWindow.agentRules.rules .checkBtn:active, html body .filter .jumpWindow.agentRules.rules .checkBtn.active, html body .filter .jumpWindow.agentRules.agentRules .checkBtn:active, html body .filter .jumpWindow.agentRules.agentRules .checkBtn.active {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(4%, #bc9c64), color-stop(93%, #f3d197));
   background: linear-gradient(to bottom, #bc9c64 4%, #f3d197 93%);
 }
-html body .filter .jumpWindow.news .box, html body .filter .jumpWindow.rules .box {
+html body .filter .jumpWindow.news .box, html body .filter .jumpWindow.rules .box, html body .filter .jumpWindow.agentRules .box {
   width: 100%;
   height: auto;
   max-height: 50vh;
   overflow-y: auto;
   margin-top: 16px;
 }
-html body .filter .jumpWindow.news .box .infoBox, html body .filter .jumpWindow.rules .box .infoBox {
+html body .filter .jumpWindow.news .box .infoBox, html body .filter .jumpWindow.rules .box .infoBox, html body .filter .jumpWindow.agentRules .box .infoBox {
   width: 96%;
   height: 46px;
   background: -webkit-gradient(linear, left bottom, left top, from(#eeeeee), to(#ffffff));
@@ -2288,30 +2294,30 @@ html body .filter .jumpWindow.news .box .infoBox, html body .filter .jumpWindow.
   margin: 0 auto 10px;
   padding: 0 12px;
 }
-html body .filter .jumpWindow.news .box .infoBox.active, html body .filter .jumpWindow.rules .box .infoBox.active {
+html body .filter .jumpWindow.news .box .infoBox.active, html body .filter .jumpWindow.rules .box .infoBox.active, html body .filter .jumpWindow.agentRules .box .infoBox.active {
   background: #ffffff;
   border-color: #b8151a;
   -webkit-box-shadow: 0 2px 5px 0 #0000001d inset;
           box-shadow: 0 2px 5px 0 #0000001d inset;
 }
-html body .filter .jumpWindow.news .box .infoBox:last-child, html body .filter .jumpWindow.rules .box .infoBox:last-child {
+html body .filter .jumpWindow.news .box .infoBox:last-child, html body .filter .jumpWindow.rules .box .infoBox:last-child, html body .filter .jumpWindow.agentRules .box .infoBox:last-child {
   margin-bottom: 0;
 }
-html body .filter .jumpWindow.news .box .infoBox.active, html body .filter .jumpWindow.rules .box .infoBox.active {
+html body .filter .jumpWindow.news .box .infoBox.active, html body .filter .jumpWindow.rules .box .infoBox.active, html body .filter .jumpWindow.agentRules .box .infoBox.active {
   height: auto;
 }
-html body .filter .jumpWindow.news .box .infoBox.active ul .smallTitle p, html body .filter .jumpWindow.rules .box .infoBox.active ul .smallTitle p {
+html body .filter .jumpWindow.news .box .infoBox.active ul .smallTitle p, html body .filter .jumpWindow.rules .box .infoBox.active ul .smallTitle p, html body .filter .jumpWindow.agentRules .box .infoBox.active ul .smallTitle p {
   color: #b8151a;
 }
-html body .filter .jumpWindow.news .box .infoBox.active ul .smallTitle .arrow_ic, html body .filter .jumpWindow.rules .box .infoBox.active ul .smallTitle .arrow_ic {
+html body .filter .jumpWindow.news .box .infoBox.active ul .smallTitle .arrow_ic, html body .filter .jumpWindow.rules .box .infoBox.active ul .smallTitle .arrow_ic, html body .filter .jumpWindow.agentRules .box .infoBox.active ul .smallTitle .arrow_ic {
   -webkit-transform: scaleY(-1);
           transform: scaleY(-1);
 }
-html body .filter .jumpWindow.news .box .infoBox ul, html body .filter .jumpWindow.rules .box .infoBox ul {
+html body .filter .jumpWindow.news .box .infoBox ul, html body .filter .jumpWindow.rules .box .infoBox ul, html body .filter .jumpWindow.agentRules .box .infoBox ul {
   width: 100%;
   height: auto;
 }
-html body .filter .jumpWindow.news .box .infoBox ul li, html body .filter .jumpWindow.rules .box .infoBox ul li {
+html body .filter .jumpWindow.news .box .infoBox ul li, html body .filter .jumpWindow.rules .box .infoBox ul li, html body .filter .jumpWindow.agentRules .box .infoBox ul li {
   width: 100%;
   height: 46px;
   border-bottom: solid 1px #b8151a;
@@ -2324,32 +2330,32 @@ html body .filter .jumpWindow.news .box .infoBox ul li, html body .filter .jumpW
   position: relative;
   padding-left: 6vw;
 }
-html body .filter .jumpWindow.news .box .infoBox ul li:last-child, html body .filter .jumpWindow.rules .box .infoBox ul li:last-child {
+html body .filter .jumpWindow.news .box .infoBox ul li:last-child, html body .filter .jumpWindow.rules .box .infoBox ul li:last-child, html body .filter .jumpWindow.agentRules .box .infoBox ul li:last-child {
   border: none;
 }
-html body .filter .jumpWindow.news .box .infoBox ul li.smallTitle, html body .filter .jumpWindow.rules .box .infoBox ul li.smallTitle {
+html body .filter .jumpWindow.news .box .infoBox ul li.smallTitle, html body .filter .jumpWindow.rules .box .infoBox ul li.smallTitle, html body .filter .jumpWindow.agentRules .box .infoBox ul li.smallTitle {
   border-color: #b8151a;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   cursor: pointer;
 }
-html body .filter .jumpWindow.news .box .infoBox ul li.smallTitle .flower_ic, html body .filter .jumpWindow.rules .box .infoBox ul li.smallTitle .flower_ic {
+html body .filter .jumpWindow.news .box .infoBox ul li.smallTitle .flower_ic, html body .filter .jumpWindow.rules .box .infoBox ul li.smallTitle .flower_ic, html body .filter .jumpWindow.agentRules .box .infoBox ul li.smallTitle .flower_ic {
   width: 5vw;
   height: 5vw;
   position: absolute;
   left: 0;
 }
-html body .filter .jumpWindow.news .box .infoBox ul li.smallTitle p, html body .filter .jumpWindow.rules .box .infoBox ul li.smallTitle p {
+html body .filter .jumpWindow.news .box .infoBox ul li.smallTitle p, html body .filter .jumpWindow.rules .box .infoBox ul li.smallTitle p, html body .filter .jumpWindow.agentRules .box .infoBox ul li.smallTitle p {
   color: #ba9141;
 }
-html body .filter .jumpWindow.news .box .infoBox ul li.smallTitle .arrow_ic, html body .filter .jumpWindow.rules .box .infoBox ul li.smallTitle .arrow_ic {
+html body .filter .jumpWindow.news .box .infoBox ul li.smallTitle .arrow_ic, html body .filter .jumpWindow.rules .box .infoBox ul li.smallTitle .arrow_ic, html body .filter .jumpWindow.agentRules .box .infoBox ul li.smallTitle .arrow_ic {
   width: 18px;
   height: 9px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
-html body .filter .jumpWindow.news .box .infoBox ul li p, html body .filter .jumpWindow.rules .box .infoBox ul li p {
+html body .filter .jumpWindow.news .box .infoBox ul li p, html body .filter .jumpWindow.rules .box .infoBox ul li p, html body .filter .jumpWindow.agentRules .box .infoBox ul li p {
   width: 100%;
   color: #3a3a3a;
   font-size: 4vw;
@@ -3063,6 +3069,292 @@ html body .filter .jumpWindow.loading .content p {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
   }
+}
+html body .filter .jumpWindow.agentWindow form {
+  width: 100%;
+  height: auto;
+  max-height: 66vh;
+  overflow-y: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 24px 16px;
+}
+html body .filter .jumpWindow.agentWindow form label {
+  width: 100%;
+  height: auto;
+  position: relative;
+  margin-bottom: 3vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 12px 0 20px;
+}
+html body .filter .jumpWindow.agentWindow form label:nth-last-of-type(1) {
+  margin-bottom: 5vw;
+}
+html body .filter .jumpWindow.agentWindow form label div {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+html body .filter .jumpWindow.agentWindow form label div.checkWord {
+  display: block;
+}
+html body .filter .jumpWindow.agentWindow form label div em {
+  position: absolute;
+  left: 0;
+  color: #b8151a;
+  font-size: 14px;
+  font-weight: bold;
+}
+html body .filter .jumpWindow.agentWindow form label div input {
+  width: 100%;
+  height: 9.87vw;
+  background: #ffffff;
+  border-radius: 5px;
+  border: solid 1px #daaf6d;
+  -webkit-box-shadow: 0 2px 5px 0 #0000001d inset;
+          box-shadow: 0 2px 5px 0 #0000001d inset;
+  color: #3a3a3a;
+  font-size: 3.4vw;
+  font-weight: bold;
+  padding-left: 16px;
+}
+html body .filter .jumpWindow.agentWindow form label div input::-webkit-input-placeholder {
+  color: #a3a3a3;
+}
+html body .filter .jumpWindow.agentWindow form label div input::-moz-placeholder {
+  color: #a3a3a3;
+}
+html body .filter .jumpWindow.agentWindow form label div input:-ms-input-placeholder {
+  color: #a3a3a3;
+}
+html body .filter .jumpWindow.agentWindow form label div input::-ms-input-placeholder {
+  color: #a3a3a3;
+}
+html body .filter .jumpWindow.agentWindow form label div input::placeholder {
+  color: #a3a3a3;
+}
+html body .filter .jumpWindow.agentWindow form label div input.line {
+  padding-left: 12vw;
+}
+html body .filter .jumpWindow.agentWindow form label div .eye {
+  position: absolute;
+  right: 20px;
+  width: 6.13vw;
+  height: 4.26vw;
+}
+html body .filter .jumpWindow.agentWindow form label div .date_ic {
+  position: absolute;
+  right: 25px;
+  width: 4vw;
+  height: 4vw;
+}
+html body .filter .jumpWindow.agentWindow form label div .line_ic,
+html body .filter .jumpWindow.agentWindow form label div .skype_ic {
+  position: absolute;
+  width: 8vw;
+  height: 8vw;
+  left: 23px;
+}
+html body .filter .jumpWindow.agentWindow form label .remind {
+  width: 100%;
+  color: #173fde;
+  font-size: 3.4vw;
+  font-weight: bold;
+  line-height: 4vw;
+  margin-top: 5px;
+}
+html body .filter .jumpWindow.agentWindow form .box {
+  width: 100%;
+  height: auto;
+  position: relative;
+  padding: 0 12px 0 20px;
+}
+html body .filter .jumpWindow.agentWindow form .box .smallTitle {
+  color: #ba9141;
+  font-size: 4vw;
+  font-weight: bold;
+}
+html body .filter .jumpWindow.agentWindow form .box em {
+  position: absolute;
+  left: 0;
+  color: #b8151a;
+  font-size: 14px;
+  font-weight: bold;
+}
+html body .filter .jumpWindow.agentWindow form .box ul {
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+html body .filter .jumpWindow.agentWindow form .box ul li {
+  width: 100%;
+  height: 9.87vw;
+  background: #ffffff;
+  -webkit-box-shadow: 1px 1px 3px 1px #00000033;
+          box-shadow: 1px 1px 3px 1px #00000033;
+  border: solid 1px transparent;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10px;
+}
+html body .filter .jumpWindow.agentWindow form .box ul li input {
+  width: 10px;
+  height: 10px;
+  position: relative;
+  margin: 0 20px;
+}
+html body .filter .jumpWindow.agentWindow form .box ul li input::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 18px;
+  height: 18px;
+  background: #f9f9f9;
+  border-radius: 50%;
+  border: solid 1px #daaf6d;
+  -webkit-box-shadow: 0 2px 3px 0 #0000001d inset;
+          box-shadow: 0 2px 3px 0 #0000001d inset;
+}
+html body .filter .jumpWindow.agentWindow form .box ul li input::after {
+  display: none;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 13px;
+  height: 13px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#970707), color-stop(98%, #cf0505));
+  background: linear-gradient(to top, #970707 0%, #cf0505 98%);
+  border-radius: 50%;
+}
+html body .filter .jumpWindow.agentWindow form .box ul li input:checked::after {
+  display: block;
+}
+html body .filter .jumpWindow.agentWindow form .box ul li input::before {
+  width: 15px;
+  height: 15px;
+}
+html body .filter .jumpWindow.agentWindow form .box ul li input:after {
+  width: 12px;
+  height: 12px;
+}
+html body .filter .jumpWindow.agentWindow form .box ul li p {
+  color: #3a3a3a;
+  font-size: 4vw;
+  font-weight: bold;
+}
+html body .filter .jumpWindow.agentWindow form .box ul li.active {
+  border-color: #b8151a;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+html body .filter .jumpWindow.agentWindow form .box ul li.active p {
+  color: #b8151a;
+}
+html body .filter .jumpWindow.agentWindow form .isCheck {
+  width: auto;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 36px 0;
+}
+html body .filter .jumpWindow.agentWindow form .isCheck input {
+  width: 10px;
+  height: 10px;
+  position: relative;
+  margin-right: 20px;
+}
+html body .filter .jumpWindow.agentWindow form .isCheck input::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 18px;
+  height: 18px;
+  background: #f9f9f9;
+  border-radius: 50%;
+  border: solid 1px #daaf6d;
+  -webkit-box-shadow: 0 2px 3px 0 #0000001d inset;
+          box-shadow: 0 2px 3px 0 #0000001d inset;
+}
+html body .filter .jumpWindow.agentWindow form .isCheck input::after {
+  display: none;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 13px;
+  height: 13px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#970707), color-stop(98%, #cf0505));
+  background: linear-gradient(to top, #970707 0%, #cf0505 98%);
+  border-radius: 50%;
+}
+html body .filter .jumpWindow.agentWindow form .isCheck input:checked::after {
+  display: block;
+}
+html body .filter .jumpWindow.agentWindow form .isCheck p {
+  color: #ff5a00;
+  font-size: 4vw;
+  font-weight: bold;
+  text-decoration: underline;
+}
+html body .filter .jumpWindow.agentWindow form .checkBtn {
+  width: 70%;
+  height: 9.87vw;
+  background: -webkit-gradient(linear, left bottom, left top, from(#970707), color-stop(98%, #cf0505));
+  background: linear-gradient(to top, #970707 0%, #cf0505 98%);
+  border-radius: 30px;
+  color: #ffffff;
+  font-size: 3.4vw;
+  font-weight: bold;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+html body .filter .jumpWindow.agentWindow form .checkBtn:active, html body .filter .jumpWindow.agentWindow form .checkBtn.active {
+  background: -webkit-gradient(linear, left top, left bottom, from(#970707), color-stop(98%, #cf0505));
+  background: linear-gradient(to bottom, #970707 0%, #cf0505 98%);
 }
 html body .filter .jumpWindow .title {
   width: 100%;
