@@ -612,4 +612,78 @@ $(function(){
             .text("3· 出金")
         }
     });
+
+    $(function(){
+        var arr = [];
+        var i = 0;
+        var ori = $(".helpBody").offset().top;
+
+        $(".helpBody.rule .content").each(function(){
+            arr[i] = $(this).offset().top - ori - 25;
+
+            i ++;
+        })
+
+        $(".helpBody.rule").scroll(function () {
+            var scrollVal = $(".helpBody.rule").scrollTop();
+
+            if(scrollVal >= arr[0])
+            {
+                $(".helpHeader.rule .selectBox p")
+                .text("1· はじめに");
+            }
+            if(scrollVal >= arr[1])
+            {
+                $(".helpHeader.rule .selectBox p")
+                .text("2· 定義と解釈");
+            }
+            if(scrollVal >= arr[2])
+            {
+                $(".helpHeader.rule .selectBox p")
+                .text("3· パートナー適用条件");
+            }
+            if(scrollVal >= arr[3])
+            {
+                $(".helpHeader.rule .selectBox p")
+                .text("4· 当社の権利と義務");
+            }
+            if(scrollVal >= arr[4])
+            {
+                $(".helpHeader.rule .selectBox p")
+                .text("5· パートナーの権利と義務");
+            }
+            if(scrollVal >= arr[5])
+            {
+                $(".helpHeader.rule .selectBox p")
+                .text("6· コミッション");
+            }
+            if(scrollVal >= arr[6])
+            {
+                $(".helpHeader.rule .selectBox p")
+                .text("7· 禁止事項");
+            }
+            if(scrollVal >= arr[7])
+            {
+                $(".helpHeader.rule .selectBox p")
+                .text("8· 負債および責任制限");
+            }
+            if(scrollVal >= arr[8])
+            {
+                $(".helpHeader.rule .selectBox p")
+                .text("9· 機密情報");
+            }
+            if(scrollVal >= arr[9])
+            {
+                $(".helpHeader.rule .selectBox p")
+                .text("10· 解約または契約の終了");
+            }
+            if(scrollVal >= 6100)
+            {
+                $(".helpHeader.rule .selectBox p")
+                .text("11· 本規約および本契約の改正");
+            }
+            
+            console.log(scrollVal);
+        })
+    })
 })
