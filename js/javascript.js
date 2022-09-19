@@ -1,6 +1,6 @@
 //ad
-$(document).on('ready', function() {
-	$(".single-item").slick({
+$(function(){
+    $(".single-item").slick({
 		dots: true,
 		slidesToShow: 1,
 		slidesToScroll: 1,
@@ -482,6 +482,13 @@ $(function(){
         $('.jumpWindow')
         .removeClass('display');
         $('.filter,.agentRules')
+        .addClass('display');
+    })
+
+    $(".jumpWindow.registerWindow .checkBtn").on("click",function(){
+        $('.jumpWindow')
+        .removeClass('display');
+        $('.filter,.plsGo2')
         .addClass('display');
     })
 })

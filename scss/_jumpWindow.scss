@@ -53,6 +53,34 @@
                     @include mainBtn;
                     margin-top: 24px;
                 }
+
+                .img {
+                    width: 52vw;
+                    height: 32vw;
+                    margin: 0 auto;
+                }
+
+                .btnBox {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    button {
+                        width: 80%;
+
+                        &:first-child {
+                            margin: 0;
+                        }
+
+                        &:last-child {
+                            @include secondBtn;
+                            font-size: 4vw;
+                            margin-top: 12px;
+                        }
+                    }
+                }
             }
         }
 

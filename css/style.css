@@ -661,6 +661,11 @@ footer .agentPrivacy::before {
   background-size: contain;
 }
 
+.jumpWindow.plsGo2 .img {
+  background: url("../images/register_susBG.png") no-repeat;
+  background-size: contain;
+}
+
 .agentWrap .topBanner {
   background: url("../images/agent_banner.png") no-repeat;
   background-size: contain;
@@ -1178,10 +1183,10 @@ html body .multiple-items.card .slick-list {
   height: 100%;
 }
 html body .multiple-items.card .slick-list .slick-track li.slick-center .cardBG .nameBox p {
-  text-shadow: 2px 4px 3px #00000080;
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.5019607843);
 }
 html body .multiple-items.card .slick-list .slick-track li.slick-center .cardBG .num {
-  text-shadow: 2px 4px 3px #00000080;
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.5019607843);
 }
 html body .multiple-items.card .slick-list .slick-track li .cardBG {
   width: 275px;
@@ -1273,8 +1278,8 @@ html body .marqueeBox {
   height: 7vw;
   background: #ffffff;
   border: solid 1px #daaf6d;
-  -webkit-box-shadow: 0 2px 5px 0 #00000033 inset;
-          box-shadow: 0 2px 5px 0 #00000033 inset;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2) inset;
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2) inset;
   border-radius: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1751,7 +1756,7 @@ html body .filter {
   position: fixed;
   top: 0;
   left: 0;
-  background: #00000066;
+  background: rgba(0, 0, 0, 0.4);
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1809,6 +1814,45 @@ html body .filter .jumpWindow.plsGo .content button:active, html body .filter .j
   background: -webkit-gradient(linear, left top, left bottom, color-stop(4%, #bc9c64), color-stop(93%, #f3d197));
   background: linear-gradient(to bottom, #bc9c64 4%, #f3d197 93%);
 }
+html body .filter .jumpWindow.plsGo .content .img, html body .filter .jumpWindow.plsGo2 .content .img {
+  width: 52vw;
+  height: 32vw;
+  margin: 0 auto;
+}
+html body .filter .jumpWindow.plsGo .content .btnBox, html body .filter .jumpWindow.plsGo2 .content .btnBox {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+html body .filter .jumpWindow.plsGo .content .btnBox button, html body .filter .jumpWindow.plsGo2 .content .btnBox button {
+  width: 80%;
+}
+html body .filter .jumpWindow.plsGo .content .btnBox button:first-child, html body .filter .jumpWindow.plsGo2 .content .btnBox button:first-child {
+  margin: 0;
+}
+html body .filter .jumpWindow.plsGo .content .btnBox button:last-child, html body .filter .jumpWindow.plsGo2 .content .btnBox button:last-child {
+  background: -webkit-gradient(linear, left bottom, left top, from(#970707), color-stop(98%, #cf0505));
+  background: linear-gradient(to top, #970707 0%, #cf0505 98%);
+  border-radius: 30px;
+  color: #ffffff;
+  font-size: 3.4vw;
+  font-weight: bold;
+  font-size: 4vw;
+  margin-top: 12px;
+}
+html body .filter .jumpWindow.plsGo .content .btnBox button:last-child:active, html body .filter .jumpWindow.plsGo .content .btnBox button:last-child.active, html body .filter .jumpWindow.plsGo2 .content .btnBox button:last-child:active, html body .filter .jumpWindow.plsGo2 .content .btnBox button:last-child.active {
+  background: -webkit-gradient(linear, left top, left bottom, from(#970707), color-stop(98%, #cf0505));
+  background: linear-gradient(to bottom, #970707 0%, #cf0505 98%);
+}
 html body .filter .jumpWindow.loginWindow form {
   width: 100%;
   height: auto;
@@ -1839,8 +1883,8 @@ html body .filter .jumpWindow.loginWindow form label input {
   background: #ffffff;
   border-radius: 5px;
   border: solid 1px #daaf6d;
-  -webkit-box-shadow: 0 2px 5px 0 #0000001d inset;
-          box-shadow: 0 2px 5px 0 #0000001d inset;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
   color: #3a3a3a;
   font-size: 3.4vw;
   font-weight: bold;
@@ -1930,8 +1974,8 @@ html body .filter .jumpWindow.forgetWindow form input {
   background: #ffffff;
   border-radius: 5px;
   border: solid 1px #daaf6d;
-  -webkit-box-shadow: 0 2px 5px 0 #0000001d inset;
-          box-shadow: 0 2px 5px 0 #0000001d inset;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
   color: #3a3a3a;
   font-size: 3.4vw;
   font-weight: bold;
@@ -2045,8 +2089,8 @@ html body .filter .jumpWindow.registerWindow form label div input {
   background: #ffffff;
   border-radius: 5px;
   border: solid 1px #daaf6d;
-  -webkit-box-shadow: 0 2px 5px 0 #0000001d inset;
-          box-shadow: 0 2px 5px 0 #0000001d inset;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
   color: #3a3a3a;
   font-size: 3.4vw;
   font-weight: bold;
@@ -2127,8 +2171,8 @@ html body .filter .jumpWindow.registerWindow form label.isCheck input[type=check
   background: #f9f9f9;
   border-radius: 50%;
   border: solid 1px #daaf6d;
-  -webkit-box-shadow: 0 2px 3px 0 #0000001d inset;
-          box-shadow: 0 2px 3px 0 #0000001d inset;
+  -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1137254902) inset;
+          box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1137254902) inset;
 }
 html body .filter .jumpWindow.registerWindow form label.isCheck input[type=checkbox]::after {
   display: none;
@@ -2302,8 +2346,8 @@ html body .filter .jumpWindow.news .box .infoBox, html body .filter .jumpWindow.
 html body .filter .jumpWindow.news .box .infoBox.active, html body .filter .jumpWindow.rules .box .infoBox.active, html body .filter .jumpWindow.agentRules .box .infoBox.active {
   background: #ffffff;
   border-color: #b8151a;
-  -webkit-box-shadow: 0 2px 5px 0 #0000001d inset;
-          box-shadow: 0 2px 5px 0 #0000001d inset;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
 }
 html body .filter .jumpWindow.news .box .infoBox:last-child, html body .filter .jumpWindow.rules .box .infoBox:last-child, html body .filter .jumpWindow.agentRules .box .infoBox:last-child {
   margin-bottom: 0;
@@ -2450,8 +2494,8 @@ html body .filter .jumpWindow.betWindow .bottom .inputBox input {
   background: #ffffff;
   border-radius: 5px;
   border: solid 1px #daaf6d;
-  -webkit-box-shadow: 0 2px 5px 0 #0000001d inset;
-          box-shadow: 0 2px 5px 0 #0000001d inset;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
   color: #3a3a3a;
   font-size: 3.4vw;
   font-weight: bold;
@@ -2554,8 +2598,8 @@ html body .filter .jumpWindow.betWindow .enterGame div input::before {
   background: #f9f9f9;
   border-radius: 50%;
   border: solid 1px #daaf6d;
-  -webkit-box-shadow: 0 2px 3px 0 #0000001d inset;
-          box-shadow: 0 2px 3px 0 #0000001d inset;
+  -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1137254902) inset;
+          box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1137254902) inset;
 }
 html body .filter .jumpWindow.betWindow .enterGame div input::after {
   display: none;
@@ -2614,8 +2658,8 @@ html body .filter .jumpWindow.phoneWindow form label input {
   background: #ffffff;
   border-radius: 5px;
   border: solid 1px #daaf6d;
-  -webkit-box-shadow: 0 2px 5px 0 #0000001d inset;
-          box-shadow: 0 2px 5px 0 #0000001d inset;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
   color: #3a3a3a;
   font-size: 3.4vw;
   font-weight: bold;
@@ -2695,8 +2739,8 @@ html body .filter .jumpWindow.passwordWindow .content .inputBox input {
   background: #ffffff;
   border-radius: 5px;
   border: solid 1px #daaf6d;
-  -webkit-box-shadow: 0 2px 5px 0 #0000001d inset;
-          box-shadow: 0 2px 5px 0 #0000001d inset;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
   color: #3a3a3a;
   font-size: 3.4vw;
   font-weight: bold;
@@ -3137,8 +3181,8 @@ html body .filter .jumpWindow.agentWindow form label div input {
   background: #ffffff;
   border-radius: 5px;
   border: solid 1px #daaf6d;
-  -webkit-box-shadow: 0 2px 5px 0 #0000001d inset;
-          box-shadow: 0 2px 5px 0 #0000001d inset;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
   color: #3a3a3a;
   font-size: 3.4vw;
   font-weight: bold;
@@ -3216,8 +3260,8 @@ html body .filter .jumpWindow.agentWindow form .box ul li {
   width: 100%;
   height: 9.87vw;
   background: #ffffff;
-  -webkit-box-shadow: 1px 1px 3px 1px #00000033;
-          box-shadow: 1px 1px 3px 1px #00000033;
+  -webkit-box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.2);
   border: solid 1px transparent;
   border-radius: 5px;
   display: -webkit-box;
@@ -3246,8 +3290,8 @@ html body .filter .jumpWindow.agentWindow form .box ul li input::before {
   background: #f9f9f9;
   border-radius: 50%;
   border: solid 1px #daaf6d;
-  -webkit-box-shadow: 0 2px 3px 0 #0000001d inset;
-          box-shadow: 0 2px 3px 0 #0000001d inset;
+  -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1137254902) inset;
+          box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1137254902) inset;
 }
 html body .filter .jumpWindow.agentWindow form .box ul li input::after {
   display: none;
@@ -3319,8 +3363,8 @@ html body .filter .jumpWindow.agentWindow form .isCheck input::before {
   background: #f9f9f9;
   border-radius: 50%;
   border: solid 1px #daaf6d;
-  -webkit-box-shadow: 0 2px 3px 0 #0000001d inset;
-          box-shadow: 0 2px 3px 0 #0000001d inset;
+  -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1137254902) inset;
+          box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1137254902) inset;
 }
 html body .filter .jumpWindow.agentWindow form .isCheck input::after {
   display: none;
@@ -3494,8 +3538,8 @@ html body .slotWrap .slotHeader .searchBox input {
   background: #ffffff;
   border-radius: 5px;
   border: solid 1px #daaf6d;
-  -webkit-box-shadow: 0 2px 5px 0 #0000001d inset;
-          box-shadow: 0 2px 5px 0 #0000001d inset;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
   color: #3a3a3a;
   font-size: 3.4vw;
   font-weight: bold;
@@ -4105,8 +4149,8 @@ html body .walletWrap .walletList .forPlatform ul li {
   height: auto;
   border-radius: 10px;
   background: #ffffff;
-  -webkit-box-shadow: 1px 1px 2px 0 #00000033;
-          box-shadow: 1px 1px 2px 0 #00000033;
+  -webkit-box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.2);
   padding: 10px 16px;
 }
 html body .walletWrap .walletList .forPlatform ul li div {
@@ -4301,7 +4345,7 @@ html body .memberWrap .user .btnBox .left button {
   color: #ffffff;
   font-size: 5vw;
   font-weight: bold;
-  text-shadow: 2px 3px 0 #00000080;
+  text-shadow: 2px 3px 0 rgba(0, 0, 0, 0.5019607843);
 }
 html body .memberWrap .user .btnBox .left button:last-child {
   margin-top: 3vw;
@@ -4500,8 +4544,8 @@ html body .memberInfo form ul li .inputBox input {
   background: #ffffff;
   border-radius: 5px;
   border: solid 1px #daaf6d;
-  -webkit-box-shadow: 0 2px 5px 0 #0000001d inset;
-          box-shadow: 0 2px 5px 0 #0000001d inset;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
   color: #3a3a3a;
   font-size: 3.4vw;
   font-weight: bold;
@@ -4588,8 +4632,8 @@ html body .memberInfo .info_1 ul li .inputBox input {
   background: #ffffff;
   border-radius: 5px;
   border: solid 1px #daaf6d;
-  -webkit-box-shadow: 0 2px 5px 0 #0000001d inset;
-          box-shadow: 0 2px 5px 0 #0000001d inset;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
   color: #3a3a3a;
   font-size: 3.4vw;
   font-weight: bold;
@@ -4639,8 +4683,8 @@ html body .memberInfo .info_2 ul li {
   height: 9.87vw;
   background: #ffffff;
   border-radius: 3px;
-  -webkit-box-shadow: 0 2px 3px 0 #00000033;
-          box-shadow: 0 2px 3px 0 #00000033;
+  -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4686,8 +4730,8 @@ html body .memberInfo .pwdBox .inputBox {
   width: 100%;
   height: 9.87vw;
   background: #ffffff;
-  -webkit-box-shadow: 0 2px 3px 0 #00000033;
-          box-shadow: 0 2px 3px 0 #00000033;
+  -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
   border-radius: 3px;
   position: relative;
   display: -webkit-box;
@@ -5155,8 +5199,8 @@ html body .helpInner li .box {
   background: #ffffff;
   border-radius: 16px;
   border: solid 1px #daaf6d;
-  -webkit-box-shadow: 0 2px 1px 0 #00000033;
-          box-shadow: 0 2px 1px 0 #00000033;
+  -webkit-box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2);
   overflow: hidden;
   margin: 0 auto 10px;
 }
@@ -5411,8 +5455,8 @@ html body .applyList .listBox .list {
   width: 100%;
   height: auto;
   background: #ffffff;
-  -webkit-box-shadow: 0 1px 1px 1px #00000033;
-          box-shadow: 0 1px 1px 1px #00000033;
+  -webkit-box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   position: relative;
   padding: 0 12px;
@@ -5639,8 +5683,8 @@ html body .applyRecord .searchContent .top .inputBox {
   background: #ffffff;
   border-radius: 5px;
   border: solid 1px #daaf6d;
-  -webkit-box-shadow: 0 2px 5px 0 #0000001d inset;
-          box-shadow: 0 2px 5px 0 #0000001d inset;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
   color: #3a3a3a;
   font-size: 3.4vw;
   font-weight: bold;
@@ -5778,7 +5822,7 @@ html body .applyRecord .reviewBody .recordBox.fail ul::before {
   top: 0;
   width: 100%;
   height: 100%;
-  background: #00000066;
+  background: rgba(0, 0, 0, 0.4);
   opacity: 0.5;
 }
 html body .applyRecord .reviewBody .recordBox .title {
@@ -5904,8 +5948,8 @@ html body .vipWrap .topBox .cardBG {
 html body .vipWrap .topBox .cardBG .medal {
   width: 28vw;
   height: 30vw;
-  -webkit-filter: drop-shadow(2px 3px 5px #00000080);
-          filter: drop-shadow(2px 3px 5px #00000080);
+  -webkit-filter: drop-shadow(2px 3px 5px rgba(0, 0, 0, 0.5019607843));
+          filter: drop-shadow(2px 3px 5px rgba(0, 0, 0, 0.5019607843));
   margin-right: 20px;
 }
 html body .vipWrap .topBox .cardBG .textBox {
@@ -5916,7 +5960,7 @@ html body .vipWrap .topBox .cardBG .textBox .title {
   color: #ffffff;
   font-size: 6vw;
   font-weight: bold;
-  text-shadow: 2px 3px 0 #00000080;
+  text-shadow: 2px 3px 0 rgba(0, 0, 0, 0.5019607843);
   margin-bottom: 16px;
 }
 html body .vipWrap .topBox .cardBG .textBox .row {
@@ -5931,14 +5975,14 @@ html body .vipWrap .topBox .cardBG .textBox .row .smallTitle {
   color: #ffd38a;
   font-size: 4vw;
   font-weight: bold;
-  text-shadow: 2px 3px 0 #00000080;
+  text-shadow: 2px 3px 0 rgba(0, 0, 0, 0.5019607843);
   margin-bottom: 5px;
 }
 html body .vipWrap .topBox .cardBG .textBox .row .text {
   color: #ffffff;
   font-size: 4vw;
   font-weight: bold;
-  text-shadow: 2px 3px 0 #00000080;
+  text-shadow: 2px 3px 0 rgba(0, 0, 0, 0.5019607843);
 }
 html body .vipWrap .lineTitle {
   width: 100%;
@@ -5986,8 +6030,8 @@ html body .vipWrap .enjoyBox ul li {
   height: 11vw;
   background: #ffffff;
   border-radius: 5px 10px 10px 5px;
-  -webkit-box-shadow: 1px 2px 1px 0 #0000001d;
-          box-shadow: 1px 2px 1px 0 #0000001d;
+  -webkit-box-shadow: 1px 2px 1px 0 rgba(0, 0, 0, 0.1137254902);
+          box-shadow: 1px 2px 1px 0 rgba(0, 0, 0, 0.1137254902);
   position: relative;
   overflow: hidden;
   color: #ba9141;
@@ -6253,8 +6297,8 @@ html body .vipDetail .remindBox {
   height: auto;
   background: #ffffff;
   border-radius: 5px;
-  -webkit-box-shadow: 1px 1px 2px 0 #00000080;
-          box-shadow: 1px 1px 2px 0 #00000080;
+  -webkit-box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.5019607843);
+          box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.5019607843);
   padding: 0 16px 16px;
 }
 html body .vipDetail .remindBox .lineTitle {
@@ -6467,8 +6511,8 @@ html body .mailWrap.normal .editBox .all input::before {
   background: #f9f9f9;
   border-radius: 50%;
   border: solid 1px #daaf6d;
-  -webkit-box-shadow: 0 2px 3px 0 #0000001d inset;
-          box-shadow: 0 2px 3px 0 #0000001d inset;
+  -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1137254902) inset;
+          box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1137254902) inset;
 }
 html body .mailWrap.normal .editBox .all input::after {
   display: none;
@@ -6549,8 +6593,8 @@ html body .mailWrap.normal .mailBox ul li {
   height: auto;
   background: #ffffff;
   border-radius: 5px 10px 10px 5px;
-  -webkit-box-shadow: 1px 2px 1px 0 #0000001d;
-          box-shadow: 1px 2px 1px 0 #0000001d;
+  -webkit-box-shadow: 1px 2px 1px 0 rgba(0, 0, 0, 0.1137254902);
+          box-shadow: 1px 2px 1px 0 rgba(0, 0, 0, 0.1137254902);
   position: relative;
   overflow: hidden;
   display: -webkit-box;
@@ -6600,8 +6644,8 @@ html body .mailWrap.normal .mailBox ul li input::before {
   background: #f9f9f9;
   border-radius: 50%;
   border: solid 1px #daaf6d;
-  -webkit-box-shadow: 0 2px 3px 0 #0000001d inset;
-          box-shadow: 0 2px 3px 0 #0000001d inset;
+  -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1137254902) inset;
+          box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1137254902) inset;
 }
 html body .mailWrap.normal .mailBox ul li input::after {
   display: none;
@@ -6748,8 +6792,8 @@ html body .mailWrap.post .mailBox ul li {
   height: 15vw;
   background: #ffffff;
   border-radius: 5px 10px 10px 5px;
-  -webkit-box-shadow: 1px 2px 1px 0 #0000001d;
-          box-shadow: 1px 2px 1px 0 #0000001d;
+  -webkit-box-shadow: 1px 2px 1px 0 rgba(0, 0, 0, 0.1137254902);
+          box-shadow: 1px 2px 1px 0 rgba(0, 0, 0, 0.1137254902);
   position: relative;
   overflow: hidden;
   display: -webkit-box;
@@ -6909,8 +6953,8 @@ html body .cardWrap .cardContent ul li .inputBox input {
   background: #ffffff;
   border-radius: 5px;
   border: solid 1px #daaf6d;
-  -webkit-box-shadow: 0 2px 5px 0 #0000001d inset;
-          box-shadow: 0 2px 5px 0 #0000001d inset;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
   color: #3a3a3a;
   font-size: 3.4vw;
   font-weight: bold;
@@ -7041,8 +7085,8 @@ html body .bettingWrap .searchContent .top .inputBox {
   background: #ffffff;
   border-radius: 5px;
   border: solid 1px #daaf6d;
-  -webkit-box-shadow: 0 2px 5px 0 #0000001d inset;
-          box-shadow: 0 2px 5px 0 #0000001d inset;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
   color: #3a3a3a;
   font-size: 3.4vw;
   font-weight: bold;
@@ -7333,8 +7377,8 @@ html body .bettingWrap .list .partnerBox {
   height: auto;
   background: #ffffff;
   border-radius: 16px;
-  -webkit-box-shadow: 0 1px 2px 1px #00000033;
-          box-shadow: 0 1px 2px 1px #00000033;
+  -webkit-box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.2);
   padding: 0 8px;
   margin-bottom: 10px;
 }
@@ -7752,8 +7796,8 @@ html body .depositWrap .depContent .inputBox input {
   background: #ffffff;
   border-radius: 5px;
   border: solid 1px #daaf6d;
-  -webkit-box-shadow: 0 2px 5px 0 #0000001d inset;
-          box-shadow: 0 2px 5px 0 #0000001d inset;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
   color: #3a3a3a;
   font-size: 3.4vw;
   font-weight: bold;
@@ -7801,8 +7845,8 @@ html body .depositWrap .remindBox {
   width: 100%;
   height: auto;
   background: #ffffff;
-  -webkit-box-shadow: 1px 1px 2px 0 #00000080;
-          box-shadow: 1px 1px 2px 0 #00000080;
+  -webkit-box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.5019607843);
+          box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.5019607843);
   border-radius: 5px;
   margin-top: 16px;
   padding: 0 16px 16px;
@@ -8028,8 +8072,8 @@ html body .transWrap .transBox .inputBox input {
   background: #ffffff;
   border-radius: 5px;
   border: solid 1px #daaf6d;
-  -webkit-box-shadow: 0 2px 5px 0 #0000001d inset;
-          box-shadow: 0 2px 5px 0 #0000001d inset;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
   color: #3a3a3a;
   font-size: 3.4vw;
   font-weight: bold;
@@ -8161,8 +8205,8 @@ html body .transWrap .walletList .forPlatform ul li {
   height: auto;
   border-radius: 10px;
   background: #ffffff;
-  -webkit-box-shadow: 1px 1px 2px 0 #00000033;
-          box-shadow: 1px 1px 2px 0 #00000033;
+  -webkit-box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.2);
   padding: 10px 16px;
 }
 html body .transWrap .walletList .forPlatform ul li div {
@@ -8391,8 +8435,8 @@ html body .withWrap .walletList .forPlatform ul li {
   height: auto;
   border-radius: 10px;
   background: #ffffff;
-  -webkit-box-shadow: 1px 1px 2px 0 #00000033;
-          box-shadow: 1px 1px 2px 0 #00000033;
+  -webkit-box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.2);
   padding: 10px 16px;
 }
 html body .withWrap .walletList .forPlatform ul li div {
@@ -8480,8 +8524,8 @@ html body .withWrap .withContent .inputBox input {
   background: #ffffff;
   border-radius: 5px;
   border: solid 1px #daaf6d;
-  -webkit-box-shadow: 0 2px 5px 0 #0000001d inset;
-          box-shadow: 0 2px 5px 0 #0000001d inset;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
   color: #3a3a3a;
   font-size: 3.4vw;
   font-weight: bold;
@@ -8528,8 +8572,8 @@ html body .withWrap .remindBox {
   width: 100%;
   height: auto;
   background: #ffffff;
-  -webkit-box-shadow: 1px 1px 2px 0 #00000080;
-          box-shadow: 1px 1px 2px 0 #00000080;
+  -webkit-box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.5019607843);
+          box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.5019607843);
   border-radius: 5px;
   margin-top: 16px;
   padding: 0 16px 16px;
@@ -8590,8 +8634,8 @@ html body .inviteWrap .top .inputBox input {
   background: #ffffff;
   border-radius: 5px;
   border: solid 1px #daaf6d;
-  -webkit-box-shadow: 0 2px 5px 0 #0000001d inset;
-          box-shadow: 0 2px 5px 0 #0000001d inset;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1137254902) inset;
   color: #3a3a3a;
   font-size: 3.4vw;
   font-weight: bold;
@@ -8628,8 +8672,8 @@ html body .inviteWrap .top .btnBox {
   background: linear-gradient(to bottom, #fdeec6 32%, #e2c28d 100%);
   border-radius: 16px;
   border: solid 1px #daaf6d;
-  -webkit-box-shadow: 0 2px 5px 2px #0000001d;
-          box-shadow: 0 2px 5px 2px #0000001d;
+  -webkit-box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.1137254902);
+          box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.1137254902);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
