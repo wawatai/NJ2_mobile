@@ -761,6 +761,11 @@ footer .agentPrivacy::before {
   background-size: contain;
 }
 
+aside .inviteFriend {
+  background: url("../images/inviteFriend.gif") no-repeat;
+  background-size: 100%;
+}
+
 header .logo {
   width: 100px;
   -o-object-fit: contain;
@@ -1693,6 +1698,18 @@ html body .homeCenter .downBox li .textBox .sub {
   color: #7c5b1a;
   font-size: 3vw;
   font-weight: bold;
+}
+html body aside {
+  position: relative;
+}
+html body aside .sideBtn {
+  position: fixed;
+  bottom: 64px;
+  right: 10px;
+}
+html body aside .sideBtn .inviteFriend {
+  width: 92px;
+  height: 108px;
 }
 html body footer {
   width: 100%;
