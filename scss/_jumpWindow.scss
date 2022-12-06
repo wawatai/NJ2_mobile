@@ -559,13 +559,32 @@
                     width: 100%;
                     height: auto;
                     display: flex;
+                    flex-direction: column;
                     justify-content: center;
                     margin-bottom: 12px;
 
                     input {
-                        width: 300px;
+                        width: 100%;
                         height: 42px;
                         @include mainInput;
+                        margin: 0 auto;
+                    }
+
+                    .BtnArea {
+                        width: 100%;
+                        height: auto;
+                        display: flex;
+                        margin: 3vw auto;
+
+                        button {
+                            @include lightBtn_1;
+                            border-radius: 5px;
+                            margin-right: 1vw;
+
+                            &:last-child {
+                                margin-right: 0;
+                            }
+                        }
                     }
                 }
 
